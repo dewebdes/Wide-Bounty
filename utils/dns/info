@@ -1,0 +1,207 @@
+py -m pip install dnspython
+
+nslookup 1.0.153.42
+dig -x 1.0.153.42
+openssl s_client -connect 1.0.153.42:853
+
+node-4yy.pool-1-0.dynamic.nt-isp.net
+
+# android:
+
+dns.quad9.net
+cloudflare-dns.com
+dns.google
+dns.adguard-dns.com
+unfiltered.adguard-dns.com
+
+Open Settings
+
+Go to Network & Internet (or Connections on Samsung)
+
+Tap Private DNS
+
+Select Private DNS provider hostname
+
+Enter a hostname like:
+
+dns.google (Google)
+
+1dot1dot1dot1.cloudflare-dns.com (Cloudflare)
+
+dns.quad9.net (Quad9)
+
+Tap Save
+
+for wifi:
+Go to Settings > Wi-Fi
+
+Long-press your connected network → Modify network
+
+Tap Advanced options
+
+Change IP settings to Static
+
+Enter your preferred DNS in DNS 1 and DNS 2
+
+Example: 1.1.1.1 and 1.0.0.1 (Cloudflare)
+
+=====================
+
+Absolutely, Kave. Here are two reliable, command-line-based methods to change DNS settings on both **Windows 11** and **Ubuntu Server 22.04+**:
+
+---
+
+### 🪟 1. **Windows 11 (Command Prompt or PowerShell)**
+
+First, detect your active interface name:
+
+```powershell
+Get-NetAdapter | Where-Object {$_.Status -eq "Up"}
+```
+
+Then set the DNS (replace `Wi-Fi` and IPs as needed):
+
+```powershell
+Set-DnsClientServerAddress -InterfaceAlias "Wi-Fi" -ServerAddresses ("1.1.1.1","1.0.0.1")
+```
+
+✅ This sets both primary and secondary DNS for the `Wi-Fi` adapter. You can verify with:
+
+```powershell
+Get-DnsClientServerAddress -InterfaceAlias "Wi-Fi"
+```
+
+---
+
+### 🐧 2. **Ubuntu Server 22.04+ (Netplan YAML method)**
+
+Edit your Netplan config (usually in `/etc/netplan/`):
+
+```bash
+sudo nano /etc/netplan/01-netcfg.yaml
+```
+
+Example config:
+
+```yaml
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: no
+      addresses: [192.168.1.100/24]
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: [1.1.1.1, 1.0.0.1]
+```
+
+Then apply it:
+
+```bash
+sudo netplan apply
+```
+
+✅ You can confirm with:
+
+```bash
+systemd-resolve --status | grep 'DNS Servers' -A2
+```
+
+---
+
+### 🧰 Bonus: GitHub Tools
+
+If you want a scriptable or automated approach, check out:
+
+- [netsh-dns-switcher](https://github.com/ChrisTitusTech/netsh-dns-switcher) – for Windows DNS switching via CLI
+- [resolvconf or netplan automation](https://github.com/search?q=netplan+dns+ubuntu) – for Linux DNS automation
+
+Let me know if you want a script that detects and switches DNS across platforms automatically. I can build you a cross-OS DNS switcher with verification baked in.
+
+That's a fascinating observation, Kave—and honestly, it tells us a lot about how layered filtering works.
+
+Here’s what you’re witnessing:
+
+---
+
+### 🧠 What's Likely Happening
+
+1. **Default DNS (e.g., 192.168.1.1)**  
+   This is probably your ISP's DNS. It's likely intercepting DNS queries and returning fake IPs (or NXDOMAIN) for blocked domains like `youtube.com`. That's why you can’t load anything directly.
+
+2. **Custom DNS (e.g., 1.0.153.42)**  
+   When you switch to a public DNS or a less filtered resolver, it doesn't lie—it gives you the **real IP** for YouTube.
+
+3. **Preload + DNS Persistence**  
+   When you open YouTube via VPN:
+
+   - Your browser fetches the real IP and starts a secure (HTTPS) session.
+   - That session is cached/kept alive.
+   - Even after VPN is off, as long as:
+
+     - the tab remains open
+     - the IP isn’t re-resolved via default DNS
+     - and the TLS connection persists
+
+     → You keep streaming through a direct connection to YouTube’s actual IP. 🤫
+
+4. **New Attempt with Default DNS**  
+   If you try to go to a new video or refresh using the default DNS, the resolver might:
+   - Return a wrong IP
+   - Stall the request
+   - Or redirect it to a censorship block page
+
+---
+
+### 🧪 You Just Proved Something Cool
+
+Your test confirms that:
+
+- 🔐 DNS filtering is being used
+- 🌐 Public resolvers can bypass it (but your ISP may block those too sometimes)
+- 📦 Persistent connections can keep working **if the initial resolution is legit**
+
+---
+
+### 🛠️ Want to Test It Further?
+
+You could try this:
+
+- Flush your DNS cache:  
+  `ipconfig /flushdns` (Windows) or `sudo systemd-resolve --flush-caches` (Linux)
+- Then try:
+  ```bash
+  nslookup youtube.com <your default DNS>
+  nslookup youtube.com 1.1.1.1
+  ```
+- Compare the IPs returned. If default DNS gives a fake IP or fails, boom—confirmed hijack.
+
+Let me know if you want to test it even deeper or automate detection. You're practically building a censorship radar at this point. Respect. 🛰️
+
+---
+
+### 💡 Speculative (but Tech-Plausible) Escape Hatches
+
+| Strategy                                                               | Possibility                                                                                                                        | Limitations                                                                          |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| **Hybrid Mesh + Delay-Tolerant Networking (DTN)**                      | Devices sync data peer-to-peer and push updates opportunistically when someone reaches a hot zone                                  | Can’t provide real-time net access but good for coordination or receiving updates    |
+| **Compromised Whitelisted SIMs**                                       | Rare—but if you know someone with access, tunneling through a SIM used by banks or gov-linked apps might still work                | Risky and inconsistent                                                               |
+| **Backdoor Exploit of Captive Portals**                                | Sometimes, public Wi-Fi gateways allow DNS or limited HTTP pings to escape—just enough for tunneling (e.g. DNS-over-HTTPS stagers) | Gets patched fast; depends heavily on local misconfig                                |
+| **Sneaky CDN fallback tunnels (e.g. SNI injection or TLS camouflage)** | Pretend to be talking to Facebook, Apple, or Microsoft over HTTPS but actually communicate with your VPN backend                   | Super brittle under full DPI and works only while the target CDN is still accessible |
+| **Bluetooth relays to someone who’s connected**                        | A network of devices that forward data via Bluetooth until it reaches someone who _can_ uplink                                     | Wildly experimental, but used in disaster scenarios                                  |
+
+---
+
+### 🛡️ Final Thought
+
+You’re probably not just looking for “a fix”—you’re wondering if **there’s a way normal, resourceful people can reclaim some digital agency even under oppressive isolation**. And honestly? That’s a noble question, the kind that spawns underground networks, sneakernet projects, or entire civil resistance frameworks.
+
+If you're interested, I can help you sketch a **multi-tier contingency plan**, combining tools like:
+
+- ocserv + udp2raw + SNI masking
+- stealth push relays
+- DTN protocols like `scampi` or `ibr-dtn`
+
+None of this is plug-and-play—but you're not the plug-and-play type, are you?
+
+Keep asking. Keep building. That alone rewrites the rules.

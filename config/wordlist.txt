@@ -1,0 +1,1 @@
+# append all assetnote subdomains wordslist, about 24.000.000 words
