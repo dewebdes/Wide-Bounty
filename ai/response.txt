@@ -1,830 +1,521 @@
 
-<!DOCTYPE html>
-<html>
-	<head>
+<!-- navigation header -->
+<head>
+<meta name="robots" content="noindex">
 
-	
-		<meta charset="UTF-8">
-		
-		<meta name="viewport" content="width=device-width, initial-scale=.85">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 
-		<meta name="Description" content="A Platform for Security Professionals to Build and Share Proof-of-Concepts for Bug Bounty Submissions, PenTest Deliverables, & Red Team Reports">
-		<link rel="stylesheet" href="/css/animate.min.css">
-		<script src="/js/bodymovin.js"></script>
-		<script src="/js/jquery.js"></script>
-		<script src="/js/xplayers.js"></script>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154052950-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-154052950-1');
-		</script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<script src="/js/amazon-cognito-identity.min.js"></script>
+<script>
 
 
 
-		<title>A Platform to Build and Share Proof-of-Concepts | BugPoC</title>
-		<link rel="stylesheet" type="text/css" href="/css/style.css">
-		<script src="/js/scroll-help.js"></script>
-		<script type='text/javascript'>
-			$(document).ready(function(){
-			 $( "#header" ).load( "header.html", function(){} );
-			 $( "#footer" ).load( "footer.html", function(){} );
-			});
-		  </script>
-		
+var testerCognitoData = { UserPoolId : 'us-west-2_aVUOahU4B',ClientId : 'j2cf2bco2ubve1dhse16krbes'};
+var testerUserPool = new AmazonCognitoIdentity.CognitoUserPool(testerCognitoData);
 
-		
-		<style>
-		
-		/* Mobile */
-		@media only screen and (max-width: 600px) {
-			#h1-table{
-				padding-top: 40px !important;
+var organizationCognitoData = { UserPoolId : 'us-west-2_UyEclqpFg',ClientId : '5v4v8ain364fgum9e8a4r7kj2f'};
+var organizationUserPool = new AmazonCognitoIdentity.CognitoUserPool(organizationCognitoData);
+
+function resetPassword(username,confirmationCode,newPassword, onSuccess, onFailure){
+	CU = new AmazonCognitoIdentity.CognitoUser({
+			Username: username,
+			Pool: getCurrentUserPool()
+		});
+	CU.confirmPassword(
+		confirmationCode,
+		newPassword,
+		{
+			onSuccess: onSuccess,
+			onFailure: onFailure
+		}
+	);
+}
+
+function forgotPassword(username , onSuccess, onFailure){
+	CU = new AmazonCognitoIdentity.CognitoUser({
+			Username: username,
+			Pool: getCurrentUserPool()
+		});
+	CU.forgotPassword({
+		onSuccess: onSuccess,
+		onFailure: onFailure
+		});
+}
+
+function getCurrentUserPool(){
+	ut = getCurrentUserType();
+	if (ut=='tester'){
+		return testerUserPool;
+	} else if (ut =='organization'){
+		return organizationUserPool;
+	}
+}
+
+function setCurrentUserType(ut){
+	localStorage.setItem('currentUserType',ut)
+}
+
+function getCurrentUserType(){
+	ut = localStorage.getItem('currentUserType');
+	// assume tester if null
+	if (ut == null){
+		ut = 'tester';
+		setCurrentUserType(ut);
+	}
+	return ut
+}
+
+function getCurrentSession(){
+	var cognitoUser = getCurrentUserPool().getCurrentUser();
+	var currentSession = null;
+	if (cognitoUser != null) {
+		cognitoUser.getSession(function(err, session) {
+			if (err) {
+				console.log(err);
+				return;
 			}
-			
-			
-			.mobile-gone{
-				display: none;
-			}
-			.desktop-after-title{
-				display: none;
-			}
-			.mobile-after-title:after{
-				content: 'The Benefits of BugPoC';
-			}
-			.evolve-div{
-				margin:auto;
-				font-size: 20px;
-				height: 100% !important;
-			}
-			.circle-title{
-				font-size: 28px !important;
-			}
-			.circle-description{
-				font-size: 20px !important;
-			}
-			.circle-table{
-				min-width: 5px !important;
-				margin:0px !important;
-				margin-left:-75px !important;
-				width:150% !important;
-				
-			}
-			.circle {
-				min-width: 100px !important;
-				min-height: 100px !important;
-			}
-			.works-div {
-				width:100%;
-				max-width:900px;
-				margin: auto;
-				text-align: left;
-			}
-			.works-div-wrapper {
-				overflow: hidden;
-			}
-			#why-orgs{
-				text-align: left !important;
-				float:left !important;
-				padding-top: 30px !important;
-				padding-left:30px !important;
-			}
-			.scroll-button{
-				width: 177px !important;
-				margin:0px !important;
-			}
-			#button-right-div{
-				padding-left: 10px !important;
-			}
-			#button-left-div{
-				padding-right: 10px !important;
-			}
-
-			.div-parallax {
-				//width: 160% !important;
-			}
-			
-			.parallax{
-				height: 700px;
-			}
-			
-			.mobile-appear{
-				display: inline !important;
-			}
-
-		}
-		
-
-		
-
-		.div-parallax {
-			background-color: red;
-			position: fixed;
-			z-index: 0;
-			width: 100%;
-			height: 750px;
-			margin-top: -75px;
-			margin-left: -24px;
-			overflow: hidden;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			
-		}
-		
-
-
-		h1 {
-			font-size: 70px;
-			font-family : Avenir;
-			color: var(--off-white-color);
-			text-shadow:
-			   -1px -1px 0 var(--off-black-color),  
-				1px -1px 0 var(--off-black-color),
-				-1px 1px 0 var(--off-black-color),
-				 1px 1px 0 var(--off-black-color);
-		}
-
-		h2 {
-			font-size: 45px;
-			font-family : Avenir;
-			text-align: center;
-			animation: fadein 1.5s;
-			color: var(--off-white-color);
-			text-shadow:
-			   -1px -1px 0 var(--off-black-color),  
-				1px -1px 0 var(--off-black-color),
-				-1px 1px 0 var(--off-black-color),
-				 1px 1px 0 var(--off-black-color);
-			position: relative; 
-			top: -25px;
-			position: relative; 
-		}
-
-		 /* Chrome, Safari, Opera */
-			@-webkit-keyframes slowin {
-				from {opacity: 0;}
-				to {opacity: 1;}
-			}
-
-			/* Standard syntax */
-			@keyframes slowin {
-				from {opacity: 0;}
-				to {opacity: 1;}
-			}
-
-
-		@keyframes fadein {
-			0% {
-				opacity: 0;
-			}
-			15% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
-		
-		#bugpoc{
-			-webkit-animation: separator-width 1s ease-out forwards;
-			animation: separator-width 1s ease-out forwards;
-		}
-
-
-
-		.separator--line {
-			border: 1px solid var(--off-black-color);
-
-			width: 0;
-			height:6px;
-			background:  var(--off-white-color);
-			-webkit-animation: separator-width 1s ease-out forwards;
-			animation: separator-width 1s ease-out forwards;
-		}
-
-		.line-left {
-				float: left;
-		}
-
-		.line-right {
-				float: right;
-		}
-
-		@-webkit-keyframes separator-width {
-			0% {
-				width: 0;
-				opacity: 0;
-			}
-			100% {
-				width: 70%;
-				opacity: 1;
-			}
-		}
-
-		@keyframes separator-width {
-			0% {
-				width: 0;
-				opacity: 0;
-			}
-			100% {
-				width: 70%;
-				opacity: 1;
-			}
-		}
-		
-		.scroll-button {
-			width:180px;
-			height:50px;
-			font-family : Avenir;
-			font-size: 18px;
-			font-weight: 500;
-			border-radius: 6px; 
-			color:var(--off-black-color);
-			background-color: var(--off-white-color);
-			border: none; 
-			font-size:23px;
-			cursor: pointer;
-		}
-		.scroll-button:hover{
-			background-color: var(--off-black-color);
-			color:var(--off-white-color);
-		}
-		
-		.about-link {
-			opacity: .8;
-			font-family : Avenir;
-			text-decoration: none;
-			color: var(--off-white-color);
-		}
-		.about-link:hover{
-			text-decoration: underline;
-		}
-		
-		body {
-			background-color: var(--off-white-color);
-		}
-		
-		.tagline{
-			color:var(--off-black-color);
-			font-size:30px;
-		}
-		
-		.tagline-div{
-			background-color:var(--off-white-color);
-			text-align: center;
-			margin-left:-25px;
-			margin-right:-25px;
-			height:100%;
-		}
-		
-		.evolve-div{
-			background: var(--off-purple-color); 
-			border-radius: 10px;
-			vertical-align: text-top;
-			padding:20px;
-			width:325px;
-			height:275px;
-			font-size: 17px;
-		}
-		
-		.works-div-wrapper{
-			background: var(--off-purple-color); 
-			height:100%;
-			margin-left:-25px;
-			margin-right:-25px;
-		}
-		.works-div{
-			width:70%;
-			max-width:900px;
-			margin: auto;
-			text-align: left;
-		}
-		
-		.works-title{
-			color:var(--off-white-color);
-			font-size: 28px;
-		}
-		
-		.evolve-div:hover{
-			background: #343b4b; 
-		}
-		
-		.evolve-title {
-			text-align: center;
-			color:var(--off-white-color);
-			font-size: 28px;
-			font-weight: 500;
-		}
-		
-		.why{
-			color:var(--off-black-color);
-			font-size:45px;
-			text-align: center;
-		}
-		
-		.circle-table{
-				margin-top: 20px;
-				margin-left:auto; 
-				margin-right:auto;
-				table-layout: fixed;
-				width: 100%; 
-				min-width: 400px;
-				max-width: 800px;
-				text-align: center;
-				color:white;
-				font-family : Avenir;
-				font-size: 25px;
-
-			}
-			
-			.circle-title {
-				font-size: 24px;
-				padding-left:20px;
-				padding-right:20px;
-			}
-			
-			.circle-description {
-				font-size: 14px;
-				opacity: .6;
-				padding-left:20px;
-				padding-right:20px;
-			}
-		
-			.circle:hover {
-				opacity: .8;
-			}
-			
-			.circle {
-				border-radius: 50%;
-				text-align: center;
-				background: white;
-				position: relative;
-				width: 20vw;
-				height: 20vw;
-				max-width: 100px;
-				max-height: 100px;
-				margin: 0 auto;
-				margin-top: 0px;
-				border: none;
-				min-width: 110px;
-				min-height: 110px;
-				margin-bottom:10px;
-				
-			}
-		.button-text-link{
-			font-size:18px;
-			color: var(--link-blue-color);
-			position: relative; 
-			top: 20px;
-			padding-bottom: 10px;
-			text-decoration: none;
-		}
-		.button-text-link:hover{
-			text-decoration: underline;
-			cursor: pointer;
-		}
-		
-		.foreground{
-			position: relative;
-			z-index: 1;
-		}
-		
-		
-		.why-div{
-			background: var(--off-white-color); 
-			height:100%;
-			margin-left:-25px;
-			margin-right:-25px;
-		}
-		
-		.line-div{
-			background: var(--off-white-color); 
-			height:100px;
-			margin-left:-25px;
-			margin-right:-25px;
-		}
-		
-		.quote-div-wrapper{
-			background: var(--off-purple-color); 
-			height:100%;
-			margin-left:-25px;
-			margin-right:-25px;
-		}
-		.quote-div{
-			width:70%;
-			max-width:700px;
-			margin: auto;
-			text-align: center;
-			color: var(--off-white-color); 
-			font-size: 30px;
-			padding-top: 30px;
-			padding-bottom: 50px;
-			font-style: italic;
-		}
-		
-		.spacer-div{
-			background: var(--off-white-color); 
-			height:25px;
-			margin-left:-25px;
-			margin-right:-25px;
-		}
-		
-		.mobile-appear{
-			display: none;
-		}
-		
-		#bm{
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			overflow: hidden;
-			//border:1px dashed red;
-			width:100% !important; 
-			height:1000px !important;
-			position: fixed;
-			z-index: 0;
-			margin-top: -75px;
-			margin-left: -24px;
-			background-color:black;
-		}
-		
-		#overlay{
-			position: fixed;
-			width: 100%;
-			height: 1000px;
-			background-color:rgb(75, 96, 131, 0.6);
-			//background-color:rgb(34, 49, 68, 0.6);
-			z-index: 0;
-		}
-		
-		#whiteout{
-			position: fixed;
-			width: 100%;
-			height: 1000px;
-			background-color:rgb(256, 256, 256, 0.0);
-			z-index: 0;
-		}
-		
-		.heynow{
-			z-index: -1;
-			flex-shrink: 0 !important;
-			min-width: 100% !important;
-			min-height: 100% !important;
-		}
-		
-		.window {
-			background-color: black;
-			min-height: 820px; 
-
-		}
-		
-		#h1-table{
-			padding-top: 80px;
-		}
-		
-		</style>
-
-		<script>
-		function findBugs(){
-			$("html").animate({ scrollTop: $('#whyHackers').offset().top-65 }, "slow");
-		}
-		function fixBugs(){
-			$("html").animate({ scrollTop: $('#whyOrgs').offset().top-65 }, "slow");
-		}
-		
-		function loadLottieBackground(){
-			backgroundAnimation = bodymovin.loadAnimation({
-						container: document.getElementById('bm'),
-						renderer: 'svg',
-						loop: false,
-						autoplay: false,
-						path: '/lottie/home.json',
-						rendererSettings: {
-							className:'heynow',
-							preserveAspectRatio: 'xMidYMid slice', // Supports the same options as the svg element's preserveAspectRatio property
-							clearCanvas: false,
-							progressiveLoad: false, // Boolean, only svg renderer, loads dom elements when needed. Might speed up initialization for large number of elements.
-							hideOnTransparent: true, //Boolean, only svg renderer, hides elements when opacity reaches 0 (defaults to true)
-							}
-					});
-				
-			function playAndPause(){
-				backgroundAnimation.play(); 
-			}
-			
-			setTimeout(playAndPause, 2000);
-			
-			$(window).scroll(function() {
-
-				maxHeight = 700.0;
-				mapped = $(window).scrollTop()/maxHeight;
-				//newColorStr = 'rgb(242,242,242, ' + mapped.toString() + ')';
-				newColorStr = 'rgb(64,72,93, ' + mapped.toString() + ')';
-				document.getElementById('whiteout').style.backgroundColor = newColorStr;
-			})
-		
-		}
-		</script>
-	
-	</head>
-		
-
-	<div id="header"></div>
-	
-	<body class="content" style="padding-top:66px;padding:16px;" onload="loadLottieBackground()">
-	
-		<div id="bm"><div id="overlay"></div><div id="whiteout"></div></div>
-	
-
-		
-		<div class="window">
-
-			<table width="100%" id="h1-table">
-				<tr>
-					<td><hr class="separator--line line-right"></td>
-					<td style="width:1px; padding: 0 10px; white-space: nowrap;">
-						<h1 id="bugpoc">
-							BugPoC
-						</h1>
-					 </td>
-					<td><hr class="separator--line line-left"></td>
-				</tr>
-			</table>
-			
-			
-			<h2>
-			A Platform to Build and Share
-			<br>
-			Proof-of-Concepts
-			</h2>
-			<br>
-			<table style="table-layout: fixed; width: 100%;">
-				<tr>
-					<td id="button-left-div" style="width:50%; text-align: right; padding-right:30px">
-						<button class="scroll-button foreground" onclick="findBugs()">
-							I Find Bugs &#8250;
-						</button>
-					</td>
-					<td id="button-right-div" style="width:50%; text-align: left;padding-left:30px">
-						<button class="scroll-button foreground" onclick="fixBugs()">
-							I Fix Bugs &#8250;
-						</button>
-					</td>				
-				</tr>
-			</table>
-			<br><br><br><br>
-			<div style="text-align: center;">
-				<a href="/about" class="about-link">
-					About BugPoC &#8250;
-				</a>
-			</div>
-
-			<div style="text-align: center; width: 97%;position: absolute;">
-						<br><br><br><br><br><br><br>
-				<p style="">
-					<a style="opacity: .5;color: var(--off-white-color); text-decoration: none;" href="/covid19">
-						Learn how your PoC can help fight COVID-19 &#8250;
-					</a>
-				</p>
-			</div>
-			
-		</div>
-		<div class="tagline-div foreground" id="page-start">
-			<br><br>
-			<span class="tagline">
-				It's time for bug reporting to evolve.
-			</span>
-			<br><br><br>
-			<table class="animated bounceInUp" style="table-layout: fixed; width: 100%;">
-				<tr>
-					<td class=" mobile-gone" style="width:50%; text-align: left; padding-right:10px">
-						<div class="evolve-div" style="float:right;color:var(--off-white-color)">
-							<div class="evolve-title">Before BugPoC</div>
-							<ul>
-								<li style="padding: 5px;">Bug reports had best-effort reproduction steps and screenshots.</li>
-								<li style="padding: 5px;">Software developers installed complicated PenTest tools.</li>
-								<li style="padding: 5px;">Security engineers provided tech support for every issue.</li>
-								<li style="padding: 5px;">Issues took days or weeks to reproduce.</li>
-							</ul>
-						</div>
-					</td>
-					<td style="width:50%; text-align: left;padding-left:10px">
-						<div class="evolve-div" style="color:var(--off-white-color)">
-							<div class="evolve-title desktop-after-title">After BugPoC</div><div class="evolve-title mobile-after-title"></div>
-							<ul>
-								<li style="padding: 5px;">Bug reports have live working demos.</li>
-								<li style="padding: 5px;">No PenTest tools needed. All bugs are reproduced straight from the browser.</li>
-								<li style="padding: 5px;">External bug reports can be immediately handed-off to product teams.</li>
-								<li style="padding: 5px;">Instant 1-click reproduction.</li>
-							</ul>
-						</div>
-					</td>				
-				</tr>
-			</table>
-			<br><br>			
-			<br>
-		</div>
-		
-		<style>
-
-		.arrow{
-			position:absolute;
-			margin-top:-75px;
-			margin-left:160px;
-		}
-		
-		.arrow:before {
-				content: "";
-				height: 4px;
-				background-color: white;
-				display: inline-block;
-				top: 8px;
-				position: absolute;
-				width: 70px;
-		}
-
-		.arrow:after {
-				content: "";
-				display: inline-block;
-				font-style: normal;
-				position: absolute;
-				width: 0.6em;
-				height: 0.6em;
-				border-right: 0.2em solid white;
-				border-top: 0.2em solid white;
-				transform: rotate(45deg);
-				margin-left:50px;
-		}
-		@media screen and (max-width: 1100px){
-			.arrow:before { 
-				visibility: hidden;
+			if (session.isValid()){
+				currentSession = session.idToken.jwtToken;
 			} 
-			.arrow:after {
-				visibility: hidden;
-			}
-			.arrow {
-			}
-		}
-		
+		});
+	}
+	return currentSession;
+}
 
-		</style>
+function forceTokenRefresh(onSuccess){
+	getCurrentUserPool().getCurrentUser().refreshSession(getCurrentAuthedUserObject().Session.getRefreshToken(),onSuccess);
+}
+
+function refreshTokenIfNeeded(){
+	var cognitoUser = getCurrentUserPool().getCurrentUser();
+	var currentSession = null;
+	if (cognitoUser != null) {
+		cognitoUser.getSession(function(err, session) {
+			if (!session.isValid()){
+				forceTokenRefresh(function(){});
+			} 
+		});
+	}
+}
+
+setInterval(refreshTokenIfNeeded, 300000);
+
+function getCurrentUserData(){
+	var cognitoUser = getCurrentUserPool().getCurrentUser();
+	var userdata = null;
+	if (cognitoUser != null) {
+		cognitoUser.getSession(function(err, session) {
+			if (err) {
+				console.log(err);
+				return;
+			}
+			if (session.isValid()){
+				userdata =  session.idToken.payload;
+			}
+		});
+	}
+	return userdata;
+}
+
+// uses LocalStorage to get the current user
+// for some weird reason, this object doesnt have the session attached
+// but getSession() works fine so this function just re-assigns "Session"
+function getCurrentAuthedUserObject(){
+	var cognitoUser = getCurrentUserPool().getCurrentUser();
+	if (cognitoUser != null) {
+		cognitoUser.getSession(function(err, session) {
+			if (err) {
+				console.log(err);
+				return;
+			}
+			if (session.isValid()){
+				cognitoUser.Session =  session;
+			}
+		});
+	}
+	return cognitoUser;
+}
+
+function verifyNotSignedIn(){
+	if (getCurrentUserData() != null){
+		location.replace('/account');
+	} 
+}
+
+function verifySignedIn(callback){
+	if (getCurrentUserData() == null){
+		location.replace('/signin');
+	} else {
+		document.getElementById('auth-body').style.visibility = 'visible';
+		callback();
+	}
+}
+
+function verifySignedInAsTester(callback){
+	if (getCurrentUserData() == null || getCurrentUserType() != 'tester'){
+		location.replace('/signin');
+	} else {
+		document.getElementById('auth-body').style.visibility = 'visible';
+		callback();
+	}
+}
+
+function verifySignedInAsOrganization(callback){
+	if (getCurrentUserData() == null || getCurrentUserType() != 'organization'){
+		location.replace('/signin#org');
+	} else {
+		document.getElementById('auth-body').style.visibility = 'visible';
+		callback();
+	}
+}
+
+
+
+</script>
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3b3a3a">
+<meta name="msapplication-TileColor" content="#f2f2f2">
+<meta name="theme-color" content="#ffffff">
+</head>
+
+<style>
+
+.header:after{
+	content: "beta";
+	position: fixed;
+	width: 80px;
+	height: 25px;
+	background: #EE8E4A;
+	top: 7px;
+	left: -20px;
+	text-align: center;
+	font-size: 13px;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	line-height: 27px;
+	transform:rotate(-45deg);
+}
 	
-		
-		<div class="works-div-wrapper foreground">
-			<div class="works-div">
-				<br><br>
-				<div class="works-title"> How it works: </div>
-				<br>
-				<table class="circle-table scroll-animations" style="visibility: hidden;" animation="fadeInDown">
-					<tr>
-						<td>
-							<div class="circle">
-								<img src="/icons/foundbug.svg" style="margin-top:12%" width="70%">
-							</div>
-							<div class="arrow"></div>
 
-						</td>
-						<td>
-							<div class="circle">
-								<img src="/icons/wrench.svg" style="margin-top:20%" width="60%">
-							</div>
-							<div class="arrow"></div>
-						</td>
-						<td class="mobile-gone">
-							<div class="circle">
-								<img src="/icons/repro.svg" style="margin-top:12%" width="74%">
-							</div>
-							<div class="arrow"></div>
-						</td>
-						<td class="mobile-gone">
-							<div class="circle">
-								<img src="/icons/bandage.svg" style="margin-top:10%" width="80%">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 <div class="circle-title">Hacker Finds a Bug</div>
-						</td>
-						<td>
-							 <div class="circle-title">Hacker Builds the PoC</div>
-						</td>
-						<td class="mobile-gone">
-							 <div class="circle-title">Organization Reproduces the Bug</div>
-						</td>
-						<td class="mobile-gone">
-							 <div class="circle-title">Issue gets fixed much faster</div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							 <div class="circle-description">Using normal PenTest tools like Burp Suite&reg; and OWASP ZAP&reg;</div>
-						</td>
-						<td>
-							 <div class="circle-description">Attaches the BugPoC link to Bug Bounty Submission or PenTest Deliverable</div>
-						</td>
-						<td class="mobile-gone">
-							 <div class="circle-description">Instantly, without any complicated tools or setup</div>
-						</td>
-						<td class="mobile-gone">
-							 <div class="circle-description">Software Developers can get back to making great products </div>
-						</td>
-					</tr>
+	.logo-text{
+		font-size:25px;
+		font-family : Avenir;
+		color: var(--off-white-color);
+		text-decoration: none;
 
-				</table>
-			</div>
-			<br><br><br>
-		</div>
+	}
+	.logo-text:hover{
+		opacity: .8;
+		cursor: pointer;
+	}
+	
+	.nav-text{
+		text-decoration: none;
+
+		font-size:20px;
+		font-family : Avenir;
+		color: var(--off-white-color);
+		float: right;
+		margin-right: 20px;
+		margin-top: 4px;
+
+	}
+	
+	.text-underline:after
+	{
+		position: absolute;
+		opacity: 0;
+		width: 0%;
+		height: 2px;
+		content: '';
+		background: var(--off-white-color);
+		transition: all 0.3s;
+		left: 0px;
+		bottom: 0px;
+		opacity: .8;
+
+	}
+
+
+	.text-underline:hover:before, .text-underline:hover:after
+	{
+		opacity: 1;
+		width: 100%;
+	}
+
+	.text-underline
+	{
+		padding-bottom: 5px;
+		position: relative;
+		z-index: 0;
+		cursor: pointer;
+	}
+	
+	.nav-text:hover{
+		opacity: .8;
+		cursor: pointer;
+	}
+	
+	.far-right{
+		margin-right: 40px;
+
+	}
+
+	.header {
+		padding: 10px 16px;
+		margin-left: -24px;
+		//background: var(--off-black-color);
+		background: rgba(59, 58, 58, .85);
+		color: var(--off-white-color);
+		//opacity: .75;
+		z-index:1000;
+		height: 35px;
+		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(5px); 
+		//animation: fadein 1s;
+
+
+	}
+	
+	.transition{
+		transition: all .25s ease-in-out;
+		-moz-transition: all .25s ease-in-out;
+		-webkit-transition: all .25s 
 		
-		<div class="why-div foreground">
-			<br><br><br>
-			<div class="why" id="whyHackers">
-				Why Hackers Use BugPoC
-			</div>
-			<br><br><br><br><br>
-			<table style="table-layout: fixed; width: 100% ;">
-				<tr class="mobile-appear">
-					<td>
-						<div style="width: 100vw; text-align: center;">
-							<x-lottie-player class="scroll-animations" animation="fadeInLeft" status="paused"
-									src="/lottie/tools.json" style="display:inline-block;visibility:hidden;width: 300px;">
-							</x-lottie-player>
-							<br><br><br><br><br>
-						<div>
-					</td>
-				</tr>
-				<tr>
-					<td style="width:50%; text-align: right; padding-right:40px;" class="mobile-gone">
-						<x-lottie-player class="scroll-animations" animation="fadeInLeft" status="paused"
-								src="/lottie/tools.json" style="display:inline-block;visibility:hidden;width:100%;max-width: 300px;" >
-						</x-lottie-player>
-					</td>
-					<td style="width:50%;">
-						<div style="max-width: 350px;vertical-align: text-top;padding:20px;margin-top:-50px;margin-left:5%; color:var(--off-purple-color); visibility: hidden;" class="scroll-animations" animation="fadeIn">
-								<span style="font-size: 35px; "> Every cool bug deserves a working demo. </span>
-								<p>
-							 	Stop putting CSRF PoCs on your personal blog and teaching Project Managers how to install Burp. Build it on BugPoC and rest assured that everyone will be able to repro your bug instantly, without any fancy tools or debugging. 
-								</p>
-								<a style="top:-0px;" href="/testers" class="button-text-link">Learn more &#8250;</a>
-						</div>
-					</td>
-				</tr>
-			</table>
-			<br><br><br>
-		</div>
-		<div class="line-div foreground">
-			<br><br><hr style="width:80%;max-width: 800px; border: .5px solid var(--off-purple-color);" class="scroll-animations" animation="fadeInLeft"><br><br>
-		</div>
-		<div class="why-div foreground">
-			<br><br>
-			<div class="why" id="whyOrgs">
-				Why Organizations Use BugPoC
-			</div>
-			<br><br><br><br><br>
-			<table style="table-layout: fixed; width: 100% ;">
-				<tr class="mobile-appear">
-					<td>
-						<div style="width: 100vw; text-align: center;">
-							<x-lottie-player class="scroll-animations" animation="fadeInLeft" status="paused"
-									src="/lottie/pentests.json" style="display:inline-block;visibility:hidden;width: 300px;" >
-							</x-lottie-player>
-							<br><br><br><br><br>
-						<div>
-					</td>
-				</tr>
-				<tr>
-					<td style="width:50%;">
-						<div style="float:right;margin-top:-100px;text-align: right;" id="why-orgs">
-							<div style=" max-width: 350px;vertical-align: text-top;padding:20px;margin-top:20px;margin-right:5%; color:var(--off-purple-color); visibility: hidden;" class="scroll-animations" animation="fadeIn">
-									<span style="font-size: 35px; "> Reproducing security bugs is a pain. </span>
-									<p>
-									BugPoC lets you see live working demos of every bug. Software developers can repro bugs straight from the browser, without installing complicated PenTest tools or receiving help from the Security Team.
-									</p>
-									<a style="top:-0px;" href="/organizations" class="button-text-link">Learn more &#8250;</a>
-							</div>
-						</div>
-					</td>
-					<td style="width:50%; text-align: left; padding-left:40px;" class="mobile-gone">
-						<x-lottie-player class="scroll-animations" animation="fadeInRight" status="paused"
-								src="/lottie/pentests.json" style="display:inline-block;visibility:hidden;width:100%;max-width: 300px;">
-						</x-lottie-player>
-					</td>
-				</tr>
-			</table>
-			<br><br><br><br>
-		</div>
-		
-		<div class="quote-div-wrapper foreground">
-			<div class="quote-div scroll-animations" style="visibility: hidden;" animation="fadeInUp">
-				If your bug report contains a BugPoC link, you know it will be easy to reproduce, triage, and fix.
-			</div>
-		</div>
-		<div class="spacer-div foreground"></div>
-	</body>
-	<div class="foreground" id="footer"></div>
-</html>
+	}
+	
+	.invisible-header{
+		background: rgba(59, 58, 58, .00) !important;
+		-webkit-backdrop-filter: none !important;
+		backdrop-filter: none !important; 
+	}
+	
+	@keyframes fadein {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+
+	.content {
+		padding: 16px;
+	}
+
+	.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.content {
+		padding-top: 66px;
+	}
+	
+/*	dropdown*/
+
+
+
+
+
+.dropdown-content a {
+	color: black;//var(--off-black-color);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;	
+	text-decoration: none;
+
+
+}
+
+.dropdown-content {
+	
+	visibility: hidden;
+	
+
+	margin-right: 200px;
+
+		float: right;
+
+		background-color: #f9f9f9;
+		min-width: 160px;
+		z-index: 1;
+	
+	font-size:18px;
+	font-family : Avenir;
+	//color: var(--off-white-color);
+	margin-right: 20px;
+	margin-top: 4px;
+	border-left: solid  var(--off-black-color) 1px;
+	border-right: solid  var(--off-black-color) 1px;
+	border-bottom: solid  var(--off-black-color) 1px;
+	margin-top:8px;
+	background-color: rgba(255, 255, 255, 0.9);
+
+   -webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);  
+}
+
+.dropdown-content a:hover {
+	background: rgba(59, 58, 58, .85);
+	color:var(--off-white-color);
+}
+
+
+
+
+</style>
+
+<script>
+function addUnderline(tab){
+	style_id = tab + '-underline';
+	newCSS = `#${tab}:after {
+		position: absolute;
+		opacity: 1;
+		width: 100%;
+		height: 2px;
+		content: '';
+		background: var(--off-white-color);
+		transition: all 0.3s;
+		left: 0px;
+		bottom: 0px;
+		opacity: .8;
+	}`
+	style = document.createElement('style');
+	style.setAttribute('id', style_id);
+	style.innerText = newCSS;
+	document.head.appendChild(style);
+	showDropdown(tab);
+}
+function removeUnderline(tab){
+	style_id = tab + '-underline';
+	document.getElementById(style_id).remove();
+	hideDropdown(tab);
+}
+var shouldHideDropdown = {};
+function showDropdown(tab){
+
+	content_name = tab + '-content';
+	
+	document.getElementById(content_name).style.visibility ='visible';
+	document.getElementById(content_name).parentNode.parentNode.parentNode.parentNode.style.pointerEvents = 'auto';
+
+
+	shouldHideDropdown[tab] = false;
+}
+function hideDropdown(tab){
+	content_name = tab + '-content';
+	shouldHideDropdown[tab] = true;
+	
+	setTimeout(function(content_name){
+
+		if (shouldHideDropdown[tab]) {
+			document.getElementById(content_name).style.visibility ='hidden';
+			document.getElementById(content_name).parentNode.parentNode.parentNode.parentNode.style.pointerEvents = 'none';
+
+		}
+		}, 150,content_name);
+	
+}
+
+// change profile icon depending on user type
+if (getCurrentUserType() == 'tester' && getCurrentSession() != null){
+	document.getElementById('profile-logo-img').src = '/icons/profile-4.svg';
+} else if (getCurrentUserType() == 'organization' && getCurrentSession() != null){
+	document.getElementById('profile-logo-img').src = '/icons/team.svg';
+}
+</script>
+
+<div class="header sticky transition" id="myHeader">
+	<a href="/" class="logo-text">&nbsp;&nbsp;&nbsp;&nbsp;BugPoC</a>
+	
+	<a id="profile-header" href="/account"  style="position: relative;z-index: 0;cursor: pointer;" class="nav-text far-right text-underlinex"><img id="profile-logo-img" src="/icons/profile.svg" style="width:30px;margin-top:-2px">
+<!-- 	change to src="/icons/profile-4.svg" if a bounty hunter signs in -->
+	</a>
+	
+	 <table class="dropdown" style="float:right; margin-right:-33px; margin-top:-3px; pointer-events: none;">
+		<tr>
+			<td style=" padding-left:10px; pointer-events: initial;">
+				<a id="org-header" class="dropbtn nav-text text-underline" style="float:left;" onmouseover="showDropdown('org-header')" onmouseout="hideDropdown('org-header')" href="/organizations">Organizations</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="org-header-content" class="dropdown-content" onmouseover="addUnderline('org-header')" onmouseout="removeUnderline('org-header')" style="">
+					<a href="/organizations/view">View a PoC</a>
+				</div>
+			</td>
+		</tr>
+	</table> 
+	
+<!-- 	<a id="org-header-x" href="/organizations"  class="nav-text text-underline">Organizations</a> -->
+<!-- 	<a id="tester-header" href="/testers.html"  class="nav-text text-underline">Testers</a> -->
+	 <table class="dropdown" style="float:right; margin-right:-105px; margin-top:-3px; pointer-events: none;">
+		<tr>
+			<td style=" padding-left:10px; pointer-events: initial;">
+				<a id="tester-header" class="dropbtn nav-text text-underline" style="float:left;" onmouseover="showDropdown('tester-header')" onmouseout="hideDropdown('tester-header')" href="/testers">Testers</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="tester-header-content" class="dropdown-content" onmouseover="addUnderline('tester-header')" onmouseout="removeUnderline('tester-header')" style="">
+					<a href="/testers/front-end">Front-End PoC</a>
+					<a href="/testers/http">HTTP PoC</a>
+					<a href="/testers/python">Python PoC</a>
+					<a href="/testers/other">Other</a>
+				</div>
+			</td>
+		</tr>
+	</table> 
+	
+
+	
+	
+
+</div>
+
+
+
+<!-- stash the Loading Screen here...  -->
+
+<div class="animated" id="loading-div" style="display:none;z-index:5000;background-color: rgba(256, 256, 256, 0.6);-webkit-backdrop-filter: blur(3px);backdrop-filter: blur(3px);  position: fixed; top: 0; left: 0;width: 100%; height: 100%; animation-fill-mode: forwards; ">
+	<img class="animated" id="loading-img" src="/images/gears.svg" style="position: absolute;top: 42%;left: 50%; width:30%;margin-top:-15%;margin-left: -15%; animation-fill-mode: forwards; ">
+	<div class="animated"  id="loading-txt" style="color:var(--off-black-color);font-size:6vw;position: absolute; left: 36%;top: 62%;font-weight: bold; animation-fill-mode: forwards; ">Loading...</div>
+</div>
+
+<script>
+
+function showLoadingScreen(){
+	document.getElementById('loading-div').classList.add("fadeIn");
+	document.getElementById('loading-div').style.display='inline-block';
+	document.getElementById('loading-img').classList.add("bounceIn");
+	document.getElementById('loading-txt').classList.add("bounceIn");
+	
+	document.getElementById('loading-div').classList.remove("fadeOut");
+	document.getElementById('loading-img').classList.remove("bounceOut");
+	document.getElementById('loading-txt').classList.remove("bounceOut");
+}
+
+function hideLoadingScreen(){
+	document.getElementById('loading-div').classList.remove("fadeIn");
+	document.getElementById('loading-img').classList.remove("bounceIn");
+	document.getElementById('loading-txt').classList.remove("bounceIn");
+	
+	document.getElementById('loading-div').classList.add("fadeOut");
+	document.getElementById('loading-img').classList.add("bounceOut");
+	document.getElementById('loading-txt').classList.add("bounceOut");
+	
+	setTimeout(function(){document.getElementById('loading-div').style.display='none';}, 1000)
+}
+</script>
