@@ -1,521 +1,382 @@
+HTTP/2 200 OK
+Content-Type: text/html
+Last-Modified: Wed, 02 Dec 2020 19:10:45 GMT
+X-Amz-Version-Id: 4omFUGwjTC08HxWCjNPMp8.tLseAlyw.
+Server: AmazonS3
+X-Frame-Options: SAMEORIGIN
+Date: Tue, 09 Sep 2025 20:58:05 GMT
+Etag: W/"7256ab6bc40090ed03205b4ab1957d82"
+Vary: Accept-Encoding
+X-Cache: Hit from cloudfront
+Via: 1.1 2ad26f5878b778b17955978bf962dc9a.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: FRA60-P9
+X-Amz-Cf-Id: 4u28wq5sNj_QWAHwiZIsHxco-uu489d1B_rbio-SNjiyJ2Upv86QrQ==
+Age: 10878
 
-<!-- navigation header -->
-<head>
-<meta name="robots" content="noindex">
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="stylesheet" type="text/css" href="/css/style.css">
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<script src="/js/amazon-cognito-identity.min.js"></script>
-<script>
-
-
-
-var testerCognitoData = { UserPoolId : 'us-west-2_aVUOahU4B',ClientId : 'j2cf2bco2ubve1dhse16krbes'};
-var testerUserPool = new AmazonCognitoIdentity.CognitoUserPool(testerCognitoData);
-
-var organizationCognitoData = { UserPoolId : 'us-west-2_UyEclqpFg',ClientId : '5v4v8ain364fgum9e8a4r7kj2f'};
-var organizationUserPool = new AmazonCognitoIdentity.CognitoUserPool(organizationCognitoData);
-
-function resetPassword(username,confirmationCode,newPassword, onSuccess, onFailure){
-	CU = new AmazonCognitoIdentity.CognitoUser({
-			Username: username,
-			Pool: getCurrentUserPool()
-		});
-	CU.confirmPassword(
-		confirmationCode,
-		newPassword,
-		{
-			onSuccess: onSuccess,
-			onFailure: onFailure
-		}
-	);
-}
-
-function forgotPassword(username , onSuccess, onFailure){
-	CU = new AmazonCognitoIdentity.CognitoUser({
-			Username: username,
-			Pool: getCurrentUserPool()
-		});
-	CU.forgotPassword({
-		onSuccess: onSuccess,
-		onFailure: onFailure
-		});
-}
-
-function getCurrentUserPool(){
-	ut = getCurrentUserType();
-	if (ut=='tester'){
-		return testerUserPool;
-	} else if (ut =='organization'){
-		return organizationUserPool;
-	}
-}
-
-function setCurrentUserType(ut){
-	localStorage.setItem('currentUserType',ut)
-}
-
-function getCurrentUserType(){
-	ut = localStorage.getItem('currentUserType');
-	// assume tester if null
-	if (ut == null){
-		ut = 'tester';
-		setCurrentUserType(ut);
-	}
-	return ut
-}
-
-function getCurrentSession(){
-	var cognitoUser = getCurrentUserPool().getCurrentUser();
-	var currentSession = null;
-	if (cognitoUser != null) {
-		cognitoUser.getSession(function(err, session) {
-			if (err) {
-				console.log(err);
-				return;
-			}
-			if (session.isValid()){
-				currentSession = session.idToken.jwtToken;
-			} 
-		});
-	}
-	return currentSession;
-}
-
-function forceTokenRefresh(onSuccess){
-	getCurrentUserPool().getCurrentUser().refreshSession(getCurrentAuthedUserObject().Session.getRefreshToken(),onSuccess);
-}
-
-function refreshTokenIfNeeded(){
-	var cognitoUser = getCurrentUserPool().getCurrentUser();
-	var currentSession = null;
-	if (cognitoUser != null) {
-		cognitoUser.getSession(function(err, session) {
-			if (!session.isValid()){
-				forceTokenRefresh(function(){});
-			} 
-		});
-	}
-}
-
-setInterval(refreshTokenIfNeeded, 300000);
-
-function getCurrentUserData(){
-	var cognitoUser = getCurrentUserPool().getCurrentUser();
-	var userdata = null;
-	if (cognitoUser != null) {
-		cognitoUser.getSession(function(err, session) {
-			if (err) {
-				console.log(err);
-				return;
-			}
-			if (session.isValid()){
-				userdata =  session.idToken.payload;
-			}
-		});
-	}
-	return userdata;
-}
-
-// uses LocalStorage to get the current user
-// for some weird reason, this object doesnt have the session attached
-// but getSession() works fine so this function just re-assigns "Session"
-function getCurrentAuthedUserObject(){
-	var cognitoUser = getCurrentUserPool().getCurrentUser();
-	if (cognitoUser != null) {
-		cognitoUser.getSession(function(err, session) {
-			if (err) {
-				console.log(err);
-				return;
-			}
-			if (session.isValid()){
-				cognitoUser.Session =  session;
-			}
-		});
-	}
-	return cognitoUser;
-}
-
-function verifyNotSignedIn(){
-	if (getCurrentUserData() != null){
-		location.replace('/account');
-	} 
-}
-
-function verifySignedIn(callback){
-	if (getCurrentUserData() == null){
-		location.replace('/signin');
-	} else {
-		document.getElementById('auth-body').style.visibility = 'visible';
-		callback();
-	}
-}
-
-function verifySignedInAsTester(callback){
-	if (getCurrentUserData() == null || getCurrentUserType() != 'tester'){
-		location.replace('/signin');
-	} else {
-		document.getElementById('auth-body').style.visibility = 'visible';
-		callback();
-	}
-}
-
-function verifySignedInAsOrganization(callback){
-	if (getCurrentUserData() == null || getCurrentUserType() != 'organization'){
-		location.replace('/signin#org');
-	} else {
-		document.getElementById('auth-body').style.visibility = 'visible';
-		callback();
-	}
-}
-
-
-
-</script>
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#3b3a3a">
-<meta name="msapplication-TileColor" content="#f2f2f2">
-<meta name="theme-color" content="#ffffff">
-</head>
-
-<style>
-
-.header:after{
-	content: "beta";
-	position: fixed;
-	width: 80px;
-	height: 25px;
-	background: #EE8E4A;
-	top: 7px;
-	left: -20px;
-	text-align: center;
-	font-size: 13px;
-	font-family: sans-serif;
-	text-transform: uppercase;
-	font-weight: bold;
-	color: #fff;
-	line-height: 27px;
-	transform:rotate(-45deg);
-}
+<!DOCTYPE html>
+<html>
+	<head>
 	
-
-	.logo-text{
-		font-size:25px;
-		font-family : Avenir;
-		color: var(--off-white-color);
-		text-decoration: none;
-
-	}
-	.logo-text:hover{
-		opacity: .8;
-		cursor: pointer;
-	}
-	
-	.nav-text{
-		text-decoration: none;
-
-		font-size:20px;
-		font-family : Avenir;
-		color: var(--off-white-color);
-		float: right;
-		margin-right: 20px;
-		margin-top: 4px;
-
-	}
-	
-	.text-underline:after
-	{
-		position: absolute;
-		opacity: 0;
-		width: 0%;
-		height: 2px;
-		content: '';
-		background: var(--off-white-color);
-		transition: all 0.3s;
-		left: 0px;
-		bottom: 0px;
-		opacity: .8;
-
-	}
+	<meta name="Description" content="A Platform for Security Experts to Build and Share Proof-of-Concepts | Sign-In">
 
 
-	.text-underline:hover:before, .text-underline:hover:after
-	{
-		opacity: 1;
-		width: 100%;
-	}
 
-	.text-underline
-	{
-		padding-bottom: 5px;
-		position: relative;
-		z-index: 0;
-		cursor: pointer;
-	}
-	
-	.nav-text:hover{
-		opacity: .8;
-		cursor: pointer;
-	}
-	
-	.far-right{
-		margin-right: 40px;
+	<meta name="viewport" content="width=device-width, initial-scale=.85">
 
-	}
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154052950-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	.header {
-		padding: 10px 16px;
-		margin-left: -24px;
-		//background: var(--off-black-color);
-		background: rgba(59, 58, 58, .85);
-		color: var(--off-white-color);
-		//opacity: .75;
-		z-index:1000;
-		height: 35px;
-		-webkit-backdrop-filter: blur(5px);
-		backdrop-filter: blur(5px); 
-		//animation: fadein 1s;
+		gtag('config', 'UA-154052950-1');
+	</script>
 
 
-	}
-	
-	.transition{
-		transition: all .25s ease-in-out;
-		-moz-transition: all .25s ease-in-out;
-		-webkit-transition: all .25s 
-		
-	}
-	
-	.invisible-header{
-		background: rgba(59, 58, 58, .00) !important;
-		-webkit-backdrop-filter: none !important;
-		backdrop-filter: none !important; 
-	}
-	
-	@keyframes fadein {
-		0% {
-			opacity: 0;
-		}
-		100% {
+		<meta charset="UTF-8">
+		<title>Sign In | BugPoC</title>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/css/switch.css">
+		<script src="/js/jquery.js"></script>
+		<link rel="stylesheet" href="/css/animate.min.css">
+<!-- 		<script src="/js/amazon-cognito-identity.min.js"></script> -->
+		<script type='text/javascript'>
+			$(document).ready(function(){
+			 $( "#header" ).load( "header.html", function(){verifyNotSignedIn();populateFromFragment()});
+			});
+		  </script>
+		<style>
+
+		#profile-header:after {
+			position: absolute;
 			opacity: 1;
-		}
-	}
-
-	.content {
-		padding: 16px;
-	}
-
-	.sticky {
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
-
-	.content {
-		padding-top: 66px;
-	}
-	
-/*	dropdown*/
-
-
-
-
-
-.dropdown-content a {
-	color: black;//var(--off-black-color);
-	padding: 12px 16px;
-	text-decoration: none;
-	display: block;	
-	text-decoration: none;
-
-
-}
-
-.dropdown-content {
-	
-	visibility: hidden;
-	
-
-	margin-right: 200px;
-
-		float: right;
-
-		background-color: #f9f9f9;
-		min-width: 160px;
-		z-index: 1;
-	
-	font-size:18px;
-	font-family : Avenir;
-	//color: var(--off-white-color);
-	margin-right: 20px;
-	margin-top: 4px;
-	border-left: solid  var(--off-black-color) 1px;
-	border-right: solid  var(--off-black-color) 1px;
-	border-bottom: solid  var(--off-black-color) 1px;
-	margin-top:8px;
-	background-color: rgba(255, 255, 255, 0.9);
-
-   -webkit-backdrop-filter: blur(5px);
-	backdrop-filter: blur(5px);  
-}
-
-.dropdown-content a:hover {
-	background: rgba(59, 58, 58, .85);
-	color:var(--off-white-color);
-}
-
-
-
-
-</style>
-
-<script>
-function addUnderline(tab){
-	style_id = tab + '-underline';
-	newCSS = `#${tab}:after {
-		position: absolute;
-		opacity: 1;
-		width: 100%;
-		height: 2px;
-		content: '';
-		background: var(--off-white-color);
-		transition: all 0.3s;
-		left: 0px;
-		bottom: 0px;
-		opacity: .8;
-	}`
-	style = document.createElement('style');
-	style.setAttribute('id', style_id);
-	style.innerText = newCSS;
-	document.head.appendChild(style);
-	showDropdown(tab);
-}
-function removeUnderline(tab){
-	style_id = tab + '-underline';
-	document.getElementById(style_id).remove();
-	hideDropdown(tab);
-}
-var shouldHideDropdown = {};
-function showDropdown(tab){
-
-	content_name = tab + '-content';
-	
-	document.getElementById(content_name).style.visibility ='visible';
-	document.getElementById(content_name).parentNode.parentNode.parentNode.parentNode.style.pointerEvents = 'auto';
-
-
-	shouldHideDropdown[tab] = false;
-}
-function hideDropdown(tab){
-	content_name = tab + '-content';
-	shouldHideDropdown[tab] = true;
-	
-	setTimeout(function(content_name){
-
-		if (shouldHideDropdown[tab]) {
-			document.getElementById(content_name).style.visibility ='hidden';
-			document.getElementById(content_name).parentNode.parentNode.parentNode.parentNode.style.pointerEvents = 'none';
+			width: 100%;
+			height: 2px;
+			content: '';
+			background: var(--off-white-color);
+			transition: all 0.3s;
+			left: 0px;
+			bottom: 0px;
+			opacity: .8;
 
 		}
-		}, 150,content_name);
-	
-}
+		
 
-// change profile icon depending on user type
-if (getCurrentUserType() == 'tester' && getCurrentSession() != null){
-	document.getElementById('profile-logo-img').src = '/icons/profile-4.svg';
-} else if (getCurrentUserType() == 'organization' && getCurrentSession() != null){
-	document.getElementById('profile-logo-img').src = '/icons/team.svg';
-}
-</script>
+		.bg-2::after {
+			
+			content: "";
+			background: url("/images/light-gradient.jpeg");
 
-<div class="header sticky transition" id="myHeader">
-	<a href="/" class="logo-text">&nbsp;&nbsp;&nbsp;&nbsp;BugPoC</a>
-	
-	<a id="profile-header" href="/account"  style="position: relative;z-index: 0;cursor: pointer;" class="nav-text far-right text-underlinex"><img id="profile-logo-img" src="/icons/profile.svg" style="width:30px;margin-top:-2px">
-<!-- 	change to src="/icons/profile-4.svg" if a bounty hunter signs in -->
-	</a>
-	
-	 <table class="dropdown" style="float:right; margin-right:-33px; margin-top:-3px; pointer-events: none;">
-		<tr>
-			<td style=" padding-left:10px; pointer-events: initial;">
-				<a id="org-header" class="dropbtn nav-text text-underline" style="float:left;" onmouseover="showDropdown('org-header')" onmouseout="hideDropdown('org-header')" href="/organizations">Organizations</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div id="org-header-content" class="dropdown-content" onmouseover="addUnderline('org-header')" onmouseout="removeUnderline('org-header')" style="">
-					<a href="/organizations/view">View a PoC</a>
+/*			background: var(--background-image);*/
+			
+	//		filter: blur(0px) grayscale(25%);
+
+			opacity: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;   
+			/* Full height */
+			height: 100%; 
+			min-height: 700px;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-animation: slowin 2s ; /* Chrome, Safari, Opera */
+			animation: slowin 2s ;
+		}
+		
+		.bg::after {
+			content: "";
+			background: url("/images/dark-gradient.jpeg");
+
+/*			background: var(--background-image);*/
+			
+		//	filter: blur(0px) grayscale(25%);
+
+			opacity: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;   
+			/* Full height */
+			height: 100%; 
+			min-height: 700px;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-animation: slowin 2s ; /* Chrome, Safari, Opera */
+			animation: slowin 2s ;
+		}
+		 /* Chrome, Safari, Opera */
+			@-webkit-keyframes slowin {
+				from {opacity: 0;}
+				to {opacity: 1;}
+			}
+
+			/* Standard syntax */
+			@keyframes slowin {
+				from {opacity: 0;}
+				to {opacity: 1;}
+			}
+			
+			body {
+				background-color: var(--off-black-color);
+			}
+
+		
+		#view-h2 {
+			font-size: 45px;
+			font-family : Avenir;
+			text-align: center;
+			//animation: fadein 1.5s;
+			color: var(--off-white-color);
+			text-shadow:
+			   -1px -1px 0 var(--off-black-color),  
+				1px -1px 0 var(--off-black-color),
+				-1px 1px 0 var(--off-black-color),
+				 1px 1px 0 var(--off-black-color);
+			position: relative; 
+			top: 5px;
+			position: relative; 
+		}
+
+		.frosted {
+			background-color: rgba(255, 255, 255, 0.6);
+
+		   -webkit-backdrop-filter: blur(5px);
+			backdrop-filter: blur(5px);  
+
+		}
+
+		.view-button{
+			background-color: var(--off-black-color);
+			color:var(--off-white-color);
+			width:100%;
+			height:50px;
+			border: 1px solid var(--off-black-color);
+			cursor: pointer;
+			font-size:22px;
+		}
+		.view-button:hover{
+			background-color: var(--off-white-color);
+			color:var(--off-black-color);
+		}
+		
+		.bugpoc-id-input {
+			font-size: 22px;
+			font-family : Avenir;
+			border: 1px solid var(--off-black-color);
+			padding:0px;
+			height:50px;
+			text-align: center;
+			margin:0px;
+			width:100%;
+			background-color: var(--off-white-color);
+		}
+		
+		.grayedout-input{
+			background-color: lightgray;
+			color:gray
+		}
+		
+		.bugpoc-id-input::placeholder {
+			opacity: .4;
+
+		}
+		
+		.wrapper {
+			padding:30px;
+			padding-bottom: 15px;
+			width:320px;
+			margin:auto;
+			border: 1px solid  var(--off-black-color);
+
+		}
+		
+		</style>
+		<script>
+		
+		
+
+		function signIn(username,password,onSuccess,onFailure){
+			document.getElementById('view-poc-button').setAttribute('disabled', '');
+			document.getElementById('loading-blocks').style.visibility = 'visible';
+
+			
+			var userData = {
+				Username : username,
+				Pool : getCurrentUserPool()
+			};
+
+			var authenticationData = {
+				Username : username, 
+				Password : password, 
+			};
+
+			var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
+			 
+			var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+			
+			cognitoUser.authenticateUser(authenticationDetails, {
+				onSuccess: onSuccess,
+				onFailure: onFailure
+			});
+
+		}		
+		function signinFailure(err){
+			document.getElementById('view-poc-button').removeAttribute('disabled');
+			document.getElementById('loading-blocks').style.visibility = 'hidden';
+			//alert('Uh Oh, something went wrong...');
+			//alert(JSON.stringify(err));
+			document.getElementById('bugpoc-password').style.border = '1px solid red';
+			document.getElementById('bugpoc-password').style.color='red';
+			animateCSS('#bugpoc-password','shake',function(){
+				document.getElementById('bugpoc-password').style.border = '1px solid var(--off-black-color)';
+				document.getElementById('bugpoc-password').style.color='black';
+			});
+		}
+		function animateCSS(element, animationName, callback) {
+			const node = document.querySelector(element)
+			node.classList.add('animated', animationName)
+
+			function handleAnimationEnd() {
+				node.classList.remove('animated', animationName)
+				node.removeEventListener('animationend', handleAnimationEnd)
+
+				if (typeof callback === 'function') callback()
+			}
+
+			node.addEventListener('animationend', handleAnimationEnd)
+		}
+		
+		function signinSuccess(){
+			document.getElementById('view-poc-button').removeAttribute('disabled');
+			document.getElementById('loading-blocks').style.visibility = 'hidden';
+			animateCSS('#view-h2','fadeOut',function(){
+				document.getElementById('view-h2').style.display='none';
+			})
+			animateCSS('#switch-toggle','fadeOut',function(){
+				document.getElementById('switch-toggle').style.display='none';
+			})
+			animateCSS('#sign-in-wrapper','bounceOutUp',function(){
+				document.getElementById('sign-in-wrapper').style.display='none';
+				location.assign('/account');
+			})
+			
+			
+		}
+		
+		function doSignin(){
+			email = document.getElementById('bugpoc-email').value;
+			password = document.getElementById('bugpoc-password').value;
+			signIn(email,password,signinSuccess,signinFailure);
+		}
+		
+		setTimeout(function(){document.getElementById("bugpoc-email").focus()},1000);
+
+		function toggleTesterOrg(isTester){
+			if (isTester){
+				document.body.classList.remove('bg-2');
+				void document.body.offsetWidth;
+				document.body.classList.add('bg');
+				//document.getElementById('invite-only-div').style.display = 'none';
+				//document.getElementById('join-link-div').style.display = 'inline-block';
+				setCurrentUserType('tester');
+			} else {
+				document.body.classList.remove('bg');
+				void document.body.offsetWidth;
+				document.body.classList.add('bg-2');
+				//document.getElementById('invite-only-div').style.display = 'inline-block';
+				//document.getElementById('join-link-div').style.display = 'none';
+				setCurrentUserType('organization')
+			}
+		}
+		
+		
+		function populateFromFragment(){
+			fragment = decodeURIComponent(window.location.hash.substr(1));
+			if (fragment == ''){
+				toggleTesterOrg(true);
+				return
+			}
+			// remove hash from URI (including # sign)
+			window.history.replaceState('', document.title, window.location.pathname+ window.location.search);
+			if (fragment == 'org'){
+				document.getElementById('q2').click();
+			} 
+		}
+		
+
+		
+		</script>
+	</head>
+	<div id="header"></div>
+<!-- 	 -->
+	<body onload="document.getElementById('sign-in-wrapper').style.visibility = ''"  style="padding: 16px;padding-top:66px;" class="content bg" >
+
+		<h2 id="view-h2">Sign In</h2>
+
+			<div class='switch' id="switch-toggle"><div class='quality'>
+				<input checked id='q1' name='q' type='radio' value='q1' onchange='toggleTesterOrg(true)'>
+				<label for='q1'>Tester</label>
+			</div><div class='quality'>
+					<input id='q2' name='q' type='radio' value='q2' onchange='toggleTesterOrg(false)'>
+					<label for='q2'>Organization</label>
 				</div>
-			</td>
-		</tr>
-	</table> 
-	
-<!-- 	<a id="org-header-x" href="/organizations"  class="nav-text text-underline">Organizations</a> -->
-<!-- 	<a id="tester-header" href="/testers.html"  class="nav-text text-underline">Testers</a> -->
-	 <table class="dropdown" style="float:right; margin-right:-105px; margin-top:-3px; pointer-events: none;">
-		<tr>
-			<td style=" padding-left:10px; pointer-events: initial;">
-				<a id="tester-header" class="dropbtn nav-text text-underline" style="float:left;" onmouseover="showDropdown('tester-header')" onmouseout="hideDropdown('tester-header')" href="/testers">Testers</a>
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<div id="tester-header-content" class="dropdown-content" onmouseover="addUnderline('tester-header')" onmouseout="removeUnderline('tester-header')" style="">
-					<a href="/testers/front-end">Front-End PoC</a>
-					<a href="/testers/http">HTTP PoC</a>
-					<a href="/testers/python">Python PoC</a>
-					<a href="/testers/other">Other</a>
-				</div>
-			</td>
-		</tr>
-	</table> 
-	
+			</div>
+		
+		<img id="loading-blocks" src="/icons/loading-blocks.svg" style="visibility: hidden; position: absolute; margin-left:auto;margin-right:auto;right:0;left:0; height:50px; margin-top:118px;z-index:1000;">
+		
+		<div id="sign-in-wrapper" style="visibility:none" class="wrapper frosted animated bounceInUp">
+			<div style="font-size:20px;padding-bottom:5px;font-weight: 500;">Email: </div>
+			<input id="bugpoc-email" class="bugpoc-id-input" type="text" ><br>
+			<br>
+			<div style="font-size:20px;padding-bottom:5px;font-weight: 500;">Password: </div>
+			<input id="bugpoc-password"  class="bugpoc-id-input animated" type="password" ><br>
+			<input type="checkbox" onclick="togglePasswordShow()">Show Password
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style="font-size:12px" href="/forgot">Forgot Password</a>
+			<br><br>
+			<button id="view-poc-button" class="view-button" onclick="doSignin()" >
+				<span class="button-text-big">Sign In &#8250;</span>
+			</button>
+			
+<!-- 			<div id="invite-only-div" style="display:none;opacity:.4;text-align:center;font-size: 14px;pzosition: absolute;left:0;right:0;margin-left:auto;margin-right:auto;bottom:0;padding-top:15px;">BugPoC (for Organizations) is currently invite-only.<br>You can request access by clicking <a href="mailto:access@bugpoc.com?subject=Access%20Request&body=Hello,%20My%20company%20would%20like%20early%20access%20to%20BugPoC.%0A%0AName:%0AEmail:%0ACompany:%0AAbout%20Us:%0A%0AThanks!">here</a>.</div> -->
+			<div id="join-link-div" style="display:inline-block;opacity:1;text-align:center;font-size: 14px;pxosition: absolute;left:0;right:0;margin-left:auto;margin-right:auto;padding-top:15px;padding-bottom:0px">New to BugPoC? <a href="/join">Create Account</a></div>
+			<script>
+			function togglePasswordShow() {
+				var x = document.getElementById("bugpoc-password");
+				if (x.type === "password") {
+					x.type = "text";
+				} else {
+					x.type = "password";
+				}
+			}
+			
+			// Get the input field
+			var input = document.getElementById("bugpoc-password");
 
-	
-	
+			// Execute a function when the user releases a key on the keyboard
+			input.addEventListener("keyup", function(event) {
+				// Number 13 is the "Enter" key on the keyboard
+				if (event.keyCode === 13) {
+					// Cancel the default action, if needed
+					event.preventDefault();
+					// Trigger the button element with a click
+					document.getElementById("view-poc-button").click();
+				}
+			});
+			</script>
+		</div>
 
-</div>
-
-
-
-<!-- stash the Loading Screen here...  -->
-
-<div class="animated" id="loading-div" style="display:none;z-index:5000;background-color: rgba(256, 256, 256, 0.6);-webkit-backdrop-filter: blur(3px);backdrop-filter: blur(3px);  position: fixed; top: 0; left: 0;width: 100%; height: 100%; animation-fill-mode: forwards; ">
-	<img class="animated" id="loading-img" src="/images/gears.svg" style="position: absolute;top: 42%;left: 50%; width:30%;margin-top:-15%;margin-left: -15%; animation-fill-mode: forwards; ">
-	<div class="animated"  id="loading-txt" style="color:var(--off-black-color);font-size:6vw;position: absolute; left: 36%;top: 62%;font-weight: bold; animation-fill-mode: forwards; ">Loading...</div>
-</div>
-
-<script>
-
-function showLoadingScreen(){
-	document.getElementById('loading-div').classList.add("fadeIn");
-	document.getElementById('loading-div').style.display='inline-block';
-	document.getElementById('loading-img').classList.add("bounceIn");
-	document.getElementById('loading-txt').classList.add("bounceIn");
-	
-	document.getElementById('loading-div').classList.remove("fadeOut");
-	document.getElementById('loading-img').classList.remove("bounceOut");
-	document.getElementById('loading-txt').classList.remove("bounceOut");
-}
-
-function hideLoadingScreen(){
-	document.getElementById('loading-div').classList.remove("fadeIn");
-	document.getElementById('loading-img').classList.remove("bounceIn");
-	document.getElementById('loading-txt').classList.remove("bounceIn");
-	
-	document.getElementById('loading-div').classList.add("fadeOut");
-	document.getElementById('loading-img').classList.add("bounceOut");
-	document.getElementById('loading-txt').classList.add("bounceOut");
-	
-	setTimeout(function(){document.getElementById('loading-div').style.display='none';}, 1000)
-}
-</script>
+	</body>
+</html>		
