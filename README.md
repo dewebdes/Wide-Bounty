@@ -72,3 +72,6 @@ Specialized engines for packet minification and AI-driven pentesting.
 
 - [PacketMinify](https://github.com/dewebdes/PacketMinify)  
 - [AI-Pentest-Engine](https://github.com/dewebdes/AI-Pentest-Engine)
+
+<img src="https://github.com/dewebdes/Wide-Bounty/blob/main/xmind/RECON%20%2B%20Ai.png">
+
