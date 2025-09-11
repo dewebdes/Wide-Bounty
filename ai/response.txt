@@ -1,0 +1,571 @@
+HTTP/1.1 200 OK
+Content-Type: text/html
+Connection: keep-alive
+Last-Modified: Wed, 02 Dec 2020 19:10:44 GMT
+x-amz-version-id: KQX6mUhbpUMzpzSGByzBNFECMkO7mOKr
+Server: AmazonS3
+X-Frame-Options: SAMEORIGIN
+Date: Mon, 08 Sep 2025 20:00:05 GMT
+ETag: W/"15b4dad9d7bc555f7c4d944d47da9685"
+Vary: Accept-Encoding
+X-Cache: RefreshHit from cloudfront
+Via: 1.1 3cdb446b466c48710dc5fa2be85a7dc0.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: MXP53-P2
+X-Amz-Cf-Id: xYwNWq5yfaf3YgbFbUxvQqcjQX5bGvDIuCnItbvVX0ZzYc7SnE6qbQ==
+Content-Length: 16436
+
+<!DOCTYPE html>
+<html>
+	<head>
+	
+	<meta name="Description" content="A Platform for Security Experts to Build and Share Proof-of-Concepts | Password Reset">
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=.85">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154052950-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-154052950-1');
+	</script>
+
+
+		<meta charset="UTF-8">
+		<title>Password Reset | BugPoC</title>
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+		<link rel="stylesheet" type="text/css" href="/css/switch.css">
+		<script src="/js/jquery.js"></script>
+		<link rel="stylesheet" href="/css/animate.min.css">
+<!-- 		<script src="/js/amazon-cognito-identity.min.js"></script> -->
+		<script type='text/javascript'>
+			$(document).ready(function(){
+			 $( "#header" ).load( "header.html", function(){});
+			});
+		  </script>
+		<style>
+		#profile-header:after {
+			position: absolute;
+			opacity: 1;
+			width: 100%;
+			height: 2px;
+			content: '';
+			background: var(--off-white-color);
+			transition: all 0.3s;
+			left: 0px;
+			bottom: 0px;
+			opacity: .8;
+
+		}
+		
+
+		.bg-2::after {
+			
+			content: "";
+			background: url("/images/light-gradient.jpeg");
+
+/*			background: var(--background-image);*/
+			
+	//		filter: blur(0px) grayscale(25%);
+
+			opacity: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;   
+			/* Full height */
+			height: 100%; 
+			min-height: 700px;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-animation: slowin 2s ; /* Chrome, Safari, Opera */
+			animation: slowin 2s ;
+		}
+		
+		.bg::after {
+			content: "";
+			background: url("/images/dark-gradient.jpeg");
+
+/*			background: var(--background-image);*/
+			
+		//	filter: blur(0px) grayscale(25%);
+
+			opacity: 1;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;   
+			/* Full height */
+			height: 100%; 
+			min-height: 700px;
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			-webkit-animation: slowin 2s ; /* Chrome, Safari, Opera */
+			animation: slowin 2s ;
+		}
+		 /* Chrome, Safari, Opera */
+			@-webkit-keyframes slowin {
+				from {opacity: 0;}
+				to {opacity: 1;}
+			}
+
+			/* Standard syntax */
+			@keyframes slowin {
+				from {opacity: 0;}
+				to {opacity: 1;}
+			}
+			
+			body {
+				background-color: var(--off-black-color);
+			}
+
+		
+		#view-h2 {
+			font-size: 45px;
+			font-family : Avenir;
+			text-align: center;
+			//animation: fadein 1.5s;
+			color: var(--off-white-color);
+			text-shadow:
+			   -1px -1px 0 var(--off-black-color),  
+				1px -1px 0 var(--off-black-color),
+				-1px 1px 0 var(--off-black-color),
+				 1px 1px 0 var(--off-black-color);
+			position: relative; 
+			top: 5px;
+			position: relative; 
+		}
+
+		.frosted {
+			background-color: rgba(255, 255, 255, 0.6);
+
+		   -webkit-backdrop-filter: blur(5px);
+			backdrop-filter: blur(5px);  
+
+		}
+
+		.view-button{
+			background-color: var(--off-black-color);
+			color:var(--off-white-color);
+			width:100%;
+			height:50px;
+			border: 1px solid var(--off-black-color);
+			cursor: pointer;
+			font-size:22px;
+		}
+		.view-button:hover{
+			background-color: var(--off-white-color);
+			color:var(--off-black-color);
+		}
+		
+		.bugpoc-id-input {
+			font-size: 22px;
+			font-family : Avenir;
+			border: 1px solid var(--off-black-color);
+			padding:0px;
+			height:50px;
+			text-align: center;
+			margin:0px;
+			width:100%;
+			background-color: var(--off-white-color);
+		}
+		
+		.grayedout-input{
+			background-color: lightgray;
+			color:gray
+		}
+		
+		.bugpoc-id-input::placeholder {
+			opacity: .4;
+
+		}
+		
+		.wrapper {
+			padding:30px;
+			width:320px;
+			margin:auto;
+			border: 1px solid  var(--off-black-color);
+
+		}
+		
+		#error-msg{
+			text-align: center;
+			display: none;
+			color:#ff5050;
+		}
+		
+		.send-button{
+			font-size: 14px;
+			cursor: pointer;
+			color: #335086;
+		}
+		.send-button:hover{
+			text-decoration: underline;
+		}
+		
+		</style>
+		<script>
+		
+		function pulseError(msg){
+			document.getElementById('error-msg').innerText = msg;
+			document.getElementById('error-msg').style.display = 'block';
+			document.getElementById('error-msg').classList.add('bounceIn');
+			randomID = Math.floor(Math.random() * 10);
+			document.getElementById('error-msg').setAttribute('msg-id', randomID);
+
+			setTimeout(function(randomID){
+				if (document.getElementById('error-msg').getAttribute('msg-id') == randomID) {
+					animateCSS('#error-msg','bounceOut',function(){
+						document.getElementById('error-msg').style.display = 'none';
+					});
+				}
+			}, 5000,randomID);
+		}
+		
+
+		function signIn(up,username,password,onSuccess,onFailure){
+			document.getElementById('view-poc-button').setAttribute('disabled', '');
+			document.getElementById('loading-blocks').style.visibility = 'visible';
+
+			
+			var userData = {
+				Username : username,
+				Pool : up
+			};
+
+			var authenticationData = {
+				Username : username, 
+				Password : password, 
+			};
+
+			var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
+			 
+			var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+			
+			cognitoUser.authenticateUser(authenticationDetails, {
+				onSuccess: onSuccess,
+				onFailure: onFailure
+			});
+
+		}		
+		function signinFailure(err){
+			document.getElementById('view-poc-button').removeAttribute('disabled');
+			document.getElementById('loading-blocks').style.visibility = 'hidden';
+			//alert('Uh Oh, something went wrong...');
+			//alert(JSON.stringify(err));
+			document.getElementById('bugpoc-password').style.border = '1px solid red';
+			document.getElementById('bugpoc-password').style.color='red';
+			animateCSS('#bugpoc-password','shake',function(){
+				document.getElementById('bugpoc-password').style.border = '1px solid var(--off-black-color)';
+				document.getElementById('bugpoc-password').style.color='black';
+			});
+		}
+		function animateCSS(element, animationName, callback) {
+			const node = document.querySelector(element)
+			node.classList.add('animated', animationName)
+
+			function handleAnimationEnd() {
+				node.classList.remove('animated', animationName)
+				node.removeEventListener('animationend', handleAnimationEnd)
+
+				if (typeof callback === 'function') callback()
+			}
+
+			node.addEventListener('animationend', handleAnimationEnd)
+		}
+		
+		function signinSuccess(){
+			document.getElementById('view-poc-button').removeAttribute('disabled');
+			document.getElementById('loading-blocks').style.visibility = 'hidden';
+			animateCSS('#view-h2','fadeOut',function(){
+				document.getElementById('view-h2').style.display='none';
+			})
+			animateCSS('#sign-in-wrapper','bounceOutUp',function(){
+				document.getElementById('sign-in-wrapper').style.display='none';
+				location.assign('/account');
+			})
+			
+			
+		}
+		
+		function join(invite_code,email,password,successCallback,errorCallback){
+			document.getElementById('view-poc-button').setAttribute('disabled', '');
+			document.getElementById('loading-blocks').style.visibility = 'visible';
+			
+			data = {
+				'inviteCode':invite_code,
+				'email':email,
+				'password':password
+			}
+
+			url = 'https://api.bugpoc.com/create-account';
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.onreadystatechange = function() { 
+				if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+					successCallback(email,password,xmlHttp.responseText);
+				}
+				else if (xmlHttp.readyState == 4 && xmlHttp.status != 200) {
+					errorCallback(xmlHttp.responseText);
+				}
+			}
+			xmlHttp.open('POST', url, true); 
+			xmlHttp.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+			xmlHttp.send(JSON.stringify(data));
+		}
+		
+		function doJoin(){
+			invite_code = document.getElementById('bugpoc-invite-code').value;
+			email = document.getElementById('bugpoc-email').value;
+			//username = document.getElementById('bugpoc-username').value;
+			password = document.getElementById('bugpoc-password').value;
+			join(invite_code,email,password,joinSuccess,joinFailure)
+//			password2 = document.getElementById('bugpoc-password2').value;
+//			if (password==password2){
+//				join(invite_code,email,password,joinSuccess,joinFailure)
+//			} else {
+//				pulseError('Passwords do not match');
+//			}
+		}
+		
+		function joinSuccess(email,password,msg){
+			document.getElementById('view-poc-button').removeAttribute('disabled');
+			document.getElementById('loading-blocks').style.visibility = 'hidden';
+			response = JSON.parse(msg);
+			userType = response['type'];
+			if (userType == 'tester'){
+				up = testerUserPool;
+				setCurrentUserType('tester');
+			} else if (userType == 'org'){
+				up = organizationUserPool;
+				setCurrentUserType('organization');
+			} else {
+				console.log('ERROR! unknown user type');
+			}
+			signIn(up, email, password,signinSuccess,signinFailure);
+		}
+		function joinFailure(msg){
+			document.getElementById('view-poc-button').removeAttribute('disabled');
+			document.getElementById('loading-blocks').style.visibility = 'hidden';
+			//alert(msg);
+			pulseError(JSON.parse(msg)['error']);
+		}
+		
+		function doSignin(){
+			email = document.getElementById('bugpoc-email').value;
+			password = document.getElementById('bugpoc-password').value;
+			signIn(email,password,signinSuccess,signinFailure);
+		}
+		
+		setTimeout(function(){document.getElementById("bugpoc-invite-code").focus()},1000);
+
+		function toggleTesterOrg(isTester){
+			if (isTester){
+				document.body.classList.remove('bg-2');
+				void document.body.offsetWidth;
+				document.body.classList.add('bg');
+				setCurrentUserType('tester')
+			} else {
+				document.body.classList.remove('bg');
+				void document.body.offsetWidth;
+				document.body.classList.add('bg-2');
+				setCurrentUserType('organization')
+			}
+		}
+		
+		
+		function populateFromFragment(){
+			fragment = decodeURIComponent(window.location.hash.substr(1));
+			if (fragment == ''){
+				toggleTesterOrg(true);
+				return
+			}
+			// remove hash from URI (including # sign)
+			window.history.replaceState('', document.title, window.location.pathname+ window.location.search);
+			if (fragment == 'org'){
+				document.getElementById('q2').click();
+			} 
+		}
+		
+		function forgotP(){
+			email = document.getElementById('bugpoc-email').value;
+			document.getElementById('send-button').innerText = '...';
+			forgotPassword(
+				email,
+				function(msg){
+					console.log(msg);
+					document.getElementById('send-status').innerText = '✓';
+					document.getElementById('send-status').style.color = 'green';
+					document.getElementById('send-button').innerText = 'Send';
+					setTimeout(function(){document.getElementById('send-status').innerText = '';}, 2000);
+				},
+				function(msg){
+					console.log(msg);
+					document.getElementById('send-status').innerText = '✕';
+					document.getElementById('send-status').style.color = 'red';
+					document.getElementById('send-button').innerText = 'Send';
+					// disable in prod
+					pulseError(msg['message']);
+					setTimeout(function(){document.getElementById('send-status').innerText = '';}, 2000);
+				}
+			);
+		}
+		
+		function shakeInput(inputId){
+			document.getElementById(inputId).style.border = '1px solid red';
+			document.getElementById(inputId).style.color='red';
+			animateCSS('#'+inputId,'shake',function(){
+				document.getElementById(inputId).style.border = '1px solid var(--off-black-color)';
+				document.getElementById(inputId).style.color='black';
+			});
+		}
+		
+		function resetP(){
+			email = document.getElementById('bugpoc-email').value;
+			code = document.getElementById('bugpoc-code').value;
+			password = document.getElementById('bugpoc-password').value;
+//			password2 = document.getElementById('bugpoc-password2').value;
+//			if (password==password2){
+			if (true){
+				resetPassword(email,code,password, 
+					function(msg){
+						console.log(msg);
+						
+						// sign-in the user once just to call globalSignOut()
+						
+						var userData = {
+							Username : email,
+							Pool : getCurrentUserPool()
+						};
+
+						var authenticationData = {
+							Username : email, 
+							Password : password, 
+						};
+
+						var authenticationDetails = new AmazonCognitoIdentity.AuthenticationDetails(authenticationData);
+						 
+						var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
+						
+						cognitoUser.authenticateUser(authenticationDetails, {
+							onSuccess: function(m){
+								cu = getCurrentUserPool().getCurrentUser();
+								cu.getSession(function (err, session) {});
+								cu.globalSignOut({
+									onSuccess:function(m){
+										// sign-in the user again to be nice
+										signIn(getCurrentUserPool(), email, password,signinSuccess,signinFailure);
+									},
+									onFailure:function(m){console.log(m)}}
+								);
+								
+							},
+							onFailure: function(m){console.log(m)}
+						});
+												
+						
+					},
+					function(msg){
+						console.log(msg);
+						if (msg['name'] == 'UserNotFoundException'){
+							shakeInput('bugpoc-email')
+						} else if (msg['name'] == 'InvalidParameterException'){
+							shakeInput('bugpoc-password')
+							shakeInput('bugpoc-password2')
+						} else if (msg['name'] == 'CodeMismatchException'){
+							shakeInput('bugpoc-code')
+						}
+						
+						// disable in prod
+						pulseError(msg['message']);
+					}
+				);
+			} else {
+				shakeInput('bugpoc-password')
+				shakeInput('bugpoc-password2')
+				pulseError('Passwords do not match');
+			}
+		}
+		
+		</script>
+	</head>
+	<div id="header"></div>
+<!-- 	 -->
+	<body onload="document.getElementById('sign-in-wrapper').style.visibility = ''"  style="padding: 16px;padding-top:66px;" class="content bg" >
+
+		<h2 id="view-h2">Password Reset</h2>
+		
+		<p id="error-msg">Error: Blah</p>
+
+			<div class='switch' id="switch-toggle"><div class='quality'>
+				<input checked id='q1' name='q' type='radio' value='q1' onchange='toggleTesterOrg(true)'>
+				<label for='q1'>Tester</label>
+			</div><div class='quality'>
+					<input id='q2' name='q' type='radio' value='q2' onchange='toggleTesterOrg(false)'>
+					<label for='q2'>Organization</label>
+				</div>
+			</div>
+		
+		<img id="loading-blocks" src="/icons/loading-blocks.svg" style="visibility: hidden; position: absolute; margin-left:auto;margin-right:auto;right:0;left:0; height:50px; margin-top:118px;z-index:1000;">
+		
+		<div id="sign-in-wrapper" style="visibility:none" class="wrapper frosted animated bounceInUp">
+
+			<div>
+			<div style="font-size:20px;padding-bottom:5px;font-weight: 500;">Email: </div>
+			<input id="bugpoc-email" class="bugpoc-id-input" type="text" ><br>
+			<br>
+			<div>
+			<div style="font-size:20px;padding-bottom:5px;font-weight: 500;">Verification Code: [<a onclick="forgotP()" id="send-button" class="send-button">Send</a>] <span id="send-status"></span></div>
+			<input id="bugpoc-code" class="bugpoc-id-input" type="text" ><br>
+			<br>
+			<div style="font-size:20px;padding-bottom:5px;font-weight: 500;"> New Password: </div>
+			<input id="bugpoc-password"  class="bugpoc-id-input animated" type="password" ><br>
+<!-- 			<br> -->
+<!-- 			<div style="font-size:20px;padding-bottom:5px;font-weight: 500;">Repeat New Password: </div> -->
+<!-- 			<input id="bugpoc-password2"  class="bugpoc-id-input animated" type="password" ><br> -->
+			<br>
+			<button id="view-poc-button" class="view-button" onclick="resetP()" >
+				<span class="button-text-big">Set &#8250;</span>
+			</button>
+			<br>
+			<script>
+			function togglePasswordShow() {
+				var x = document.getElementById("bugpoc-password");
+				if (x.type === "password") {
+					x.type = "text";
+				} else {
+					x.type = "password";
+				}
+			}
+			
+			// Get the input field
+			var input = document.getElementById("bugpoc-password");
+
+			// Execute a function when the user releases a key on the keyboard
+			input.addEventListener("keyup", function(event) {
+				// Number 13 is the "Enter" key on the keyboard
+				if (event.keyCode === 13) {
+					// Cancel the default action, if needed
+					event.preventDefault();
+					// Trigger the button element with a click
+					document.getElementById("view-poc-button").click();
+				}
+			});
+			</script>
+		</div>
+
+	</body>
+</html>		
