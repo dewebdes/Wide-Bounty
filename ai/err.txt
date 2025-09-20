@@ -1,0 +1,2327 @@
+Operating system: Windows NT
+                  10.0.26100 6584
+CPU: amd64
+     family 6 model 186 stepping 2
+     16 CPUs
+
+GPU: UNKNOWN
+
+Crash reason:  0x40000015 / 0x00000001
+Crash address: 0x7ff7e55b9ff8
+Process uptime: 2 seconds
+
+Thread 0 (crashed)
+ 0  qemu-system-x86_64.exe + 0x669ff8
+ 
+    rax = 0x00007ff7e55b9fe0   rdx = 0x000002493db00000
+    rcx = 0x00000085f997d640   rbx = 0x0000000000000016
+    rsi = 0x00000085f997d640   rdi = 0x00000085f997dd01
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d570
+     r8 = 0x7ffffffffffffffc    r9 = 0x00000085f9a95000
+    r10 = 0x000002493dbf0000   r11 = 0x00007ffef4ce06d5
+    r12 = 0x0000000000000910   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x00007fff15b58c00
+    rip = 0x00007ff7e55b9ff8
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085f997d570 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d580 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d590 00 00 00 00 00 00 00 00 a8 d5 97 f9 85 00 00 00  ................
+     00000085f997d5a0 40 d6 97 f9 85 00 00 00 15 00 00 40 01 00 00 00  @..........@....
+     00000085f997d5b0 00 00 00 00 00 00 00 00 f8 9f 5b e5 f7 7f 00 00  ..........[.....
+    Possible instruction pointers:
+
+ 1  qemu-system-x86_64.exe + 0x669ff8
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d5c0
+    rip = 0x00007ff7e55b9ff8
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f997d5c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d5d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d5e0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d5f0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d600 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d610 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d620 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d630 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d640 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d650 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d660 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d670 0f 00 10 00 a0 1f 00 00 33 00 2b 00 2b 00 53 00  ........3.+.+.S.
+     00000085f997d680 2b 00 2b 00 02 02 00 00 00 00 00 00 00 00 00 00  +.+.............
+     00000085f997d690 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d6a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d6b0 00 00 00 00 00 00 00 00 e0 9f 5b e5 f7 7f 00 00  ..........[.....
+    Possible instruction pointers:
+
+ 2  qemu-system-x86_64.exe + 0x669fe0
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d6c0
+    rip = 0x00007ff7e55b9fe0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f997d6c0 40 d6 97 f9 85 00 00 00 00 00 b0 3d 49 02 00 00  @..........=I...
+     00000085f997d6d0 16 00 00 00 00 00 00 00 70 d5 97 f9 85 00 00 00  ........p.......
+     00000085f997d6e0 80 dc 97 f9 85 00 00 00 40 d6 97 f9 85 00 00 00  ........@.......
+     00000085f997d6f0 01 dd 97 f9 85 00 00 00 fc ff ff ff ff ff ff 7f  ................
+     00000085f997d700 00 50 a9 f9 85 00 00 00 00 00 bf 3d 49 02 00 00  .P.........=I...
+     00000085f997d710 d5 06 ce f4 fe 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 3  VCRUNTIME140.dll + 0x106d5
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d718
+    rip = 0x00007ffef4ce06d5
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f997d718 10 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d728 00 00 00 00 00 00 00 00 00 8c b5 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 4  ucrtbase.dll + 0x138c00
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d738
+    rip = 0x00007fff15b58c00
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f997d738 f8 9f 5b e5 f7 7f 00 00                          ..[.....        
+    Possible instruction pointers:
+
+ 5  qemu-system-x86_64.exe + 0x669ff8
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d740
+    rip = 0x00007ff7e55b9ff8
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f997d740 7f 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d750 00 00 00 00 00 00 00 00 a0 1f 00 00 ff ff 00 00  ................
+     00000085f997d760 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d770 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d780 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d790 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d7a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d7b0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d7c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d7d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d7e0 73 1b 56 68 fe 7f 00 00                          s.Vh....        
+    Possible instruction pointers:
+
+ 6  libgfxstream_backend.dll + 0x1281b73
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d7e8
+    rip = 0x00007ffe68561b73
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f997d7e8 31 f1 55 68 fe 7f 00 00                          1.Uh....        
+    Possible instruction pointers:
+
+ 7  libgfxstream_backend.dll + 0x127f131
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d7f0
+    rip = 0x00007ffe6855f131
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f997d7f0 60 20 79 53 49 02 00 00 fa 04 00 00 ff ff ff ff  ` ySI...........
+     00000085f997d800 6f 6e 4f 70 65 72 61 74 69 6f 6e 73 2e 63 70 70  onOperations.cpp
+     00000085f997d810 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f997d820 e8 dc 5e 53 49 02 00 00 c0 05 0d 42 49 02 00 00  ..^SI......BI...
+     00000085f997d830 6e 64 20 6d 65 6d 6f 72 79 20 74 79 70 65 20 66  nd memory type f
+     00000085f997d840 73 1b 56 68 fe 7f 00 00                          s.Vh....        
+    Possible instruction pointers:
+
+ 8  libgfxstream_backend.dll + 0x1281b73
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d848
+    rip = 0x00007ffe68561b73
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f997d848 31 f1 55 68 fe 7f 00 00                          1.Uh....        
+    Possible instruction pointers:
+
+ 9  libgfxstream_backend.dll + 0x127f131
+ 
+    rbp = 0x00000085f997dc80   rsp = 0x00000085f997d850
+    rip = 0x00007ffe6855f131
+    Found by: stack scanning
+
+Thread 1
+ 0  ntdll.dll + 0x166ee4
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493dd1fa10
+    rcx = 0x00000000000000a4   rbx = 0x000002493dd1fd90
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd22280
+    rbp = 0x0000000000000000   rsp = 0x00000085f9cff9e8
+     r8 = 0x0000000000000010    r9 = 0x00000085f9cffa48
+    r10 = 0x00000000000000a4   r11 = 0x00000000000000a4
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17f06ee4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085f9cff9e8 2e e0 e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x7e02e
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493dd1fa10
+    rcx = 0x00000000000000a4   rbx = 0x000002493dd1fd90
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd22280
+    rbp = 0x0000000000000000   rsp = 0x00000085f9cff9f0
+     r8 = 0x0000000000000010    r9 = 0x00000085f9cffa48
+    r10 = 0x00000000000000a4   r11 = 0x00000000000000a4
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17e1e02e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085f9cff9f0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9cffa00 90 cf e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 2  ntdll.dll + 0x7cf90
+ 
+    rsp = 0x00000085f9cffa08   rip = 0x00007fff17e1cf90
+    Found by: stack scanning
+
+Thread 2
+ 0  ntdll.dll + 0x166ee4
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493dd20800
+    rcx = 0x00000000000000a4   rbx = 0x000002493dd20b80
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd22280
+    rbp = 0x0000000000000000   rsp = 0x00000085f9dffb88
+     r8 = 0x0000000000000010    r9 = 0x00000085f9dffbe8
+    r10 = 0x00000000000000a4   r11 = 0x00000000000000a4
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17f06ee4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085f9dffb88 2e e0 e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x7e02e
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493dd20800
+    rcx = 0x00000000000000a4   rbx = 0x000002493dd20b80
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd22280
+    rbp = 0x0000000000000000   rsp = 0x00000085f9dffb90
+     r8 = 0x0000000000000010    r9 = 0x00000085f9dffbe8
+    r10 = 0x00000000000000a4   r11 = 0x00000000000000a4
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17e1e02e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085f9dffb90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9dffba0 90 cf e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 2  ntdll.dll + 0x7cf90
+ 
+    rsp = 0x00000085f9dffba8   rip = 0x00007fff17e1cf90
+    Found by: stack scanning
+
+Thread 3
+ 0  ntdll.dll + 0x166ee4
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493dd24aa0
+    rcx = 0x00000000000000a4   rbx = 0x000002493dd24e20
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd22280
+    rbp = 0x0000000000000000   rsp = 0x00000085f9eff928
+     r8 = 0x0000000000000010    r9 = 0x00000085f9eff988
+    r10 = 0x00000000000000a4   r11 = 0x00000000000000a4
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17f06ee4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085f9eff928 2e e0 e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x7e02e
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493dd24aa0
+    rcx = 0x00000000000000a4   rbx = 0x000002493dd24e20
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd22280
+    rbp = 0x0000000000000000   rsp = 0x00000085f9eff930
+     r8 = 0x0000000000000010    r9 = 0x00000085f9eff988
+    r10 = 0x00000000000000a4   r11 = 0x00000000000000a4
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17e1e02e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085f9eff930 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9eff940 90 cf e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 2  ntdll.dll + 0x7cf90
+ 
+    rsp = 0x00000085f9eff948   rip = 0x00007fff17e1cf90
+    Found by: stack scanning
+
+Thread 4
+ 0  ntdll.dll + 0x1632b4
+ 
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x00000000000003f4   rbx = 0x00000000000003f4
+    rsi = 0x00000000ffffffff   rdi = 0x0000000000000000
+    rbp = 0x0000000000000000   rsp = 0x00000085f9fffbb8
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x00000000000003f4   r11 = 0x00000000000003f4
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff17f032b4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085f9fffbb8 5f 89 5a 15 ff 7f 00 00                          _.Z.....        
+    Possible instruction pointers:
+
+ 1  KERNELBASE.dll + 0x1895f
+ 
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x00000000000003f4   rbx = 0x00000000000003f4
+    rsi = 0x00000000ffffffff   rdi = 0x0000000000000000
+    rbp = 0x0000000000000000   rsp = 0x00000085f9fffbc0
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x00000000000003f4   r11 = 0x00000000000003f4
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff155a895f
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085f9fffbc0 70 fc ff f9 85 00 00 00 a1 46 5b 15 ff 7f 00 00  p........F[.....
+    Possible instruction pointers:
+
+ 2  KERNELBASE.dll + 0x246a1
+ 
+    rsp = 0x00000085f9fffbd0   rip = 0x00007fff155b46a1
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffbd0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffbe0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffbf0 48 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  H...............
+     00000085f9fffc00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffc10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffc20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffc30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffc40 c8 c0 93 e8 f7 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 3  qemu-system-x86_64.exe + 0x39ec0c8
+ 
+    rsp = 0x00000085f9fffc48   rip = 0x00007ff7e893c0c8
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffc48 00 00 00 00 00 00 00 00 78 c0 93 e8 f7 7f 00 00  ........x.......
+    Possible instruction pointers:
+
+ 4  qemu-system-x86_64.exe + 0x39ec078
+ 
+    rsp = 0x00000085f9fffc58   rip = 0x00007ff7e893c078
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffc58 8d 81 32 e5 f7 7f 00 00                          ..2.....        
+    Possible instruction pointers:
+
+ 5  qemu-system-x86_64.exe + 0x3d818d
+ 
+    rsp = 0x00000085f9fffc60   rip = 0x00007ff7e532818d
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffc60 70 12 f5 79 fe 7f 00 00                          p..y....        
+    Possible instruction pointers:
+
+ 6  libglib2_windows_msvc-x86_64.dll + 0x61270
+ 
+    rsp = 0x00000085f9fffc68   rip = 0x00007ffe79f51270
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffc68 00 00 00 00 49 02 00 00 00 00 00 00 ff ff ff ff  ....I...........
+     00000085f9fffc78 f4 03 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffc88 60 6a 83 3f 49 02 00 00 00 00 00 00 00 00 00 00  `j.?I...........
+     00000085f9fffc98 20 81 32 e5 f7 7f 00 00                           .2.....        
+    Possible instruction pointers:
+
+ 7  qemu-system-x86_64.exe + 0x3d8120
+ 
+    rsp = 0x00000085f9fffca0   rip = 0x00007ff7e5328120
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffca0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffcb0 00 00 00 00 00 00 00 00 1f 4f 32 e5 f7 7f 00 00  .........O2.....
+    Possible instruction pointers:
+
+ 8  qemu-system-x86_64.exe + 0x3d4f1f
+ 
+    rsp = 0x00000085f9fffcc0   rip = 0x00007ff7e5324f1f
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffcc0 00 00 00 00 00 00 00 00 6d 38 a2 15 ff 7f 00 00  ........m8......
+    Possible instruction pointers:
+
+ 9  ucrtbase.dll + 0x386d
+ 
+    rsp = 0x00000085f9fffcd0   rip = 0x00007fff15a2386d
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffcd0 01 00 08 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+     00000085f9fffce0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffcf0 00 00 00 00 00 00 00 00 b0 37 a2 15 ff 7f 00 00  .........7......
+    Possible instruction pointers:
+
+10  ucrtbase.dll + 0x37b0
+ 
+    rsp = 0x00000085f9fffd00   rip = 0x00007fff15a237b0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffd00 60 6a 83 3f 49 02 00 00 00 00 00 00 00 00 00 00  `j.?I...........
+     00000085f9fffd10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffd20 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+11  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085f9fffd30   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085f9fffd30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffd40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085f9fffd50 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+12  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085f9fffd60   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 5
+ 0  ntdll.dll + 0x166e84
+ 
+    rax = 0x00000000000001e3   rdx = 0x00000085fa0ff620
+    rcx = 0x000002493dd2a9b0   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa0ff5d0   rsp = 0x00000085fa0ff558
+     r8 = 0x000002493dd2a9b0    r9 = 0x7ffffffffffffffc
+    r10 = 0x000002493dd2a9b0   r11 = 0x000002493dd2a9b0
+    r12 = 0x000311cdad160000   r13 = 0x000002493dd2a9f8
+    r14 = 0x000002493dd2a9b0   r15 = 0x0000000000000000
+    rip = 0x00007fff17f06e84
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa0ff558 6e dd e3 17 ff 7f 00 00                          n.......        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x9dd6e
+ 
+    rax = 0x00000000000001e3   rdx = 0x00000085fa0ff620
+    rcx = 0x000002493dd2a9b0   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa0ff5d0   rsp = 0x00000085fa0ff560
+     r8 = 0x000002493dd2a9b0    r9 = 0x7ffffffffffffffc
+    r10 = 0x000002493dd2a9b0   r11 = 0x000002493dd2a9b0
+    r12 = 0x000311cdad160000   r13 = 0x000002493dd2a9f8
+    r14 = 0x000002493dd2a9b0   r15 = 0x0000000000000000
+    rip = 0x00007fff17e3dd6e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa0ff560 00 00 00 00 00 00 00 00 d0 f6 0f fa 85 00 00 00  ................
+     00000085fa0ff570 a0 f7 0f fa 85 00 00 00 50 71 64 15 ff 7f 00 00  ........Pqd.....
+    Possible instruction pointers:
+
+ 2  KERNELBASE.dll + 0xb7150
+ 
+    rbp = 0x00000085fa0ff5d0   rsp = 0x00000085fa0ff580
+    rip = 0x00007fff15647150
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff580 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff590 10 f6 0f fa 85 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff5a0 00 00 00 00 00 00 00 00 a0 f5 0f fa 85 00 00 00  ................
+     00000085fa0ff5b0 00 00 00 00 00 00 00 00 7c 12 00 00 00 00 00 00  ........|.......
+     00000085fa0ff5c0 00 00 00 00 01 00 00 00 b0 a9 d2 3d 49 02 00 00  ...........=I...
+     00000085fa0ff5d0 38 f1 05 2a 01 00 00 00 f8 a9 d2 3d 49 02 00 00  8..*.......=I...
+     00000085fa0ff5e0 b3 94 d6 26 e8 0b 2e 11 d0 f6 0f fa 85 00 00 00  ...&............
+     00000085fa0ff5f0 a0 f7 0f fa 85 00 00 00 18 f5 5a 15 ff 7f 00 00  ..........Z.....
+    Possible instruction pointers:
+
+ 3  KERNELBASE.dll + 0x1f518
+ 
+    rsp = 0x00000085fa0ff600   rip = 0x00007fff155af518
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff600 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff610 20 f6 0f fa 85 00 00 00 00 00 16 ad cd 11 03 00   ...............
+     00000085fa0ff620 80 0f 05 fd ff ff ff ff a0 e7 27 00 00 00 00 00  ..........'.....
+     00000085fa0ff630 00 00 00 00 00 00 00 00 62 22 d0 f4 fe 7f 00 00  ........b"......
+    Possible instruction pointers:
+
+ 4  MSVCP140.dll + 0x12262
+ 
+    rsp = 0x00000085fa0ff640   rip = 0x00007ffef4d02262
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff640 a0 a9 d2 3d 49 02 00 00 36 aa d2 f4 fe 7f 00 00  ...=I...6.......
+    Possible instruction pointers:
+
+ 5  MSVCP140.dll + 0x3aa36
+ 
+    rsp = 0x00000085fa0ff650   rip = 0x00007ffef4d2aa36
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff650 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff660 ef f2 cb 68 00 00 00 00 5c ea 27 00 00 00 00 00  ...h....\.'.....
+     00000085fa0ff670 0c 8a 6e 7c 7f f2 00 00 8a 26 d0 f4 fe 7f 00 00  ..n|.....&......
+    Possible instruction pointers:
+
+ 6  MSVCP140.dll + 0x1268a
+ 
+    rsp = 0x00000085fa0ff680   rip = 0x00007ffef4d0268a
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff680 d0 f6 0f fa 85 00 00 00 98 f7 0f fa 85 00 00 00  ................
+     00000085fa0ff690 a8 f7 0f fa 85 00 00 00 a0 f7 0f fa 85 00 00 00  ................
+     00000085fa0ff6a0 f0 a9 d2 3d 49 02 00 00 7c 2c 3f e5 f7 7f 00 00  ...=I...|,?.....
+    Possible instruction pointers:
+
+ 7  qemu-system-x86_64.exe + 0x4a2c7c
+ 
+    rsp = 0x00000085fa0ff6b0   rip = 0x00007ff7e53f2c7c
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff6b0 f0 a9 d2 3d 49 02 00 00 00 00 00 00 00 00 00 00  ...=I...........
+     00000085fa0ff6c0 00 00 00 00 00 00 00 00 0c 29 d0 f4 fe 7f 00 00  .........)......
+    Possible instruction pointers:
+
+ 8  MSVCP140.dll + 0x1290c
+ 
+    rsp = 0x00000085fa0ff6d0   rip = 0x00007ffef4d0290c
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff6d0 f4 f2 cb 68 00 00 00 00 a0 e7 27 00 00 00 00 00  ...h......'.....
+     00000085fa0ff6e0 00 00 00 00 00 00 00 00 f0 a9 d2 3d 49 02 00 00  ...........=I...
+     00000085fa0ff6f0 00 a9 d2 3d 49 02 00 00 80 96 98 00 00 00 00 00  ...=I...........
+     00000085fa0ff700 98 f7 0f fa 85 00 00 00 70 f7 0f fa 85 00 00 00  ........p.......
+     00000085fa0ff710 a8 f7 0f fa 85 00 00 00 82 28 3f e5 f7 7f 00 00  .........(?.....
+    Possible instruction pointers:
+
+ 9  qemu-system-x86_64.exe + 0x4a2882
+ 
+    rsp = 0x00000085fa0ff720   rip = 0x00007ff7e53f2882
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff720 b0 70 eb c6 0b 00 00 00 00 00 00 00 00 00 00 00  .p..............
+     00000085fa0ff730 a0 f7 0f fa 85 00 00 00 00 a9 d2 3d 49 02 00 00  ...........=I...
+     00000085fa0ff740 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff750 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff760 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff770 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff780 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff790 00 00 00 00 00 00 00 00 a0 a9 d2 3d 49 02 00 00  ...........=I...
+     00000085fa0ff7a0 01 00 00 00 00 00 00 00 c0 f6 fd dd 9a 04 00 00  ................
+     00000085fa0ff7b0 fe ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff7c0 00 00 00 00 00 00 00 00 38 aa d2 3d 49 02 00 00  ........8..=I...
+     00000085fa0ff7d0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff7e0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff7f0 00 00 00 00 00 00 00 00 dd 3b 3f e5 f7 7f 00 00  .........;?.....
+    Possible instruction pointers:
+
+10  qemu-system-x86_64.exe + 0x4a3bdd
+ 
+    rsp = 0x00000085fa0ff800   rip = 0x00007ff7e53f3bdd
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff800 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff810 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff820 00 00 00 00 00 00 00 00 70 11 42 e5 f7 7f 00 00  ........p.B.....
+    Possible instruction pointers:
+
+11  qemu-system-x86_64.exe + 0x4d1170
+ 
+    rsp = 0x00000085fa0ff830   rip = 0x00007ff7e5421170
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff830 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff840 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff850 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff860 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+12  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fa0ff870   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa0ff870 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff880 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa0ff890 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+13  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fa0ff8a0   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 6
+ 0  ntdll.dll + 0x1632b4
+ 
+    rax = 0x0000000000000004   rdx = 0x00000085fa1fef01
+    rcx = 0x000000000000049c   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa1ff040   rsp = 0x00000085fa1fefd8
+     r8 = 0x0000000000000000    r9 = 0x00000085fa1ff010
+    r10 = 0x000000000000049c   r11 = 0x000000000000049c
+    r12 = 0x0000000000000400   r13 = 0x0000000000000000
+    r14 = 0x000002493fe4ca00   r15 = 0x000000000000049c
+    rip = 0x00007fff17f032b4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa1fefd8 4a 94 23 14 ff 7f 00 00                          J.#.....        
+    Possible instruction pointers:
+
+ 1  mswsock.dll + 0x944a
+ 
+    rax = 0x0000000000000004   rdx = 0x00000085fa1fef01
+    rcx = 0x000000000000049c   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa1ff040   rsp = 0x00000085fa1fefe0
+     r8 = 0x0000000000000000    r9 = 0x00000085fa1ff010
+    r10 = 0x000000000000049c   r11 = 0x000000000000049c
+    r12 = 0x0000000000000400   r13 = 0x0000000000000000
+    r14 = 0x000002493fe4ca00   r15 = 0x000000000000049c
+    rip = 0x00007fff1423944a
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa1fefe0 00 00 00 00 00 00 00 00 10 02 da 3d 49 02 00 00  ...........=I...
+     00000085fa1feff0 d0 52 df 3d 49 02 00 00 00 00 00 00 00 00 00 00  .R.=I...........
+     00000085fa1ff000 a0 04 00 00 00 00 00 00 06 01 00 00 00 00 00 00  ................
+     00000085fa1ff010 00 00 00 00 00 00 00 00 60 79 fe ff ff ff ff ff  ........`y......
+     00000085fa1ff020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa1ff030 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa1ff040 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+     00000085fa1ff050 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa1ff060 ff ff ff ff 00 00 00 00 24 91 23 14 ff 7f 00 00  ........$.#.....
+    Possible instruction pointers:
+
+ 2  mswsock.dll + 0x9124
+ 
+    rsp = 0x00000085fa1ff070   rip = 0x00007fff14239124
+    Found by: stack scanning
+
+Thread 7
+ 0  ntdll.dll + 0x163354
+ 
+    rax = 0x0000000000000009   rdx = 0x00000085fa2ffd18
+    rcx = 0x0000000000000520   rbx = 0x000002493fe4cbe0
+    rsi = 0x0000000000000001   rdi = 0x00007fff14230000
+    rbp = 0x00000085fa2ffcf0   rsp = 0x00000085fa2ffca8
+     r8 = 0x00000085fa2ffd10    r9 = 0x00000085fa2ffce0
+    r10 = 0x0000000000000520   r11 = 0x0000000000000520
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff17f03354
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa2ffca8 8e 90 24 14 ff 7f 00 00                          ..$.....        
+    Possible instruction pointers:
+
+ 1  mswsock.dll + 0x1908e
+ 
+    rax = 0x0000000000000009   rdx = 0x00000085fa2ffd18
+    rcx = 0x0000000000000520   rbx = 0x000002493fe4cbe0
+    rsi = 0x0000000000000001   rdi = 0x00007fff14230000
+    rbp = 0x00000085fa2ffcf0   rsp = 0x00000085fa2ffcb0
+     r8 = 0x00000085fa2ffd10    r9 = 0x00000085fa2ffce0
+    r10 = 0x0000000000000520   r11 = 0x0000000000000520
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff1424908e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa2ffcb0 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+     00000085fa2ffcc0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa2ffcd0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa2ffce0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa2ffcf0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa2ffd00 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 2  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fa2ffd10   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa2ffd10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa2ffd20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa2ffd30 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 3  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fa2ffd40   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 8
+ 0  ntdll.dll + 0x166ee4
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493fea2970
+    rcx = 0x0000000000000404   rbx = 0x000002493fea2cf0
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd4b3a0
+    rbp = 0x0000000000000000   rsp = 0x00000085fa3ff858
+     r8 = 0x0000000000000010    r9 = 0x00000085fa3ff8b8
+    r10 = 0x0000000000000404   r11 = 0x0000000000000404
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17f06ee4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa3ff858 2e e0 e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x7e02e
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493fea2970
+    rcx = 0x0000000000000404   rbx = 0x000002493fea2cf0
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd4b3a0
+    rbp = 0x0000000000000000   rsp = 0x00000085fa3ff860
+     r8 = 0x0000000000000010    r9 = 0x00000085fa3ff8b8
+    r10 = 0x0000000000000404   r11 = 0x0000000000000404
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17e1e02e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa3ff860 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa3ff870 a0 fc e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 2  ntdll.dll + 0x7fca0
+ 
+    rsp = 0x00000085fa3ff878   rip = 0x00007fff17e1fca0
+    Found by: stack scanning
+
+Thread 9
+ 0  ntdll.dll + 0x166ee4
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493febf8b0
+    rcx = 0x0000000000000404   rbx = 0x000002493febfc30
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd4b3a0
+    rbp = 0x0000000000000000   rsp = 0x00000085fa4ff798
+     r8 = 0x0000000000000010    r9 = 0x00000085fa4ff7f8
+    r10 = 0x0000000000000404   r11 = 0x0000000000000404
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17f06ee4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa4ff798 2e e0 e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x7e02e
+ 
+    rax = 0x00000000000001e6   rdx = 0x000002493febf8b0
+    rcx = 0x0000000000000404   rbx = 0x000002493febfc30
+    rsi = 0x00007fff17e1cf90   rdi = 0x000002493dd4b3a0
+    rbp = 0x0000000000000000   rsp = 0x00000085fa4ff7a0
+     r8 = 0x0000000000000010    r9 = 0x00000085fa4ff7f8
+    r10 = 0x0000000000000404   r11 = 0x0000000000000404
+    r12 = 0x00007fff17e760d0   r13 = 0x0000000000000000
+    r14 = 0x000000000000ffff   r15 = 0x00007fff17de2330
+    rip = 0x00007fff17e1e02e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa4ff7a0 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa4ff7b0 a0 fc e1 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 2  ntdll.dll + 0x7fca0
+ 
+    rsp = 0x00000085fa4ff7b8   rip = 0x00007fff17e1fca0
+    Found by: stack scanning
+
+Thread 10
+ 0  ntdll.dll + 0x166e84
+ 
+    rax = 0x00000000000001e3   rdx = 0x00000085fa5ff970
+    rcx = 0x000002493dd34a68   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa5ff920   rsp = 0x00000085fa5ff8a8
+     r8 = 0x000002493dd34a68    r9 = 0x7ffffffffffffffc
+    r10 = 0x000002493dd34a68   r11 = 0x000002493dd34a68
+    r12 = 0x000311cdad160000   r13 = 0x000002493dd34a18
+    r14 = 0x000002493dd34a68   r15 = 0x0000000000000000
+    rip = 0x00007fff17f06e84
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa5ff8a8 6e dd e3 17 ff 7f 00 00                          n.......        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x9dd6e
+ 
+    rax = 0x00000000000001e3   rdx = 0x00000085fa5ff970
+    rcx = 0x000002493dd34a68   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa5ff920   rsp = 0x00000085fa5ff8b0
+     r8 = 0x000002493dd34a68    r9 = 0x7ffffffffffffffc
+    r10 = 0x000002493dd34a68   r11 = 0x000002493dd34a68
+    r12 = 0x000311cdad160000   r13 = 0x000002493dd34a18
+    r14 = 0x000002493dd34a68   r15 = 0x0000000000000000
+    rip = 0x00007fff17e3dd6e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa5ff8b0 00 00 00 00 00 00 00 00 28 fa 5f fa 85 00 00 00  ........(._.....
+     00000085fa5ff8c0 40 fa 5f fa 85 00 00 00 50 71 64 15 ff 7f 00 00  @._.....Pqd.....
+    Possible instruction pointers:
+
+ 2  KERNELBASE.dll + 0xb7150
+ 
+    rbp = 0x00000085fa5ff920   rsp = 0x00000085fa5ff8d0
+    rip = 0x00007fff15647150
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ff8d0 00 4a d3 3d 49 02 00 00 8f 7d 3b e5 f7 7f 00 00  .J.=I....};.....
+    Possible instruction pointers:
+
+ 3  qemu-system-x86_64.exe + 0x467d8f
+ 
+    rbp = 0x00000085fa5ff920   rsp = 0x00000085fa5ff8e0
+    rip = 0x00007ff7e53b7d8f
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ff8e0 60 f9 5f fa 85 00 00 00 00 00 00 00 00 00 00 00  `._.............
+     00000085fa5ff8f0 00 00 00 00 00 00 00 00 f0 f8 5f fa 85 00 00 00  .........._.....
+     00000085fa5ff900 00 00 00 00 00 00 00 00 b8 4f 00 00 00 00 00 00  .........O......
+     00000085fa5ff910 00 00 00 00 01 00 00 00 68 4a d3 3d 49 02 00 00  ........hJ.=I...
+     00000085fa5ff920 58 4a d3 3d 49 02 00 00 18 4a d3 3d 49 02 00 00  XJ.=I....J.=I...
+     00000085fa5ff930 b3 94 d6 26 e8 0b 2e 11 28 fa 5f fa 85 00 00 00  ...&....(._.....
+     00000085fa5ff940 40 fa 5f fa 85 00 00 00 18 f5 5a 15 ff 7f 00 00  @._.......Z.....
+    Possible instruction pointers:
+
+ 4  KERNELBASE.dll + 0x1f518
+ 
+    rsp = 0x00000085fa5ff950   rip = 0x00007fff155af518
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ff950 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa5ff960 70 f9 5f fa 85 00 00 00 00 00 16 ad cd 11 03 00  p._.............
+     00000085fa5ff970 80 69 67 ff ff ff ff ff 30 a8 6a 08 00 00 00 00  .ig.....0.j.....
+     00000085fa5ff980 00 00 00 00 00 00 00 00 62 22 d0 f4 fe 7f 00 00  ........b"......
+    Possible instruction pointers:
+
+ 5  MSVCP140.dll + 0x12262
+ 
+    rsp = 0x00000085fa5ff990   rip = 0x00007ffef4d02262
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ff990 58 4a d3 3d 49 02 00 00 36 aa d2 f4 fe 7f 00 00  XJ.=I...6.......
+    Possible instruction pointers:
+
+ 6  MSVCP140.dll + 0x3aa36
+ 
+    rsp = 0x00000085fa5ff9a0   rip = 0x00007ffef4d2aa36
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ff9a0 00 00 00 00 00 00 00 00 0c 29 d0 f4 fe 7f 00 00  .........)......
+    Possible instruction pointers:
+
+ 7  MSVCP140.dll + 0x1290c
+ 
+    rsp = 0x00000085fa5ff9b0   rip = 0x00007ffef4d0290c
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ff9b0 f0 f2 cb 68 00 00 00 00 94 a8 6a 08 00 00 00 00  ...h......j.....
+     00000085fa5ff9c0 dc 85 3e 7c 7f f2 00 00 8a 26 d0 f4 fe 7f 00 00  ..>|.....&......
+    Possible instruction pointers:
+
+ 8  MSVCP140.dll + 0x1268a
+ 
+    rsp = 0x00000085fa5ff9d0   rip = 0x00007ffef4d0268a
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ff9d0 f0 68 70 33 9a 04 00 00 28 fa 5f fa 85 00 00 00  .hp3....(._.....
+     00000085fa5ff9e0 10 4a d3 3d 49 02 00 00 40 fa 5f fa 85 00 00 00  .J.=I...@._.....
+     00000085fa5ff9f0 00 ca 9a 3b 00 00 00 00 23 84 3b e5 f7 7f 00 00  ...;....#.;.....
+    Possible instruction pointers:
+
+ 9  qemu-system-x86_64.exe + 0x468423
+ 
+    rsp = 0x00000085fa5ffa00   rip = 0x00007ff7e53b8423
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ffa00 00 ca 9a 3b 00 00 00 00 00 00 00 00 00 00 00 00  ...;............
+     00000085fa5ffa10 40 fa 5f fa 85 00 00 00 10 4a d3 3d 49 02 00 00  @._......J.=I...
+     00000085fa5ffa20 00 00 00 00 00 00 00 00 f1 f2 cb 68 00 00 00 00  ...........h....
+     00000085fa5ffa30 30 a8 6a 08 00 00 00 00 58 4a d3 3d 49 02 00 00  0.j.....XJ.=I...
+     00000085fa5ffa40 fe ff ff ff ff ff ff ff a0 ae e2 3f 49 02 00 00  ...........?I...
+     00000085fa5ffa50 00 00 00 00 00 00 00 00 20 9f 91 3f 49 02 00 00  ........ ..?I...
+     00000085fa5ffa60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa5ffa70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa5ffa80 b0 fa 5f fa 85 00 00 00 de 8e 3b e5 f7 7f 00 00  .._.......;.....
+    Possible instruction pointers:
+
+10  qemu-system-x86_64.exe + 0x468ede
+ 
+    rsp = 0x00000085fa5ffa90   rip = 0x00007ff7e53b8ede
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ffa90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa5ffaa0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa5ffab0 fe ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00  ................
+     00000085fa5ffac0 00 00 00 00 00 00 00 00 b0 37 a2 15 ff 7f 00 00  .........7......
+    Possible instruction pointers:
+
+11  ucrtbase.dll + 0x37b0
+ 
+    rsp = 0x00000085fa5ffad0   rip = 0x00007fff15a237b0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ffad0 a0 ae e2 3f 49 02 00 00 00 00 00 00 00 00 00 00  ...?I...........
+     00000085fa5ffae0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa5ffaf0 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+12  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fa5ffb00   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa5ffb00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa5ffb10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa5ffb20 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+13  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fa5ffb30   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 11
+ 0  ntdll.dll + 0x166e84
+ 
+    rax = 0x00000000000001e3   rdx = 0x0000000000000000
+    rcx = 0x00000249416efed0   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa6ffa00   rsp = 0x00000085fa6ff988
+     r8 = 0x00000249416efed0    r9 = 0x7ffffffffffffffc
+    r10 = 0x00000249416efed0   r11 = 0x00000249416efed0
+    r12 = 0x0000000000000000   r13 = 0x00000249416efed8
+    r14 = 0x00000249416efed0   r15 = 0x0000000000000000
+    rip = 0x00007fff17f06e84
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa6ff988 6e dd e3 17 ff 7f 00 00                          n.......        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x9dd6e
+ 
+    rax = 0x00000000000001e3   rdx = 0x0000000000000000
+    rcx = 0x00000249416efed0   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa6ffa00   rsp = 0x00000085fa6ff990
+     r8 = 0x00000249416efed0    r9 = 0x7ffffffffffffffc
+    r10 = 0x00000249416efed0   r11 = 0x00000249416efed0
+    r12 = 0x0000000000000000   r13 = 0x00000249416efed8
+    r14 = 0x00000249416efed0   r15 = 0x0000000000000000
+    rip = 0x00007fff17e3dd6e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa6ff990 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ff9a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ff9b0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ff9c0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ff9d0 00 00 00 00 00 00 00 00 d0 f9 6f fa 85 00 00 00  ..........o.....
+     00000085fa6ff9e0 00 00 00 00 00 00 00 00 5c 46 00 00 00 00 00 00  ........\F......
+     00000085fa6ff9f0 00 00 00 00 01 00 00 00 d0 fe 6e 41 49 02 00 00  ..........nAI...
+     00000085fa6ffa00 00 00 00 00 00 00 00 00 98 fa 6f fa 85 00 00 00  ..........o.....
+     00000085fa6ffa10 e0 f4 5a 15 ff 7f 00 00                          ..Z.....        
+    Possible instruction pointers:
+
+ 2  KERNELBASE.dll + 0x1f4e0
+ 
+    rsp = 0x00000085fa6ffa18   rip = 0x00007fff155af4e0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa6ffa18 e8 fd 6e 41 49 02 00 00 d0 fa 6f fa 85 00 00 00  ..nAI.....o.....
+     00000085fa6ffa28 18 f5 5a 15 ff 7f 00 00                          ..Z.....        
+    Possible instruction pointers:
+
+ 3  KERNELBASE.dll + 0x1f518
+ 
+    rsp = 0x00000085fa6ffa30   rip = 0x00007fff155af518
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa6ffa30 00 00 00 00 00 00 00 00 d0 fe 6e 41 49 02 00 00  ..........nAI...
+     00000085fa6ffa40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffa50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffa60 d0 fe 6e 41 49 02 00 00 75 d6 60 e5 f7 7f 00 00  ..nAI...u.`.....
+    Possible instruction pointers:
+
+ 4  qemu-system-x86_64.exe + 0x6bd675
+ 
+    rsp = 0x00000085fa6ffa70   rip = 0x00007ff7e560d675
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa6ffa70 d8 fe 6e 41 49 02 00 00 00 00 00 00 00 00 00 00  ..nAI...........
+     00000085fa6ffa80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffa90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffaa0 00 00 00 00 00 00 00 00 b8 fe 6e 41 49 02 00 00  ..........nAI...
+     00000085fa6ffab0 70 09 6f 41 49 02 00 00 70 09 6f 41 49 02 00 00  p.oAI...p.oAI...
+     00000085fa6ffac0 50 0b 6f 41 49 02 00 00 00 00 00 00 00 00 00 00  P.oAI...........
+     00000085fa6ffad0 fe ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffae0 00 00 00 00 00 00 00 00 28 fe 6e 41 49 02 00 00  ........(.nAI...
+     00000085fa6ffaf0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffb00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffb10 00 00 00 00 00 00 00 00 cd d4 60 e5 f7 7f 00 00  ..........`.....
+    Possible instruction pointers:
+
+ 5  qemu-system-x86_64.exe + 0x6bd4cd
+ 
+    rsp = 0x00000085fa6ffb20   rip = 0x00007ff7e560d4cd
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa6ffb20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffb30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffb40 00 00 00 00 00 00 00 00 70 11 42 e5 f7 7f 00 00  ........p.B.....
+    Possible instruction pointers:
+
+ 6  qemu-system-x86_64.exe + 0x4d1170
+ 
+    rsp = 0x00000085fa6ffb50   rip = 0x00007ff7e5421170
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa6ffb50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffb60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffb70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffb80 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 7  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fa6ffb90   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa6ffb90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffba0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa6ffbb0 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 8  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fa6ffbc0   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 12
+ 0  ntdll.dll + 0x166e84
+ 
+    rax = 0x00000000000001e3   rdx = 0x00000085fa7ffdd0
+    rcx = 0x0000024941fc5840   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa7ffd80   rsp = 0x00000085fa7ffd08
+     r8 = 0x0000024941fc5840    r9 = 0x7ffffffffffffffc
+    r10 = 0x0000024941fc5840   r11 = 0x0000024941fc5840
+    r12 = 0x0000000000000000   r13 = 0x0000024941fc5830
+    r14 = 0x0000024941fc5840   r15 = 0x0000000000000000
+    rip = 0x00007fff17f06e84
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa7ffd08 6e dd e3 17 ff 7f 00 00                          n.......        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x9dd6e
+ 
+    rax = 0x00000000000001e3   rdx = 0x00000085fa7ffdd0
+    rcx = 0x0000024941fc5840   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa7ffd80   rsp = 0x00000085fa7ffd10
+     r8 = 0x0000024941fc5840    r9 = 0x7ffffffffffffffc
+    r10 = 0x0000024941fc5840   r11 = 0x0000024941fc5840
+    r12 = 0x0000000000000000   r13 = 0x0000024941fc5830
+    r14 = 0x0000024941fc5840   r15 = 0x0000000000000000
+    rip = 0x00007fff17e3dd6e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa7ffd10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffd20 ac 2d b7 03 12 3f 06 00 30 58 fc 41 49 02 00 00  .-...?..0X.AI...
+     00000085fa7ffd30 90 d7 fb 41 49 02 00 00 bf ee 40 e5 f7 7f 00 00  ...AI.....@.....
+    Possible instruction pointers:
+
+ 2  qemu-system-x86_64.exe + 0x4beebf
+ 
+    rbp = 0x00000085fa7ffd80   rsp = 0x00000085fa7ffd40
+    rip = 0x00007ff7e540eebf
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa7ffd40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffd50 00 00 00 00 00 00 00 00 50 fd 7f fa 85 00 00 00  ........P.......
+     00000085fa7ffd60 00 00 00 00 00 00 00 00 f0 0e 00 00 00 00 00 00  ................
+     00000085fa7ffd70 00 00 00 00 01 00 00 00 40 58 fc 41 49 02 00 00  ........@X.AI...
+     00000085fa7ffd80 00 00 00 00 00 00 00 00 e0 f4 5a 15 ff 7f 00 00  ..........Z.....
+    Possible instruction pointers:
+
+ 3  KERNELBASE.dll + 0x1f4e0
+ 
+    rsp = 0x00000085fa7ffd90   rip = 0x00007fff155af4e0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa7ffd90 00 00 00 00 00 00 00 00 90 d7 fb 41 49 02 00 00  ...........AI...
+     00000085fa7ffda0 20 fe 7f fa 85 00 00 00 18 f5 5a 15 ff 7f 00 00   .........Z.....
+    Possible instruction pointers:
+
+ 4  KERNELBASE.dll + 0x1f518
+ 
+    rsp = 0x00000085fa7ffdb0   rip = 0x00007fff155af518
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa7ffdb0 00 00 00 00 00 00 00 00 30 58 fc 41 49 02 00 00  ........0X.AI...
+     00000085fa7ffdc0 d0 fd 7f fa 85 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffdd0 90 90 67 ff ff ff ff ff 00 00 00 00 00 00 00 00  ..g.............
+     00000085fa7ffde0 30 58 fc 41 49 02 00 00 0d f3 4d e5 f7 7f 00 00  0X.AI.....M.....
+    Possible instruction pointers:
+
+ 5  qemu-system-x86_64.exe + 0x58f30d
+ 
+    rsp = 0x00000085fa7ffdf0   rip = 0x00007ff7e54df30d
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa7ffdf0 ac 2d b7 03 12 3f 06 00 00 00 00 00 00 00 00 00  .-...?..........
+     00000085fa7ffe00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffe10 40 58 fc 41 49 02 00 00 fe ff ff ff ff ff ff ff  @X.AI...........
+     00000085fa7ffe20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffe30 a0 57 fc 41 49 02 00 00 00 00 00 00 00 00 00 00  .W.AI...........
+     00000085fa7ffe40 00 00 00 00 00 00 00 00 5d f2 4d e5 f7 7f 00 00  ........].M.....
+    Possible instruction pointers:
+
+ 6  qemu-system-x86_64.exe + 0x58f25d
+ 
+    rsp = 0x00000085fa7ffe50   rip = 0x00007ff7e54df25d
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa7ffe50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffe60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffe70 00 00 00 00 00 00 00 00 70 11 42 e5 f7 7f 00 00  ........p.B.....
+    Possible instruction pointers:
+
+ 7  qemu-system-x86_64.exe + 0x4d1170
+ 
+    rsp = 0x00000085fa7ffe80   rip = 0x00007ff7e5421170
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa7ffe80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffe90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffea0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffeb0 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 8  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fa7ffec0   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa7ffec0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffed0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa7ffee0 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 9  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fa7ffef0   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 13
+ 0  ntdll.dll + 0x166e84
+ 
+    rax = 0x00000000000001e3   rdx = 0x0000000000000000
+    rcx = 0x0000024941e2ac68   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa8ffb10   rsp = 0x00000085fa8ffa98
+     r8 = 0x0000024941e2ac68    r9 = 0x7ffffffffffffffc
+    r10 = 0x0000024941e2ac68   r11 = 0x0000024941e2ac68
+    r12 = 0x0000000000000000   r13 = 0x0000024941e2ac70
+    r14 = 0x0000024941e2ac68   r15 = 0x0000000000000000
+    rip = 0x00007fff17f06e84
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa8ffa98 6e dd e3 17 ff 7f 00 00                          n.......        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x9dd6e
+ 
+    rax = 0x00000000000001e3   rdx = 0x0000000000000000
+    rcx = 0x0000024941e2ac68   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa8ffb10   rsp = 0x00000085fa8ffaa0
+     r8 = 0x0000024941e2ac68    r9 = 0x7ffffffffffffffc
+    r10 = 0x0000024941e2ac68   r11 = 0x0000024941e2ac68
+    r12 = 0x0000000000000000   r13 = 0x0000024941e2ac70
+    r14 = 0x0000024941e2ac68   r15 = 0x0000000000000000
+    rip = 0x00007fff17e3dd6e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa8ffaa0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffab0 b0 88 b5 15 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 2  ucrtbase.dll + 0x1388b0
+ 
+    rbp = 0x00000085fa8ffb10   rsp = 0x00000085fa8ffab8
+    rip = 0x00007fff15b588b0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa8ffab8 39 01 a3 15 ff 7f 00 00                          9.......        
+    Possible instruction pointers:
+
+ 3  ucrtbase.dll + 0x10139
+ 
+    rbp = 0x00000085fa8ffb10   rsp = 0x00000085fa8ffac0
+    rip = 0x00007fff15a30139
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa8ffac0 00 00 00 00 00 00 00 00 30 02 00 00 00 00 00 00  ........0.......
+     00000085fa8ffad0 c0 fb 8f fa 85 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffae0 00 00 00 00 00 00 00 00 e0 fa 8f fa 85 00 00 00  ................
+     00000085fa8ffaf0 00 00 00 00 00 00 00 00 44 2e 00 00 00 00 00 00  ........D.......
+     00000085fa8ffb00 00 00 00 00 01 00 00 00 68 ac e2 41 49 02 00 00  ........h..AI...
+     00000085fa8ffb10 a8 fb 8f fa 85 00 00 00 70 ac e2 41 49 02 00 00  ........p..AI...
+     00000085fa8ffb20 e0 f4 5a 15 ff 7f 00 00                          ..Z.....        
+    Possible instruction pointers:
+
+ 4  KERNELBASE.dll + 0x1f4e0
+ 
+    rsp = 0x00000085fa8ffb28   rip = 0x00007fff155af4e0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa8ffb28 80 ab e2 41 49 02 00 00 e0 fb 8f fa 85 00 00 00  ...AI...........
+     00000085fa8ffb38 18 f5 5a 15 ff 7f 00 00                          ..Z.....        
+    Possible instruction pointers:
+
+ 5  KERNELBASE.dll + 0x1f518
+ 
+    rsp = 0x00000085fa8ffb40   rip = 0x00007fff155af518
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa8ffb40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffb50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffb60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffb70 00 00 00 00 00 00 00 00 95 35 34 67 fe 7f 00 00  .........54g....
+    Possible instruction pointers:
+
+ 6  libgfxstream_backend.dll + 0x63595
+ 
+    rsp = 0x00000085fa8ffb80   rip = 0x00007ffe67343595
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa8ffb80 68 ac e2 41 49 02 00 00 00 00 00 00 00 00 00 00  h..AI...........
+     00000085fa8ffb90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffba0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffbb0 00 00 00 00 00 00 00 00 50 ac e2 41 49 02 00 00  ........P..AI...
+     00000085fa8ffbc0 f0 7b e3 41 49 02 00 00 f0 7b e3 41 49 02 00 00  .{.AI....{.AI...
+     00000085fa8ffbd0 20 7e e3 41 49 02 00 00 00 00 00 00 00 00 00 00   ~.AI...........
+     00000085fa8ffbe0 fe ff ff ff ff ff ff ff 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffbf0 00 00 00 00 00 00 00 00 c0 ab e2 41 49 02 00 00  ...........AI...
+     00000085fa8ffc00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffc10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffc20 00 00 00 00 00 00 00 00 bd 34 34 67 fe 7f 00 00  .........44g....
+    Possible instruction pointers:
+
+ 7  libgfxstream_backend.dll + 0x634bd
+ 
+    rsp = 0x00000085fa8ffc30   rip = 0x00007ffe673434bd
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa8ffc30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffc40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffc50 00 00 00 00 00 00 00 00 60 44 35 67 fe 7f 00 00  ........`D5g....
+    Possible instruction pointers:
+
+ 8  libgfxstream_backend.dll + 0x74460
+ 
+    rsp = 0x00000085fa8ffc60   rip = 0x00007ffe67354460
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa8ffc60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffc70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffc80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffc90 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 9  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fa8ffca0   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa8ffca0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffcb0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa8ffcc0 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+10  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fa8ffcd0   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 14
+ 0  ntdll.dll + 0x166e84
+ 
+    rax = 0x00000000000001e3   rdx = 0x0000000000000000
+    rcx = 0x000002493dd35e48   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa9ffab0   rsp = 0x00000085fa9ffa38
+     r8 = 0x000002493dd35e48    r9 = 0x7ffffffffffffffc
+    r10 = 0x000002493dd35e48   r11 = 0x000002493dd35e48
+    r12 = 0x0000000000000000   r13 = 0x000002493dd35e50
+    r14 = 0x000002493dd35e48   r15 = 0x0000000000000000
+    rip = 0x00007fff17f06e84
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fa9ffa38 6e dd e3 17 ff 7f 00 00                          n.......        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x9dd6e
+ 
+    rax = 0x00000000000001e3   rdx = 0x0000000000000000
+    rcx = 0x000002493dd35e48   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fa9ffab0   rsp = 0x00000085fa9ffa40
+     r8 = 0x000002493dd35e48    r9 = 0x7ffffffffffffffc
+    r10 = 0x000002493dd35e48   r11 = 0x000002493dd35e48
+    r12 = 0x0000000000000000   r13 = 0x000002493dd35e50
+    r14 = 0x000002493dd35e48   r15 = 0x0000000000000000
+    rip = 0x00007fff17e3dd6e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fa9ffa40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffa50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffa60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffa70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffa80 00 00 00 00 00 00 00 00 80 fa 9f fa 85 00 00 00  ................
+     00000085fa9ffa90 00 00 00 00 00 00 00 00 bc 18 00 00 00 00 00 00  ................
+     00000085fa9ffaa0 00 00 00 00 01 00 00 00 48 5e d3 3d 49 02 00 00  ........H^.=I...
+     00000085fa9ffab0 00 00 00 00 00 00 00 00 e0 f4 5a 15 ff 7f 00 00  ..........Z.....
+    Possible instruction pointers:
+
+ 2  KERNELBASE.dll + 0x1f4e0
+ 
+    rsp = 0x00000085fa9ffac0   rip = 0x00007fff155af4e0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa9ffac0 00 00 00 00 00 00 00 00 28 5e d3 3d 49 02 00 00  ........(^.=I...
+     00000085fa9ffad0 00 00 00 00 00 00 00 00 18 f5 5a 15 ff 7f 00 00  ..........Z.....
+    Possible instruction pointers:
+
+ 3  KERNELBASE.dll + 0x1f518
+ 
+    rsp = 0x00000085fa9ffae0   rip = 0x00007fff155af518
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa9ffae0 00 00 00 00 00 00 00 00 48 5e d3 3d 49 02 00 00  ........H^.=I...
+     00000085fa9ffaf0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffb00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffb10 48 5e d3 3d 49 02 00 00 82 48 35 67 fe 7f 00 00  H^.=I....H5g....
+    Possible instruction pointers:
+
+ 4  libgfxstream_backend.dll + 0x74882
+ 
+    rsp = 0x00000085fa9ffb20   rip = 0x00007ffe67354882
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa9ffb20 50 5e d3 3d 49 02 00 00 00 00 00 00 00 00 00 00  P^.=I...........
+     00000085fa9ffb30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffb40 00 00 00 00 00 00 00 00 10 5e d3 3d 49 02 00 00  .........^.=I...
+     00000085fa9ffb50 00 00 00 00 00 00 00 00 28 5e d3 3d 49 02 00 00  ........(^.=I...
+     00000085fa9ffb60 00 00 00 00 00 00 00 00 bd d7 41 67 fe 7f 00 00  ..........Ag....
+    Possible instruction pointers:
+
+ 5  libgfxstream_backend.dll + 0x13d7bd
+ 
+    rsp = 0x00000085fa9ffb70   rip = 0x00007ffe6741d7bd
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa9ffb70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffb80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffb90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffba0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffbb0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffbc0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffbd0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffbe0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffbf0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffc00 70 5e d3 3d 49 02 00 00 60 44 35 67 fe 7f 00 00  p^.=I...`D5g....
+    Possible instruction pointers:
+
+ 6  libgfxstream_backend.dll + 0x74460
+ 
+    rsp = 0x00000085fa9ffc10   rip = 0x00007ffe67354460
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa9ffc10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffc20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffc30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffc40 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 7  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fa9ffc50   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fa9ffc50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffc60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fa9ffc70 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 8  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fa9ffc80   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 15
+ 0  ntdll.dll + 0x1632b4
+ 
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x00000000000005d8   rbx = 0x00000000000005d8
+    rsi = 0x00000000ffffffff   rdi = 0x0000000000000000
+    rbp = 0x0000000000000000   rsp = 0x00000085faaff718
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x00000000000005d8   r11 = 0x00000000000005d8
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff17f032b4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085faaff718 5f 89 5a 15 ff 7f 00 00                          _.Z.....        
+    Possible instruction pointers:
+
+ 1  KERNELBASE.dll + 0x1895f
+ 
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x00000000000005d8   rbx = 0x00000000000005d8
+    rsi = 0x00000000ffffffff   rdi = 0x0000000000000000
+    rbp = 0x0000000000000000   rsp = 0x00000085faaff720
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x00000000000005d8   r11 = 0x00000000000005d8
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff155a895f
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085faaff720 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff730 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff740 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff750 48 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  H...............
+     00000085faaff760 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff770 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff780 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff790 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff7a0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff7b0 00 00 00 00 00 00 00 00 95 8c d3 c0 fe 7f 00 00  ................
+    Possible instruction pointers:
+
+ 2  graphics-hook64.dll + 0x8c95
+ 
+    rsp = 0x00000085faaff7c0   rip = 0x00007ffec0d38c95
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faaff7c0 10 20 d7 c0 fe 7f 00 00                          . ......        
+    Possible instruction pointers:
+
+ 3  graphics-hook64.dll + 0x42010
+ 
+    rsp = 0x00000085faaff7c8   rip = 0x00007ffec0d72010
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faaff7c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff7d8 d8 05 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff7e8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff7f8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff808 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff818 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff828 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff838 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff848 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff858 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff868 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff878 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff888 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff898 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff8a8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff8b8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff8c8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff8d8 2d 8d 64 15 ff 7f 00 00                          -.d.....        
+    Possible instruction pointers:
+
+ 4  KERNELBASE.dll + 0xb8d2d
+ 
+    rsp = 0x00000085faaff8e0   rip = 0x00007fff15648d2d
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faaff8e0 db a1 ac bb 5e f9 00 00 04 01 00 00 00 00 00 00  ....^...........
+     00000085faaff8f0 bb a2 ac bb 5e f9 00 00 00 00 00 00 00 00 00 00  ....^...........
+     00000085faaff900 00 00 00 00 00 00 00 00 1c 91 d3 c0 fe 7f 00 00  ................
+    Possible instruction pointers:
+
+ 5  graphics-hook64.dll + 0x911c
+ 
+    rsp = 0x00000085faaff910   rip = 0x00007ffec0d3911c
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faaff910 e8 81 d6 c0 fe 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 6  graphics-hook64.dll + 0x381e8
+ 
+    rsp = 0x00000085faaff918   rip = 0x00007ffec0d681e8
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faaff918 00 00 00 00 00 00 00 00 b8 ef af fa 85 00 00 00  ................
+     00000085faaff928 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff938 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff948 d7 e8 c0 15 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 7  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085faaff950   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faaff950 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff960 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faaff970 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 8  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085faaff980   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 16
+ 0  ntdll.dll + 0x163d84
+ 
+    rax = 0x000000000000005b   rdx = 0x00007ffe7deb4ec0
+    rcx = 0x0000000000000003   rbx = 0x0000000000000003
+    rsi = 0x0000000000000000   rdi = 0x0000000000000003
+    rbp = 0x0000000000000000   rsp = 0x00000085facff6e8
+     r8 = 0x0000000000000001    r9 = 0x0000000000000000
+    r10 = 0x0000000000000003   r11 = 0x0000000000000003
+    r12 = 0x00007ffe7deb4ec0   r13 = 0x00000085f9a94000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff17f03d84
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085facff6e8 33 f2 5a 15 ff 7f 00 00                          3.Z.....        
+    Possible instruction pointers:
+
+ 1  KERNELBASE.dll + 0x1f233
+ 
+    rax = 0x000000000000005b   rdx = 0x00007ffe7deb4ec0
+    rcx = 0x0000000000000003   rbx = 0x0000000000000003
+    rsi = 0x0000000000000000   rdi = 0x0000000000000003
+    rbp = 0x0000000000000000   rsp = 0x00000085facff6f0
+     r8 = 0x0000000000000001    r9 = 0x0000000000000000
+    r10 = 0x0000000000000003   r11 = 0x0000000000000003
+    r12 = 0x00007ffe7deb4ec0   r13 = 0x00000085f9a94000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff155af233
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085facff6f0 00 00 a3 7c fe 7f 00 00 3a 79 64 15 ff 7f 00 00  ...|....:yd.....
+    Possible instruction pointers:
+
+ 2  KERNELBASE.dll + 0xb793a
+ 
+    rsp = 0x00000085facff700   rip = 0x00007fff1564793a
+    Found by: stack scanning
+
+    Stack contents:
+     00000085facff700 dc 18 00 00 00 00 00 00 21 8a e4 17 ff 7f 00 00  ........!.......
+    Possible instruction pointers:
+
+ 3  ntdll.dll + 0xa8a21
+ 
+    rsp = 0x00000085facff710   rip = 0x00007fff17e48a21
+    Found by: stack scanning
+
+    Stack contents:
+     00000085facff710 00 00 00 00 00 00 00 00 c0 06 cc 7c fe 7f 00 00  ...........|....
+    Possible instruction pointers:
+
+ 4  igxelpicd64.dll + 0x2906c0
+ 
+    rsp = 0x00000085facff720   rip = 0x00007ffe7ccc06c0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085facff720 c4 00 06 02 03 00 00 00 00 00 00 00 85 00 00 00  ................
+     00000085facff730 00 00 00 00 00 00 00 00 fd 15 3a 16 ff 7f 00 00  ..........:.....
+    Possible instruction pointers:
+
+ 5  USER32.dll + 0x515fd
+ 
+    rsp = 0x00000085facff740   rip = 0x00007fff163a15fd
+    Found by: stack scanning
+
+Thread 17
+ 0  ntdll.dll + 0x166e84
+ 
+    rax = 0x00000000000001e3   rdx = 0x00000085fadffd70
+    rcx = 0x0000024942255280   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fadffd20   rsp = 0x00000085fadffca8
+     r8 = 0x0000024942255280    r9 = 0x7ffffffffffffffc
+    r10 = 0x0000024942255280   r11 = 0x0000024942255280
+    r12 = 0x0000000000000000   r13 = 0x00007ffe7deb4b78
+    r14 = 0x0000024942255280   r15 = 0x0000000000000000
+    rip = 0x00007fff17f06e84
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fadffca8 6e dd e3 17 ff 7f 00 00                          n.......        
+    Possible instruction pointers:
+
+ 1  ntdll.dll + 0x9dd6e
+ 
+    rax = 0x00000000000001e3   rdx = 0x00000085fadffd70
+    rcx = 0x0000024942255280   rbx = 0x0000000000000000
+    rsi = 0x0000000000000000   rdi = 0x0000000000000000
+    rbp = 0x00000085fadffd20   rsp = 0x00000085fadffcb0
+     r8 = 0x0000024942255280    r9 = 0x7ffffffffffffffc
+    r10 = 0x0000024942255280   r11 = 0x0000024942255280
+    r12 = 0x0000000000000000   r13 = 0x00007ffe7deb4b78
+    r14 = 0x0000024942255280   r15 = 0x0000000000000000
+    rip = 0x00007fff17e3dd6e
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fadffcb0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffcc0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffcd0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffce0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffcf0 00 00 00 00 00 00 00 00 f0 fc df fa 85 00 00 00  ................
+     00000085fadffd00 00 00 00 00 00 00 00 00 40 24 00 00 00 00 00 00  ........@$......
+     00000085fadffd10 00 00 00 00 01 00 00 00 80 52 25 42 49 02 00 00  .........R%BI...
+     00000085fadffd20 00 00 00 00 00 00 00 00 35 32 4d 00 00 00 00 00  ........52M.....
+     00000085fadffd30 00 00 00 00 00 00 00 00 70 52 25 42 49 02 00 00  ........pR%BI...
+     00000085fadffd40 fa 00 00 00 00 00 00 00 18 f5 5a 15 ff 7f 00 00  ..........Z.....
+    Possible instruction pointers:
+
+ 2  KERNELBASE.dll + 0x1f518
+ 
+    rsp = 0x00000085fadffd50   rip = 0x00007fff155af518
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffd50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffd60 70 fd df fa 85 00 00 00 00 00 00 00 00 00 00 00  p...............
+     00000085fadffd70 60 da d9 ff ff ff ff ff 00 00 00 00 00 00 00 00  `...............
+     00000085fadffd80 00 00 00 00 00 00 00 00 98 85 42 7d fe 7f 00 00  ..........B}....
+    Possible instruction pointers:
+
+ 3  igxelpicd64.dll + 0x9f8598
+ 
+    rsp = 0x00000085fadffd90   rip = 0x00007ffe7d428598
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffd90 70 4b eb 7d fe 7f 00 00                          pK.}....        
+    Possible instruction pointers:
+
+ 4  igxelpicd64.dll + 0x1484b70
+ 
+    rsp = 0x00000085fadffd98   rip = 0x00007ffe7deb4b70
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffd98 e0 fd df fa 85 00 00 00 60 fe df fa 85 00 00 00  ........`.......
+     00000085fadffda8 fa 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffdb8 2a 7a 4f 7d fe 7f 00 00                          *zO}....        
+    Possible instruction pointers:
+
+ 5  igxelpicd64.dll + 0xac7a2a
+ 
+    rsp = 0x00000085fadffdc0   rip = 0x00007ffe7d4f7a2a
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffdc0 60 fe df fa 85 00 00 00 60 fe df fa 85 00 00 00  `.......`.......
+     00000085fadffdd0 fa 00 00 00 00 00 00 00 60 4b eb 7d fe 7f 00 00  ........`K.}....
+    Possible instruction pointers:
+
+ 6  igxelpicd64.dll + 0x1484b60
+ 
+    rsp = 0x00000085fadffde0   rip = 0x00007ffe7deb4b60
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffde0 70 52 25 42 49 02 00 00 01 10 f4 7d fe 7f 00 00  pR%BI......}....
+    Possible instruction pointers:
+
+ 7  igxelpicd64.dll + 0x1511001
+ 
+    rsp = 0x00000085fadffdf0   rip = 0x00007ffe7df41001
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffdf0 70 52 25 42 49 02 00 00 60 52 25 42 49 02 00 00  pR%BI...`R%BI...
+     00000085fadffe00 00 00 00 00 00 00 00 00 c3 8b a5 7c fe 7f 00 00  ...........|....
+    Possible instruction pointers:
+
+ 8  igxelpicd64.dll + 0x28bc3
+ 
+    rsp = 0x00000085fadffe10   rip = 0x00007ffe7ca58bc3
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffe10 60 fe df fa 85 00 00 00 60 fe df fa 85 00 00 00  `.......`.......
+     00000085fadffe20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffe30 00 00 00 00 00 00 00 00 7c 2a cd 7c fe 7f 00 00  ........|*.|....
+    Possible instruction pointers:
+
+ 9  igxelpicd64.dll + 0x2a2a7c
+ 
+    rsp = 0x00000085fadffe40   rip = 0x00007ffe7ccd2a7c
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffe40 fa 00 00 00 00 00 00 00 e0 98 51 42 49 02 00 00  ..........QBI...
+     00000085fadffe50 b0 fe df fa 85 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffe60 f0 8d d8 7d fe 7f 00 00                          ...}....        
+    Possible instruction pointers:
+
+10  igxelpicd64.dll + 0x1358df0
+ 
+    rsp = 0x00000085fadffe68   rip = 0x00007ffe7dd88df0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffe68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffe78 a2 89 ab 7c fe 7f 00 00                          ...|....        
+    Possible instruction pointers:
+
+11  igxelpicd64.dll + 0x889a2
+ 
+    rsp = 0x00000085fadffe80   rip = 0x00007ffe7cab89a2
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffe80 fa 00 00 00 00 00 00 00 00 f0 21 42 49 02 00 00  ..........!BI...
+     00000085fadffe90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffea0 00 f0 21 42 49 02 00 00 3f ff 45 7d fe 7f 00 00  ..!BI...?.E}....
+    Possible instruction pointers:
+
+12  igxelpicd64.dll + 0xa2ff3f
+ 
+    rsp = 0x00000085fadffeb0   rip = 0x00007ffe7d45ff3f
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffeb0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffec0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffed0 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+13  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fadffee0   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fadffee0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadffef0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fadfff00 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+14  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fadfff10   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 18
+ 0  win32u.dll + 0x1324
+ 
+    rax = 0x0000000000001004   rdx = 0x0000000000000000
+    rcx = 0x00000085faeffb20   rbx = 0x00000085faeffb20
+    rsi = 0x0000000000000000   rdi = 0x00007ffec0d671b0
+    rbp = 0x0000000000000000   rsp = 0x00000085faeffa58
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x00000085faeffb20   r11 = 0x00000085faeffb20
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff15561324
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085faeffa58 d2 fa 38 16 ff 7f 00 00                          ..8.....        
+    Possible instruction pointers:
+
+ 1  USER32.dll + 0x3fad2
+ 
+    rax = 0x0000000000001004   rdx = 0x0000000000000000
+    rcx = 0x00000085faeffb20   rbx = 0x00000085faeffb20
+    rsi = 0x0000000000000000   rdi = 0x00007ffec0d671b0
+    rbp = 0x0000000000000000   rsp = 0x00000085faeffa60
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x00000085faeffb20   r11 = 0x00000085faeffb20
+    r12 = 0x0000000000000000   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000000
+    rip = 0x00007fff1638fad2
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085faeffa60 01 00 00 00 20 00 00 00 01 00 00 00 ff 7f 00 00  .... ...........
+     00000085faeffa70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffa80 00 00 d3 c0 fe 7f 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffa90 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00  ...........@....
+     00000085faeffaa0 00 00 00 00 fe 7f 00 00 01 00 00 00 00 00 00 00  ................
+     00000085faeffab0 00 00 00 00 00 00 00 00 b7 87 d3 c0 fe 7f 00 00  ................
+    Possible instruction pointers:
+
+ 2  graphics-hook64.dll + 0x87b7
+ 
+    rsp = 0x00000085faeffac0   rip = 0x00007ffec0d387b7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faeffac0 b0 71 d6 c0 fe 7f 00 00                          .q......        
+    Possible instruction pointers:
+
+ 3  graphics-hook64.dll + 0x371b0
+ 
+    rsp = 0x00000085faeffac8   rip = 0x00007ffec0d671b0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faeffac8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffad8 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffae8 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+     00000085faeffaf8 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffb08 00 00 00 00 00 00 00 00 00 00 d3 c0 fe 7f 00 00  ................
+     00000085faeffb18 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffb28 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffb38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffb48 00 00 00 00 00 00 00 00 20 00 00 00 00 00 00 00  ........ .......
+     00000085faeffb58 f0 2e f0 17 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 4  ntdll.dll + 0x162ef0
+ 
+    rsp = 0x00000085faeffb60   rip = 0x00007fff17f02ef0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faeffb60 00 00 00 00 00 00 00 00 00 00 d3 c0 fe 7f 00 00  ................
+     00000085faeffb70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffb80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffb90 b0 71 d6 c0 fe 7f 00 00                          .q......        
+    Possible instruction pointers:
+
+ 5  graphics-hook64.dll + 0x371b0
+ 
+    rsp = 0x00000085faeffb98   rip = 0x00007ffec0d671b0
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faeffb98 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffba8 d7 e8 c0 15 ff 7f 00 00                          ........        
+    Possible instruction pointers:
+
+ 6  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085faeffbb0   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085faeffbb0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffbc0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085faeffbd0 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 7  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085faeffbe0   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 19
+ 0  ntdll.dll + 0x1643e4
+ 
+    rax = 0x000000000000008e   rdx = 0x0000000000020000
+    rcx = 0x0000000000000650   rbx = 0x0000000000000000
+    rsi = 0x0000000000000001   rdi = 0x0000000000000000
+    rbp = 0x0000000000000001   rsp = 0x00000085fabffb48
+     r8 = 0x00000249536309e0    r9 = 0x0000000000000000
+    r10 = 0x0000000000000650   r11 = 0x0000000000000650
+    r12 = 0x0000000000000038   r13 = 0x0000000000000000
+    r14 = 0x0000024941e0e470   r15 = 0x00000249536309e0
+    rip = 0x00007fff17f043e4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fabffb48 85 5b 3e 11 ff 7f 00 00                          .[>.....        
+    Possible instruction pointers:
+
+ 1  dwmapi.dll + 0x5b85
+ 
+    rax = 0x000000000000008e   rdx = 0x0000000000020000
+    rcx = 0x0000000000000650   rbx = 0x0000000000000000
+    rsi = 0x0000000000000001   rdi = 0x0000000000000000
+    rbp = 0x0000000000000001   rsp = 0x00000085fabffb50
+     r8 = 0x00000249536309e0    r9 = 0x0000000000000000
+    r10 = 0x0000000000000650   r11 = 0x0000000000000650
+    r12 = 0x0000000000000038   r13 = 0x0000000000000000
+    r14 = 0x0000024941e0e470   r15 = 0x00000249536309e0
+    rip = 0x00007fff113e5b85
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fabffb50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffb60 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffb70 e0 09 63 53 49 02 00 00 a0 fb bf fa 85 00 00 00  ..cSI...........
+     00000085fabffb80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffb90 0a 00 00 80 00 00 00 00 01 00 00 00 00 00 00 00  ................
+     00000085fabffba0 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  8...............
+     00000085fabffbb0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffbc0 00 00 00 00 00 00 00 00 5c 49 48 17 c0 d0 00 00  ........\IH.....
+     00000085fabffbd0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffbe0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffbf0 00 00 00 00 00 00 00 00 bd 01 cc 7c fe 7f 00 00  ...........|....
+    Possible instruction pointers:
+
+ 2  igxelpicd64.dll + 0x2901bd
+ 
+    rsp = 0x00000085fabffc00   rip = 0x00007ffe7ccc01bd
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fabffc00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffc10 00 00 00 00 00 00 00 00 a0 06 00 00 00 00 00 00  ................
+     00000085fabffc20 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 3  KERNEL32.DLL + 0x2e8d7
+ 
+    rsp = 0x00000085fabffc30   rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fabffc30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffc40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fabffc50 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 4  ntdll.dll + 0x8d9c
+ 
+    rsp = 0x00000085fabffc60   rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 20
+ 0  ntdll.dll + 0x1632b4
+ 
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x0000000000000694   rbx = 0x0000000000000694
+    rsi = 0x00000000ffffffff   rdi = 0x0000000000000000
+    rbp = 0x00000249523a3040   rsp = 0x00000085fafffdb8
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000694   r11 = 0x0000000000000694
+    r12 = 0x0000000000000068   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000228
+    rip = 0x00007fff17f032b4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fafffdb8 5f 89 5a 15 ff 7f 00 00                          _.Z.....        
+    Possible instruction pointers:
+
+ 1  KERNELBASE.dll + 0x1895f
+ 
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x0000000000000694   rbx = 0x0000000000000694
+    rsi = 0x00000000ffffffff   rdi = 0x0000000000000000
+    rbp = 0x00000249523a3040   rsp = 0x00000085fafffdc0
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000694   r11 = 0x0000000000000694
+    r12 = 0x0000000000000068   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000228
+    rip = 0x00007fff155a895f
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fafffdc0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffdd0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffde0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffdf0 48 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  H...............
+     00000085fafffe00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffe10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffe20 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffe30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffe40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffe50 00 00 00 00 00 00 00 00 89 d4 cb 7c fe 7f 00 00  ...........|....
+    Possible instruction pointers:
+
+ 2  igxelpicd64.dll + 0x28d489
+ 
+    rbp = 0x00000249523a3040   rsp = 0x00000085fafffe60
+    rip = 0x00007ffe7ccbd489
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fafffe60 40 67 7a 42 49 02 00 00 00 00 00 00 00 00 00 00  @gzBI...........
+     00000085fafffe70 00 00 00 00 00 00 00 00 94 06 00 00 00 00 00 00  ................
+     00000085fafffe80 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffe90 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffea0 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 3  KERNEL32.DLL + 0x2e8d7
+ 
+    rbp = 0x00000249523a3040   rsp = 0x00000085fafffeb0
+    rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fafffeb0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffec0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fafffed0 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 4  ntdll.dll + 0x8d9c
+ 
+    rbp = 0x00000249523a3040   rsp = 0x00000085fafffee0
+    rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Thread 21
+ 0  ntdll.dll + 0x1632b4
+ 
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x0000000000000720   rbx = 0x0000000000000720
+    rsi = 0x00000000ffffffff   rdi = 0x0000000000000000
+    rbp = 0x0000024953b2f040   rsp = 0x00000085fb0ff9e8
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000720   r11 = 0x0000000000000720
+    r12 = 0x0000000000000068   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000228
+    rip = 0x00007fff17f032b4
+    Found by: given as instruction pointer in context
+
+    Stack contents:
+     00000085fb0ff9e8 5f 89 5a 15 ff 7f 00 00                          _.Z.....        
+    Possible instruction pointers:
+
+ 1  KERNELBASE.dll + 0x1895f
+ 
+    rax = 0x0000000000000004   rdx = 0x0000000000000000
+    rcx = 0x0000000000000720   rbx = 0x0000000000000720
+    rsi = 0x00000000ffffffff   rdi = 0x0000000000000000
+    rbp = 0x0000024953b2f040   rsp = 0x00000085fb0ff9f0
+     r8 = 0x0000000000000000    r9 = 0x0000000000000000
+    r10 = 0x0000000000000720   r11 = 0x0000000000000720
+    r12 = 0x0000000000000068   r13 = 0x0000000000000000
+    r14 = 0x0000000000000000   r15 = 0x0000000000000228
+    rip = 0x00007fff155a895f
+    Found by: simulating a return from leaf function
+
+    Stack contents:
+     00000085fb0ff9f0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffa00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffa10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffa20 48 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  H...............
+     00000085fb0ffa30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffa40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffa50 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffa60 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffa70 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffa80 00 00 00 00 00 00 00 00 89 d4 cb 7c fe 7f 00 00  ...........|....
+    Possible instruction pointers:
+
+ 2  igxelpicd64.dll + 0x28d489
+ 
+    rbp = 0x0000024953b2f040   rsp = 0x00000085fb0ffa90
+    rip = 0x00007ffe7ccbd489
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fb0ffa90 c0 12 db 42 49 02 00 00 00 00 00 00 00 00 00 00  ...BI...........
+     00000085fb0ffaa0 00 00 00 00 00 00 00 00 20 07 00 00 00 00 00 00  ........ .......
+     00000085fb0ffab0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffac0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffad0 00 00 00 00 00 00 00 00 d7 e8 c0 15 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 3  KERNEL32.DLL + 0x2e8d7
+ 
+    rbp = 0x0000024953b2f040   rsp = 0x00000085fb0ffae0
+    rip = 0x00007fff15c0e8d7
+    Found by: stack scanning
+
+    Stack contents:
+     00000085fb0ffae0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffaf0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+     00000085fb0ffb00 00 00 00 00 00 00 00 00 9c 8d da 17 ff 7f 00 00  ................
+    Possible instruction pointers:
+
+ 4  ntdll.dll + 0x8d9c
+ 
+    rbp = 0x0000024953b2f040   rsp = 0x00000085fb0ffb10
+    rip = 0x00007fff17da8d9c
+    Found by: stack scanning
+
+Loaded modules:
+0x7ff7e4f50000 - 0x7ff7e9316fff  qemu-system-x86_64.exe  0.0.0.0  (main)  (WARNING: No symbols, qemu-system-x86_64.pdb, 6AC6A4062D442BE24C4C44205044422E1)
+0x7ffe657c0000 - 0x7ffe65937fff  libshadertranslator.dll  0.0.0.0
+0x7ffe65940000 - 0x7ffe65aa0fff  igvkMedia64.dll  32.0.101.6881
+0x7ffe65ab0000 - 0x7ffe672dffff  igvk64.dll  32.0.101.6881
+0x7ffe672e0000 - 0x7ffe68f6bfff  libgfxstream_backend.dll  0.0.0.0  (WARNING: No symbols, libgfxstream_backend.pdb, 9049E46E753A37D54C4C44205044422E1)
+0x7ffe68f70000 - 0x7ffe6dbb9fff  Qt5WebEngineCoreAndroidEmu.dll  5.12.1.0
+0x7ffe6dbc0000 - 0x7ffe6df61fff  Qt5QuickAndroidEmu.dll  5.12.1.0
+0x7ffe6df70000 - 0x7ffe6e65ffff  libGLESv2.dll  4.0.0.1
+0x7ffe6fd40000 - 0x7ffe6fec3fff  vulkan-1.dll  1.4.304.0
+0x7ffe6fed0000 - 0x7ffe702b6fff  Qt5QmlAndroidEmu.dll  5.12.1.0
+0x7ffe702c0000 - 0x7ffe70786fff  Qt5GuiAndroidEmu.dll  5.12.1.0
+0x7ffe70790000 - 0x7ffe70ce1fff  Qt5WidgetsAndroidEmu.dll  5.12.1.0
+0x7ffe70cf0000 - 0x7ffe712a2fff  Qt5CoreAndroidEmu.dll  5.12.1.0
+0x7ffe75f40000 - 0x7ffe76210fff  libprotobuf.dll  0.0.0.0
+0x7ffe76220000 - 0x7ffe765bbfff  libandroid-emu-metrics.dll  0.0.0.0
+0x7ffe76960000 - 0x7ffe76abdfff  qwindows.dll  5.12.1.0
+0x7ffe77eb0000 - 0x7ffe7800ffff  libandroid-emu-protos.dll  0.0.0.0
+0x7ffe79ef0000 - 0x7ffe7a00dfff  libglib2_windows_msvc-x86_64.dll  0.0.0.0  (WARNING: No symbols, libglib2_windows_msvc-x86_64.pdb, CF4F525E4EE1D37A4C4C44205044422E1)
+0x7ffe7ca30000 - 0x7ffe7df9ffff  igxelpicd64.dll  32.0.101.6881  (WARNING: No symbols, igxelpicd64.pdb, 27AF2404C5ED422E951FDAA3DC5B2A5E1)
+0x7ffe80b60000 - 0x7ffe80c6cfff  Qt5NetworkAndroidEmu.dll  5.12.1.0
+0x7ffe893a0000 - 0x7ffe89541fff  igdml64.dll  32.0.101.6881
+0x7ffe89550000 - 0x7ffe8ac73fff  igd9dxva64.dll  32.0.101.6881
+0x7ffe8ac80000 - 0x7ffe8c687fff  igd9trinity64.dll  32.0.101.6881
+0x7ffe8c690000 - 0x7ffe8c92efff  igdumdim64.dll  32.0.101.6881
+0x7ffe94920000 - 0x7ffe94a2bfff  OpenGL32.dll  10.0.26100.5074
+0x7ffe976b0000 - 0x7ffe97710fff  qtiff.dll  5.12.1.0
+0x7ffe97c70000 - 0x7ffe97cf6fff  qwebp.dll  5.12.1.0
+0x7ffe9a1b0000 - 0x7ffe9a219fff  qjpeg.dll  5.12.1.0
+0x7ffe9fc70000 - 0x7ffe9fcc1fff  Qt5PositioningAndroidEmu.dll  5.12.1.0
+0x7ffea0130000 - 0x7ffea0152fff  d3d12.dll  10.0.26100.5074
+0x7ffea7b40000 - 0x7ffea7b6cfff  GLU32.dll  10.0.26100.1150
+0x7ffea7bf0000 - 0x7ffea7c40fff  Qt5PrintSupportAndroidEmu.dll  5.12.1.0
+0x7ffeabb10000 - 0x7ffeabb7efff  libandroid-emu-curl.dll  0.0.0.0
+0x7ffec0d30000 - 0x7ffec0d7bfff  graphics-hook64.dll  1.8.6.0  (WARNING: No symbols, graphics-hook64.pdb, B3E9247D2AEF66E3BE1F72741D1ED32C1)
+0x7ffec4390000 - 0x7ffec43bffff  libEGL.DLL  4.0.0.1
+0x7ffec5ec0000 - 0x7ffec5ed6fff  libemugl_common.dll  0.0.0.0
+0x7ffec5ee0000 - 0x7ffec5f1afff  Qt5WebEngineWidgetsAndroidEmu.dll  5.12.1.0
+0x7ffec6230000 - 0x7ffec6284fff  Qt5SvgAndroidEmu.dll  5.12.1.0
+0x7ffec8c30000 - 0x7ffec8c3bfff  qwbmp.dll  5.12.1.0
+0x7ffec8d20000 - 0x7ffec8d2bfff  qtga.dll  5.12.1.0
+0x7ffecb940000 - 0x7ffecb94bfff  qsvg.dll  5.12.1.0
+0x7ffece310000 - 0x7ffece31cfff  qico.dll  5.12.1.0
+0x7ffed0960000 - 0x7ffed096dfff  msdmo.dll  10.0.26100.1150
+0x7ffed1f20000 - 0x7ffed1f2efff  qicns.dll  5.12.1.0
+0x7ffed2580000 - 0x7ffed2595fff  Qt5QuickWidgetsAndroidEmu.dll  5.12.1.0
+0x7ffed2d20000 - 0x7ffed2d2cfff  qgif.dll  5.12.1.0
+0x7ffed4a40000 - 0x7ffed4a6bfff  dxva2.dll  10.0.26100.3624
+0x7ffed7800000 - 0x7ffed78b1fff  WINSPOOL.DRV  10.0.26100.5074
+0x7ffedc0e0000 - 0x7ffedc193fff  COMCTL32.dll  5.82.26100.5074
+0x7ffedd280000 - 0x7ffedd29ffff  Qt5WebChannelAndroidEmu.dll  5.12.1.0
+0x7ffedd4f0000 - 0x7ffedd53cfff  ControlLib.dll  1.1.240.0
+0x7ffee6340000 - 0x7ffee63ebfff  IntelControlLib.dll  1.1.240.0
+0x7ffee63f0000 - 0x7ffee65a0fff  d3d9.dll  10.0.26100.5074
+0x7ffee8eb0000 - 0x7ffee8ed6fff  Qt5WebSocketsAndroidEmu.dll  5.12.1.0
+0x7ffee8ee0000 - 0x7ffee8ef5fff  libandroid-emu-tracing.dll  0.0.0.0
+0x7ffef0b00000 - 0x7ffef0dc3fff  iertutil.dll  11.0.26100.5074
+0x7ffef0fe0000 - 0x7ffef11befff  urlmon.dll  11.0.26100.6584
+0x7ffef3310000 - 0x7ffef3338fff  SRVCLI.DLL  10.0.26100.1150
+0x7ffef33c0000 - 0x7ffef33e0fff  MPR.dll  10.0.26100.1882
+0x7ffef3450000 - 0x7ffef3469fff  NETAPI32.dll  10.0.26100.1150
+0x7ffef46f0000 - 0x7ffef46fbfff  VCRUNTIME140_1.dll  14.42.34438.0
+0x7ffef4cd0000 - 0x7ffef4cedfff  VCRUNTIME140.dll  14.42.34438.0  (WARNING: No symbols, vcruntime140.amd64.pdb, 6E365B5EB0554BF689C0E4915F72E91C1)
+0x7ffef4cf0000 - 0x7ffef4d7cfff  MSVCP140.dll  14.42.34438.0  (WARNING: No symbols, msvcp140.amd64.pdb, 54413C12039C446A94752DBDC675A9411)
+0x7ffef83e0000 - 0x7ffefa45ffff  media_bin_64.dll  32.0.101.6881
+0x7ffefa5b0000 - 0x7ffefbb25fff  igddxvacommon64.dll  32.0.101.6881
+0x7ffefe500000 - 0x7ffefe50afff  VERSION.dll  10.0.26100.1150
+0x7ffeff8b0000 - 0x7ffeff8befff  qsvgicon.dll  5.12.1.0
+0x7ffeff8c0000 - 0x7ffeff8defff  libandroid-emu-base-logging.dll  0.0.0.0
+0x7ffeff8e0000 - 0x7ffeff8effff  libandroid-emu-agents.dll  0.0.0.0
+0x7ffeffe00000 - 0x7ffeffe19fff  windows.staterepositorycore.dll  10.0.26100.5074
+0x7fff06800000 - 0x7fff0683dfff  RTWorkQ.DLL  10.0.26100.5074
+0x7fff06850000 - 0x7fff0bac3fff  igc64.dll  32.0.101.6881
+0x7fff0bad0000 - 0x7fff0bce5fff  MFPlat.DLL  10.0.26100.5074
+0x7fff0bcf0000 - 0x7fff0c299fff  igdgmm64.dll  32.0.101.6881
+0x7fff0c830000 - 0x7fff0c83afff  rasadhlp.dll  10.0.26100.6584
+0x7fff0cc30000 - 0x7fff0cc64fff  WINMM.dll  10.0.26100.5074
+0x7fff0e770000 - 0x7fff0e88efff  WINHTTP.dll  10.0.26100.5074
+0x7fff0ef30000 - 0x7fff0ef52fff  dhcpcsvc.DLL  10.0.26100.5074
+0x7fff0ef60000 - 0x7fff0ef7dfff  dhcpcsvc6.DLL  10.0.26100.5074
+0x7fff0f4d0000 - 0x7fff0f52ffff  directxdatabasehelper.dll  10.0.26100.5074
+0x7fff0f540000 - 0x7fff0f5c5fff  fwpuclnt.dll  10.0.26100.6584
+0x7fff10e00000 - 0x7fff10e9dfff  apphelp.dll  10.0.26100.5074
+0x7fff10f10000 - 0x7fff10f28fff  USP10.dll  10.0.26100.1
+0x7fff11150000 - 0x7fff1115cfff  Secur32.dll  10.0.26100.1
+0x7fff11160000 - 0x7fff11189fff  WTSAPI32.dll  10.0.26100.5074
+0x7fff11290000 - 0x7fff1129efff  WINNSI.DLL  10.0.26100.5074
+0x7fff112b0000 - 0x7fff11357fff  UxTheme.dll  10.0.26100.5074
+0x7fff113e0000 - 0x7fff1140afff  dwmapi.dll  10.0.26100.5074  (WARNING: No symbols, dwmapi.pdb, 05C9E9DDE4673B33509602CEE3161E991)
+0x7fff11440000 - 0x7fff11483fff  dxcore.dll  10.0.26100.5074
+0x7fff11ad0000 - 0x7fff11d36fff  DWrite.dll  10.0.26100.5074
+0x7fff11f90000 - 0x7fff121d1fff  dbghelp.dll  10.0.26100.5074
+0x7fff123d0000 - 0x7fff1262ffff  d3d11.dll  10.0.26100.5074
+0x7fff12640000 - 0x7fff12779fff  dxgi.dll  10.0.26100.5074
+0x7fff12b50000 - 0x7fff133a8fff  windows.storage.dll  10.0.26100.6584
+0x7fff133b0000 - 0x7fff133befff  HID.DLL  10.0.26100.1150
+0x7fff13670000 - 0x7fff1367cfff  NETUTILS.DLL  10.0.26100.1882
+0x7fff13720000 - 0x7fff13753fff  IPHLPAPI.DLL  10.0.26100.5074
+0x7fff137c0000 - 0x7fff138e5fff  DNSAPI.dll  10.0.26100.6584
+0x7fff13cd0000 - 0x7fff13ceafff  kernel.appcore.dll  10.0.26100.5074
+0x7fff13df0000 - 0x7fff13e25fff  ntmarta.dll  10.0.26100.4202
+0x7fff13f70000 - 0x7fff13fb8fff  SSPICLI.DLL  10.0.26100.6584
+0x7fff14230000 - 0x7fff1429afff  mswsock.dll  10.0.26100.5074  (WARNING: No symbols, mswsock.pdb, 9596597D67BCB8F6E1218374188BDD591)
+0x7fff142d0000 - 0x7fff142fafff  USERENV.dll  10.0.26100.2454
+0x7fff14460000 - 0x7fff1446bfff  CRYPTBASE.DLL  10.0.26100.5074
+0x7fff14700000 - 0x7fff1473efff  NTASN1.dll  10.0.26100.1882
+0x7fff14750000 - 0x7fff1477ffff  ncrypt.dll  10.0.26100.5074
+0x7fff14ac0000 - 0x7fff14b16fff  cfgmgr32.dll  10.0.26100.4202
+0x7fff14d70000 - 0x7fff14d83fff  UMPDC.dll  10.0.26100.1301
+0x7fff14d90000 - 0x7fff14dedfff  powrprof.dll  10.0.26100.3912
+0x7fff14e20000 - 0x7fff14e45fff  bcrypt.dll  10.0.26100.5074
+0x7fff14e50000 - 0x7fff14e78fff  profapi.dll  10.0.26100.4768
+0x7fff14f30000 - 0x7fff14fd2fff  msvcp_win.dll  10.0.26100.5074
+0x7fff14fe0000 - 0x7fff15078fff  bcryptPrimitives.dll  10.0.26100.5074
+0x7fff15080000 - 0x7fff151ebfff  wintypes.dll  10.0.26100.5074
+0x7fff151f0000 - 0x7fff1531cfff  gdi32full.dll  10.0.26100.5074
+0x7fff15320000 - 0x7fff15496fff  CRYPT32.dll  10.0.26100.5074
+0x7fff15560000 - 0x7fff15586fff  win32u.dll  10.0.26100.5074  (WARNING: No symbols, win32u.pdb, FC31FCCD0B721EA576A6604ACCDABF631)
+0x7fff15590000 - 0x7fff15982fff  KERNELBASE.dll  10.0.26100.6584  (WARNING: No symbols, kernelbase.pdb, 7F3CD2A8BD9275ED7056780D62154F2C1)
+0x7fff15a20000 - 0x7fff15b6afff  ucrtbase.dll  10.0.26100.5074  (WARNING: No symbols, ucrtbase.pdb, B4499D96BDB51EE1D9334C5A5B045A911)
+0x7fff15b70000 - 0x7fff15b9efff  IMM32.DLL  10.0.26100.4484
+0x7fff15bb0000 - 0x7fff15bdafff  GDI32.dll  10.0.26100.5074
+0x7fff15be0000 - 0x7fff15ca8fff  KERNEL32.DLL  10.0.26100.5074  (WARNING: No symbols, kernel32.pdb, FD47EC7B00D61787D0CD6D4EC3590C511)
+0x7fff15cb0000 - 0x7fff15d11fff  SHLWAPI.dll  10.0.26100.6584
+0x7fff15d70000 - 0x7fff15d77fff  Normaliz.dll  10.0.26100.1
+0x7fff15ec0000 - 0x7fff16346fff  SETUPAPI.dll  10.0.26100.5074
+0x7fff16350000 - 0x7fff16513fff  USER32.dll  10.0.26100.5074  (WARNING: No symbols, user32.pdb, 0A1B5CF3B9877F17D2EDB494474C75EC1)
+0x7fff16520000 - 0x7fff1689afff  combase.dll  10.0.26100.5074
+0x7fff168a0000 - 0x7fff168a9fff  NSI.dll  10.0.26100.5074
+0x7fff168e0000 - 0x7fff16985fff  sechost.dll  10.0.26100.6584
+0x7fff16990000 - 0x7fff16b27fff  ole32.dll  10.0.26100.5074
+0x7fff16b30000 - 0x7fff16ba4fff  WLDAP32.dll  10.0.26100.5074
+0x7fff16bb0000 - 0x7fff16ca0fff  COMDLG32.dll  10.0.26100.5074
+0x7fff16cb0000 - 0x7fff16dc7fff  RPCRT4.dll  10.0.26100.5074
+0x7fff16dd0000 - 0x7fff16dd7fff  PSAPI.DLL  10.0.26100.1
+0x7fff16de0000 - 0x7fff16ecffff  shcore.dll  10.0.26100.6584
+0x7fff170e0000 - 0x7fff17237fff  MSCTF.dll  10.0.26100.5074
+0x7fff17240000 - 0x7fff172f3fff  ADVAPI32.dll  10.0.26100.6584
+0x7fff17370000 - 0x7fff17abcfff  SHELL32.dll  10.0.26100.6584
+0x7fff17b50000 - 0x7fff17c26fff  OLEAUT32.dll  10.0.26100.5074
+0x7fff17c30000 - 0x7fff17ca3fff  WS2_32.dll  10.0.26100.5074
+0x7fff17cb0000 - 0x7fff17d58fff  msvcrt.dll  7.0.26100.5074
+0x7fff17da0000 - 0x7fff18008fff  ntdll.dll  10.0.26100.5074  (WARNING: No symbols, ntdll.pdb, 21EB609F5CD42F738B9AD508893634BD1)
+MDRawCrashpadInfo
+  version = 1
+  report_id = 00570ef2-7e9c-410e-8a2f-a17a24c76a34
+  client_id = 2b3dad3c-d55c-4730-b50f-74ad6e4dc503
+   simple_annotations["prod"] = AndroidEmulator
+   simple_annotations["ver"] = 34.1.19-11525734
+  module_list[0].minidump_module_list_index = 0
+  module_list[0].version = 1
+
+thread requested=0
