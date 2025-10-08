@@ -1,0 +1,478 @@
+GET /web/webclient/qweb/1759861905874?bundle=web.assets_frontend HTTP/2
+Host: sinour.ir
+Cookie: frontend_lang=fa_IR; visitor_uuid=4af9414b0f6941eb8a5075343dd4f8c9; session_id=45554e2550eb10e10fefce0b5aacfeade505704c; tz=Asia/Tehran; im_livechat_history=["/"]
+Sec-Ch-Ua: "Not/A)Brand";v="8", "Chromium";v="126"
+Accept-Language: en-US
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.127 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://sinour.ir/
+Accept-Encoding: gzip, deflate, br
+Priority: u=4, i
+
+
+
+HTTP/2 200 OK
+Server: nginx/1.18.0
+Date: Tue, 07 Oct 2025 18:31:46 GMT
+Content-Type: text/xml
+Cache-Control: public, max-age=31536000
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, POST
+Set-Cookie: session_id=45554e2550eb10e10fefce0b5aacfeade505704c; Expires=Mon, 05-Jan-2026 18:31:46 GMT; Max-Age=7776000; HttpOnly; Path=/
+
+<templates><t t-name="web.CheckBox" owl="1">
+    <div class="custom-control custom-checkbox">
+        <input t-att-id="props.id or id" type="checkbox" class="custom-control-input" t-att-disabled="props.disabled" t-att-checked="props.value"/>
+        <label t-att-for="props.id or id" class="custom-control-label">
+            <t t-slot="default"/>
+        </label>
+    </div>
+</t>
+
+<t t-name="web.ConfirmationDialogBody" owl="1">
+    <t t-esc="props.body"/>
+  </t>
+
+  <t t-name="web.ConfirmationDialogFooter" owl="1">
+    <button class="btn btn-primary" t-on-click="_confirm">
+      Ok
+    </button>
+    <button t-if="props.cancel" class="btn btn-secondary" t-on-click="_cancel">
+      Cancel
+    </button>
+  </t>
+
+<t t-name="web.DatePicker" owl="1">
+        <div class="o_datepicker" aria-atomic="true" t-att-id="datePickerId" data-target-input="nearest">
+            <input type="text" class="o_datepicker_input o_input datetimepicker-input" autofocus="" t-att-name="props.name" t-att-placeholder="props.placeholder" t-attf-data-target="#{{ datePickerId }}" t-att-readonly="props.readonly" t-ref="input" t-on-change="onDateChange" t-on-click="onInputClick"/>
+            <span t-if="props.warn_future and state.warning" class="fa fa-exclamation-triangle text-danger o_tz_warning o_datepicker_warning">
+                <t>This date is on the future. Make sure it is what you expected.</t>
+            </span>
+            <span class="o_datepicker_button"/>
+        </div>
+    </t>
+
+<t t-name="web.DebugMenu" owl="1">
+        <Dropdown class="o_debug_manager" beforeOpen="getElements" position="'bottom-end'" togglerClass="`o-dropdown--narrow ${env.inDialog?'btn btn-link':''}`">
+            <t t-set-slot="toggler">
+                <i class="fa fa-bug"/>
+            </t>
+            <t t-foreach="elements" t-as="element" t-key="element_index">
+                <DropdownItem t-if="element.type == 'item'" t-on-dropdown-item-selected.stop="element.callback" href="element.href" t-esc="element.description"/>
+                <div t-if="element.type == 'separator'" role="separator" class="dropdown-divider"/>
+                <t t-if="element.type == 'component'" t-component="element.Component" t-props="element.props"/>
+            </t>
+        </Dropdown>
+    </t>
+
+<t t-name="web.DebugMenu.SetDefaultFooter" owl="1">
+        <button class="btn btn-secondary" t-on-click="trigger('dialog-closed')">Close</button>
+        <button class="btn btn-secondary" t-on-click="saveDefault">Save default</button>
+    </t>
+
+    <t t-name="web.DebugMenu.setDefaultBody" owl="1">
+        <table style="width: 100%">
+            <tr>
+                <td>
+                    <label for="formview_default_fields" class="oe_label oe_align_right">
+                        Default:
+                    </label>
+                </td>
+                <td class="oe_form_required">
+                    <select id="formview_default_fields" class="o_input" t-model="state.fieldToSet">
+                        <option value=""/>
+                        <option t-foreach="defaultFields" t-as="field" t-att-value="field.name">
+                            <t t-esc="field.string"/> = <t t-esc="field.displayed"/>
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr t-if="conditions.length">
+                <td>
+                    <label for="formview_default_conditions" class="oe_label oe_align_right">
+                        Condition:
+                    </label>
+                </td>
+                <td>
+                    <select id="formview_default_conditions" class="o_input" t-model="state.condition">
+                        <option value=""/>
+                        <option t-foreach="conditions" t-as="cond" t-att-value="cond.name + '=' + cond.value">
+                            <t t-esc="cond.string"/>=<t t-esc="cond.displayed"/>
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="radio" id="formview_default_self" value="self" name="scope" t-model="state.scope"/>
+                    <label for="formview_default_self" class="oe_label" style="display: inline;">
+                        Only you
+                    </label>
+                    <br/>
+                    <input type="radio" id="formview_default_all" value="all" name="scope" t-model="state.scope"/>
+                    <label for="formview_default_all" class="oe_label" style="display: inline;">
+                        All users
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </t>
+
+    <t t-name="web.DebugMenu.getMetadataBody" owl="1">
+        <table class="table table-sm table-striped">
+            <tr>
+                <th>ID:</th>
+                <td><t t-esc="state.id"/></td>
+            </tr>
+            <tr>
+                <th>XML ID:</th>
+                <td><t t-esc="state.xmlid or '/'"/></td>
+            </tr>
+            <tr>
+                <th>No Update:</th>
+                <td>
+                    <t t-esc="state.noupdate"/>
+                    <t t-if="state.xmlid">
+                        <a t-on-click="toggleNoupdate"> (change)</a>
+                    </t>
+                </td>
+            </tr>
+            <tr>
+                <th>Creation User:</th>
+                <td><t t-esc="state.creator"/></td>
+            </tr>
+            <tr>
+                <th>Creation Date:</th>
+                <td><t t-esc="state.create_date"/></td>
+            </tr>
+            <tr>
+                <th>Latest Modification by:</th>
+                <td><t t-esc="state.lastModifiedBy"/></td>
+            </tr>
+            <tr>
+                <th>Latest Modification Date:</th>
+                <td><t t-esc="state.write_date"/></td>
+            </tr>
+        </table>
+    </t>
+<t t-name="web.DebugMenu.ProfilingItem" owl="1">
+        <DropdownItem payload="{}">
+            <div class="o_debug_profiling_item">
+                <span class="o_profiling_switch">
+                    <span class="custom-control custom-switch" t-on-click.stop.prevent="profiling.toggleProfiling()">
+                        <input type="checkbox" class="custom-control-input" id="enable_profiling" t-att-checked="profiling.state.isEnabled"/>
+                        <label class="custom-control-label">
+                            Enable profiling
+                            <span t-if="profiling.state.isEnabled" class="profiling_items text-danger fa fa-circle"/>
+                        </label>
+                    </span>
+                    <i class="o_open_profiling float-right fa fa-list fa-lg" t-on-click="openProfiles"/>
+                </span>
+                <t t-if="profiling.state.isEnabled">
+                    <span class="o_profiling_switch custom-control custom-switch" t-on-click.stop.prevent="profiling.toggleCollector('sql')">
+                        <input type="checkbox" class="custom-control-input" id="profile_sql" t-att-checked="profiling.isCollectorEnabled('sql')"/>
+                        <label class="custom-control-label" for="profile_sql">Record sql</label>
+                    </span>
+                    <span class="o_profiling_switch custom-control custom-switch" t-on-click.stop.prevent="profiling.toggleCollector('traces_async')">
+                        <input type="checkbox" class="custom-control-input" id="profile_traces_async" t-att-checked="profiling.isCollectorEnabled('traces_async')"/>
+                        <label class="custom-control-label" for="profile_traces_async">Record traces</label>
+                    </span>
+                    <div t-if="profiling.isCollectorEnabled('traces_async')" class="input-group input-group-sm" t-on-click.stop.prevent="">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">Interval</div>
+                        </div>
+                        <select class="profile_param form-control" t-on-change="changeParam('traces_async_interval')">
+                            <t t-set="interval" t-value="profiling.state.params.traces_async_interval"/>
+                            <option value="">Default</option>
+                            <option value="0.001" t-att-selected="interval === '0.001'">0.001</option>
+                            <option value="0.01" t-att-selected="interval === '0.01'">0.01</option>
+                            <option value="0.1" t-att-selected="interval === '0.1'">0.1</option>
+                            <option value="1" t-att-selected="interval === '1'">1</option>
+                        </select>
+                    </div>
+                    <span t-if="profiling.isCollectorEnabled('sql') || profiling.isCollectorEnabled('traces_async')" class="o_profiling_switch custom-control custom-switch" t-on-click.stop.prevent="toggleParam('execution_context_qweb')">
+                        <input type="checkbox" class="custom-control-input" id="profile_execution_context_qweb" t-att-checked="!!profiling.state.params.execution_context_qweb"/>
+                        <label class="custom-control-label" for="profile_execution_context_qweb">Add qweb directive context</label>
+                    </span>
+                    <span class="o_profiling_switch custom-control custom-switch" t-on-click.stop.prevent="profiling.toggleCollector('qweb')">
+                        <input type="checkbox" class="custom-control-input" id="profile_qweb" t-att-checked="profiling.isCollectorEnabled('qweb')"/>
+                        <label class="custom-control-label" for="profile_qweb">Record qweb</label>
+                    </span>
+                </t>
+            </div>
+        </DropdownItem>
+    </t>
+
+<t t-name="web.ProfilingQwebView">
+    <div class="oe_form_field o_ace_view_editor oe_ace_open o_profiling_qweb_view">
+        <div class="o_select_view_profiling">
+            <a role="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"/>
+            <div class="dropdown-menu" role="menu">
+                <t t-foreach="widget.views" t-as="view">
+                    <a role="menuitem" href="#" t-att-data-id="view.id">
+                        <div class="o_delay"><t t-if="view.delay" t-esc="view.delay"/> ms</div>
+                        <div class="o_query"><t t-if="view.delay" t-esc="view.query"/> query</div>
+                        <t t-esc="view.display_name"/>
+                        <div class="o_key text-muted">(<t t-esc="view.id"/>, <t t-esc="view.key"/>)</div>
+                    </a>
+                </t>
+            </div>
+        </div>
+        <div class="ace-view-editor"/>
+        <small class="text-muted">
+            It is possible that the "t-call" time does not correspond to the overall time of the
+            template. Because the global time (in the drop down) does not take into account the
+            duration which is not in the rendering (look for the template, read, inheritance,
+            compilation...). During rendering, the global time also takes part of the time to make
+            the profile as well as some part not logged in the function generated by the qweb.
+        </small>
+    </div>
+</t>
+<t t-name="web.ProfilingQwebView.hover">
+    <div class="o_info o_detail">
+        <div class="o_delay"><t t-esc="delay"/> <span>ms</span></div>
+        <div class="o_query"><t t-esc="query"/> <span>query</span></div>
+    </div>
+</t>
+<t t-name="web.ProfilingQwebView.info">
+    <div class="o_info">
+        <div t-if="detail" class="o_more">
+            <span>*</span>
+            <table class="o_detail">
+                <thead>
+                    <tr><th/><th>ms</th><th>query</th></tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="groups" t-as="directive">
+                        <td><t t-esc="directive"/></td>
+                        <td><t t-esc="groups[directive].delays.join(' ')"/></td>
+                        <td><t t-esc="groups[directive].querys.join(' ')"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="o_delay"><t t-esc="delay"/></div>
+        <div class="o_query"><t t-esc="query"/></div>
+    </div>
+</t>
+
+<t t-name="web.Dialog" owl="1">
+        <div class="o_dialog">
+            <div role="dialog" class="modal" tabindex="-1" t-att-class="{ o_technical_modal: technical, o_modal_full: fullscreen }" t-ref="modal">
+                <div class="modal-dialog" t-att-class="size">
+                    <div class="modal-content" t-att-class="contentClass">
+                        <header t-if="renderHeader" class="modal-header">
+                            <h4 class="modal-title">
+                                <t t-esc="title"/>
+                            </h4>
+                            <button type="button" class="close" aria-label="Close" tabindex="-1" t-on-click="close">×</button>
+                        </header>
+                        <main class="modal-body">
+                            <t t-call="{{ constructor.bodyTemplate }}"/>
+                        </main>
+                        <footer t-if="renderFooter" class="modal-footer">
+                            <t t-call="{{ constructor.footerTemplate }}"/>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="web.DialogFooterDefault" owl="1">
+        <button class="btn btn-primary" t-on-click="close">
+            <t>Ok</t>
+        </button>
+    </t>
+<t t-name="web.Dropdown" owl="1">
+    <div class="o-dropdown dropdown" t-att-class="{ show: state.open, 'o-dropdown--no-caret': !hasParentDropdown }" t-attf-class="{{ directionCaretClass || '' }}" t-on-dropdown-item-selected="onItemSelected">
+      <button t-if="props.toggler !== 'parent'" class="dropdown-toggle" t-attf-class="{{props.togglerClass || ''}} {{hasParentDropdown ? 'dropdown-item' : ''}}" t-on-click="onTogglerClick" t-on-mouseenter="onTogglerMouseEnter" t-att-title="props.title" t-att-data-hotkey="props.hotkey" t-ref="togglerRef">
+        <t t-slot="toggler"/>
+      </button>
+      <div t-if="state.open" class="o-dropdown--menu dropdown-menu d-block" t-att-class="props.menuClass" t-ref="menuRef">
+        <t t-slot="default"/>
+      </div>
+    </div>
+  </t>
+
+<t t-name="web.DropdownItem" owl="1">
+    <t t-tag="props.href ? 'a' : 'span'" t-att-href="props.href" class="dropdown-item" t-on-click="onClick" t-att-title="props.title" t-att-data-hotkey="props.hotkey">
+      <t t-slot="default"/>
+    </t>
+  </t>
+
+<t t-name="web.RainbowMan" owl="1">
+        <div class="o_reward" t-on-animationend="onAnimationEnd">
+            <svg class="o_reward_rainbow" viewBox="0 0 340 180">
+                <path d="M270,170a100,100,0,0,0-200,0" style="stroke:#FF9E80;"/>
+                <path d="M290,170a120,120,0,0,0-240,0" style="stroke:#FFE57F;"/>
+                <path d="M310,170a140,140,0,0,0-280,0" style="stroke:#80D8FF;"/>
+                <path d="M330,170a160,160,0,0,0-320,0" style="stroke:#c794ba;"/>
+            </svg>
+            <div class="o_reward_stars" t-foreach="[1, 2, 3, 4]" t-as="star">
+                <t t-call="web.RainbowMan.Star">
+                    <t t-set="class" t-value="star"/>
+                </t>
+            </div>
+            <div class="o_reward_face_group">
+                <svg style="display:none">
+                    <symbol id="thumb">
+                        <path d="M10,52 C6,51 3,48 3,44 C2,42 3,39 5,38 C3,36 2,34 2,32 C2,29 3,27 5,26 C3,24 2,21 2,19 C2,15 7,12 10,12 L23,12 C23,11 23,11 23,11 L23,10 C23,8 24,6 25,4 C27,2 29,2 31,2 C33,2 35,2 36,4 C38,5 39,7 39,10 L39,38 C39,41 37,45 35,47 C32,50 28,51 25,52 L10,52 L10,52 Z" fill="#FBFBFC"/>
+                        <polygon fill="#ECF1FF" points="25 11 25 51 5 52 5 12"/>
+                        <path d="M31,0 C28,0 26,1 24,3 C22,5 21,7 21,10 L10,10 C8,10 6,11 4,12 C2,14 1,16 1,19 C1,21 1,24 2,26 C1,27 1,29 1,32 C1,34 1,36 2,38 C1,40 0,42 1,45 C1,50 5,53 10,54 L25,54 C29,54 33,52 36,49 C39,46 41,42 41,38 L41,10 C41,4 36,3.38176876e-16 31,0 M31,4 C34,4 37,6 37,10 L37,38 C37,41 35,44 33,46 C31,48 28,49 25,50 L10,50 C7,49 5,47 5,44 C4,41 6,38 9,37 L9,37 C6,37 5,35 5,32 C5,28 6,26 9,26 L9,26 C6,26 5,22 5,19 C5,16 8,14 11,14 L23,14 C24,14 25,12 25,11 L25,10 C25,7 28,4 31,4" id="Shape" fill="#A1ACBA"/>
+                    </symbol>
+                </svg>
+                <span class="o_reward_face" t-attf-style="background-image:url({{props.imgUrl}});"/>
+
+                <svg class="o_reward_thumbup" viewBox="0 0 42 60">
+                    <use href="#thumb"/>
+                </svg>
+
+                <div class="o_reward_msg_container">
+                    <svg class="o_reward_thumb_right" viewBox="0 0 100 55">
+                        <use href="#thumb" transform="scale(-1, 1.2) rotate(-90) translate(-42,-60)"/>
+                    </svg>
+                    <div class="o_reward_msg">
+                        <div class="o_reward_msg_card">
+                            <div class="o_reward_msg_content">
+                                <t t-if="!props.Component">
+                                    <t t-if="props.messageIsHtml" t-raw="props.message"/>
+                                    <t t-else="" t-esc="props.message"/>
+                                </t>
+                                <t t-else="" t-component="props.Component" t-props="props.props"/>
+                            </div>
+                            <div class="o_reward_shadow_container">
+                                <div class="o_reward_shadow"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="web.RainbowMan.Star" owl="1">
+        <svg t-attf-class="star{{ star }}" width="35px" height="34px" viewBox="0 0 35 34">
+            <path fill="#fff" d="M33,15.9 C26.3557814,13.6951256 21.1575294,8.45974313 19,1.8 C19,1.24771525 18.5522847,0.8 18,0.8 C17.4477153,0.8 17,1.24771525 17,1.8 C14.6431206,8.69377078 9.02624222,13.9736364 2,15.9 C1.36487254,15.9 0.85,16.4148725 0.85,17.05 C0.85,17.6851275 1.36487254,18.2 2,18.2 C8.6215326,20.3844521 13.8155479,25.5784674 16,32.2 C16,32.7522847 16.4477153,33.2 17,33.2 C17.5522847,33.2 18,32.7522847 18,32.2 C20.3568794,25.3062292 25.9737578,20.0263636 33,18.1 C33.6351275,18.1 34.15,17.5851275 34.15,16.95 C34.15,16.3148725 33.6351275,15.8 33,15.8"/>
+        </svg>
+    </t>
+<t t-name="web.WarningDialogBody" owl="1">
+      <div role="alert" class="o_dialog_warning">
+        <p t-esc="message" style="white-space: pre-wrap;"/>
+      </div>
+    </t>
+
+    <t t-name="web.RedirectWarningDialogBody" owl="1">
+      <div role="alert">
+        <p t-esc="message" style="white-space: pre-wrap;"/>
+      </div>
+    </t>
+
+    <t t-name="web.RedirectWarningDialogFooter" owl="1">
+      <button class="btn btn-primary" t-on-click="onClick"><t t-esc="env._t(buttonText)"/></button>
+      <button class="btn btn-secondary" t-on-click="onCancel">Cancel</button>
+    </t>
+
+    <t t-name="web.Error504DialogBody" owl="1">
+        <div role="alert">
+            <p style="white-space: pre-wrap;">
+            The operation was interrupted. This usually means that the current operation is taking too much time.
+            </p>
+        </div>
+    </t>
+
+    <t t-name="web.SessionExpiredDialogBody" owl="1">
+      <div role="alert">
+        <p style="white-space: pre-wrap;">
+          Your Rstco session expired. The current page is about to be refreshed.
+        </p>
+      </div>
+    </t>
+
+    <t t-name="web.SessionExpiredDialogFooter" owl="1">
+        <button class="btn btn-primary" t-on-click="onClick">Ok</button>
+    </t>
+
+     <t t-name="web.ErrorDialogBody" owl="1">
+      <div class="alert alert-warning clearfix" role="alert">
+          <div class="float-right ml8 btn-group-vertical">
+              <button class="btn btn-primary" t-on-click="onClickClipboard">
+                  <i class="fa fa-clipboard mr8"/><t>Copy the full error to clipboard</t>
+              </button>
+          </div>
+          <p><b>An error occurred</b></p>
+          <p>Please use the copy button to report the error to your support service.</p>
+      </div>
+
+
+      <button class="btn btn-link" t-on-click="state.showTraceback = !state.showTraceback">See details</button>
+      <div t-if="state.showTraceback and (props.name or props.message)" class="alert clearfix" style="background-color:#ececec;" role="alert">
+        <code t-if="props.name" t-esc="props.name"/>
+        <p t-if="props.message" t-esc="props.message"/>
+      </div>
+      <div t-if="state.showTraceback" class="alert alert-danger o_error_detail" role="alert">
+          <pre t-esc="traceback or props.traceback"/>
+      </div>
+    </t>
+
+<t t-name="web.FileInput" owl="1">
+        <span class="o_file_input" aria-atomic="true">
+            <span class="o_file_input_trigger" t-on-click.prevent="onTriggerClicked">
+                <t t-slot="default">
+                    <button class="btn btn-primary">Choose File</button>
+                </t>
+            </span>
+            <input type="file" name="ufile" class="o_input_file d-none" t-att="{multiple: props.multi_upload, accept: props.accepted_file_extensions}" t-ref="file-input" t-on-change="onFileInputChange"/>
+        </span>
+    </t>
+
+<t t-name="web.NotificationWowl" owl="1">
+        <div t-attf-class="o_notification {{className}}" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="o_notification_body">
+                <button type="button" class="close o_notification_close" aria-label="Close" t-on-click="trigger('close')">
+                    <span class="d-inline" aria-hidden="true">×</span>
+                </button>
+                <div t-if="props.title" class="font-weight-bold o_notification_title mb-1" t-esc="props.title"/>
+                <div t-if="props.message" class="mr-auto o_notification_content">
+                    <t t-if="props.messageIsHtml" t-raw="props.message"/>
+                    <t t-else="" t-esc="props.message"/>
+                </div>
+                <div t-if="props.buttons.length" class="mt-2 o_notification_buttons">
+                    <button t-foreach="props.buttons" t-as="button" type="button" t-attf-class="btn {{button.primary ? 'btn-primary' : 'btn-link'}}" t-on-click="button.onClick()">
+                    <t t-if="button.icon">
+                        <i t-if="button.icon.indexOf('fa-') === 0" role="img" t-att-aria-label="button.name" t-att-title="button.name" t-attf-class="fa fa-fw o_button_icon {{button.icon}}"/>
+                        <img t-else="" t-att-src="button.icon" t-att-alt="button.name"/>
+                    </t>
+                    <span t-esc="button.name"/>
+                </button>
+                </div>
+            </div>
+        </div>
+    </t>
+
+<t t-name="web.PopoverWowl" owl="1">
+        <div role="tooltip" class="o_popover" t-att-class="props.popoverClass" t-on-popover-compute="compute">
+            <t t-slot="default"/>
+        </div>
+    </t>
+
+<t t-name="web.Tooltip" owl="1">
+        <div class="o-tooltip px-2 py-1">
+            <t t-if="props.template" t-call="{{props.template}}">
+                 <t t-set="info" t-value="props.info"/>
+            </t>
+            <small t-else="" t-esc="props.tooltip"/>
+        </div>
+    </t>
+
+<t t-name="website_sale_stock_wishlist.product_availability" inherit_id="website_sale_stock.product_availability">
+        <div id="stock_wishlist_message" t-if="product_type == 'product' and !free_qty and !allow_out_of_stock_order and !wish" t-attf-class="availability_message_#{product_template} text-success mt8">
+            Add the item to your wishlist to be notified when the product is back in stock.
+        </div>
+    </t>
+</templates>

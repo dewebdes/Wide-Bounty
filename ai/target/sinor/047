@@ -1,0 +1,27 @@
+GET /shop/wishlist?count=1 HTTP/2
+Host: sinour.ir
+Cookie: frontend_lang=fa_IR; visitor_uuid=4af9414b0f6941eb8a5075343dd4f8c9; session_id=45554e2550eb10e10fefce0b5aacfeade505704c; tz=Asia/Tehran; im_livechat_history=["/"]
+Sec-Ch-Ua: "Not/A)Brand";v="8", "Chromium";v="126"
+Accept: */*
+X-Requested-With: XMLHttpRequest
+Accept-Language: en-US
+Sec-Ch-Ua-Mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.127 Safari/537.36
+Sec-Ch-Ua-Platform: "Windows"
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://sinour.ir/
+Accept-Encoding: gzip, deflate, br
+Priority: u=1, i
+
+
+
+HTTP/2 200 OK
+Server: nginx/1.18.0
+Date: Tue, 07 Oct 2025 18:31:47 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 2
+Set-Cookie: session_id=45554e2550eb10e10fefce0b5aacfeade505704c; Expires=Mon, 05-Jan-2026 18:31:47 GMT; Max-Age=7776000; HttpOnly; Path=/
+
+[]
