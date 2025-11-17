@@ -1,0 +1,5482 @@
+{
+  "timestamp": "2025-11-17T09:11:12.649Z",
+  "refreshCount": 16,
+  "parallelCount": 479,
+  "top": [
+    {
+      "symbol": "ALCHUSDT",
+      "stealthCeiling": 7.3068637,
+      "lowestAnchor": 0.082536,
+      "anchorTimestamp": 1763130720,
+      "currentPrice": 0.159704,
+      "diffPercent": 93.49617136764566,
+      "diffDays": 2,
+      "prevPrice": 0.159704,
+      "movements": [
+        -0.12749760941982946,
+        0.16771068654997245,
+        -0.10245709609101032,
+        -0.12382506894803473,
+        -0.0006261544723089446
+      ],
+      "avgMovement": -0.0373390484762422
+    },
+    {
+      "symbol": "FIROUSDT",
+      "stealthCeiling": 1.42758,
+      "lowestAnchor": 2.588,
+      "anchorTimestamp": 1763105700,
+      "currentPrice": 4.8541,
+      "diffPercent": 87.56182380216381,
+      "diffDays": 3,
+      "prevPrice": 4.8541,
+      "movements": [
+        -0.25070382015083303
+      ],
+      "avgMovement": -0.25070382015083303
+    },
+    {
+      "symbol": "STRKUSDT",
+      "stealthCeiling": 6.4515559,
+      "lowestAnchor": 0.137815,
+      "anchorTimestamp": 1763027940,
+      "currentPrice": 0.230042,
+      "diffPercent": 66.92087218372457,
+      "diffDays": 3,
+      "prevPrice": 0.230042,
+      "movements": [
+        -0.27480969648014775,
+        0.06955204958444476,
+        0.3286029754625506,
+        0.6668917408022846,
+        0.0836258787250528,
+        -0.33770551730740733,
+        0.6030304353521773,
+        0.1653710431397027,
+        -0.3163295373788884
+      ],
+      "avgMovement": 0.1098032635444188
+    },
+    {
+      "symbol": "ZECUSDT",
+      "stealthCeiling": 16.511753,
+      "lowestAnchor": 479.71,
+      "anchorTimestamp": 1763045040,
+      "currentPrice": 682.05,
+      "diffPercent": 42.179650205332386,
+      "diffDays": 3,
+      "prevPrice": 682.05,
+      "movements": [
+        -0.2806347340581793,
+        0.18565177032223706,
+        0.401500110302214,
+        -0.032225933087231734,
+        0.05714620637106737,
+        -0.08347367650289961,
+        0.06888667409275184,
+        -0.004393994873668651,
+        -0.09813686430748664
+      ],
+      "avgMovement": 0.023813284250978266
+    },
+    {
+      "symbol": "XVGUSDT",
+      "stealthCeiling": 3.21208336984304,
+      "lowestAnchor": 0.005924,
+      "anchorTimestamp": 1763095200,
+      "currentPrice": 0.008174,
+      "diffPercent": 37.98109385550306,
+      "diffDays": 3,
+      "prevPrice": 0.008174,
+      "movements": [
+        0.07449714427612443,
+        0.6823821339950525,
+        0.7270486752926681
+      ],
+      "avgMovement": 0.4946426511879484
+    },
+    {
+      "symbol": "DASHUSDT",
+      "stealthCeiling": 18.669345,
+      "lowestAnchor": 62.57,
+      "anchorTimestamp": 1763096340,
+      "currentPrice": 85.84,
+      "diffPercent": 37.19034681157105,
+      "diffDays": 3,
+      "prevPrice": 85.84,
+      "movements": [
+        0.2603858444786352,
+        0.48400424979342566,
+        0.09398496240601302,
+        -0.07042253521127027,
+        0.28188865398167123,
+        0.5856172405715625,
+        -0.058220773171864415,
+        0.11650937900501983,
+        -0.10473641335971536
+      ],
+      "avgMovement": 0.17655673427705304
+    },
+    {
+      "symbol": "KITEUSDT",
+      "stealthCeiling": 3.81791997275537,
+      "lowestAnchor": 0.070862,
+      "anchorTimestamp": 1763123520,
+      "currentPrice": 0.092249,
+      "diffPercent": 30.181197256639674,
+      "diffDays": 2,
+      "prevPrice": 0.092249,
+      "movements": [
+        -0.05488413958133774,
+        1.2059175626846357,
+        0.10743469815190819,
+        -0.020596652501941773,
+        0.021685153259812257
+      ],
+      "avgMovement": 0.2519113244026153
+    },
+    {
+      "symbol": "ZENUSDT",
+      "stealthCeiling": 7.1248913,
+      "lowestAnchor": 11.6133,
+      "anchorTimestamp": 1763100120,
+      "currentPrice": 15.035,
+      "diffPercent": 29.46363221478821,
+      "diffDays": 3,
+      "prevPrice": 15.035,
+      "movements": [
+        0.4736161949674916,
+        0.8558980195152858,
+        0.0006676904587017891,
+        0.8205860947713479,
+        0.0006622516556275957,
+        -0.4311229726955403
+      ],
+      "avgMovement": 0.2867178797788191
+    },
+    {
+      "symbol": "RAILUSDT",
+      "stealthCeiling": 1.695638636166,
+      "lowestAnchor": 3.073,
+      "anchorTimestamp": 1763126700,
+      "currentPrice": 3.9007,
+      "diffPercent": 26.934591604295484,
+      "diffDays": 2,
+      "prevPrice": 3.9007,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "BUSDT",
+      "stealthCeiling": 8.3243979,
+      "lowestAnchor": 0.137155,
+      "anchorTimestamp": 1763127960,
+      "currentPrice": 0.170827,
+      "diffPercent": 24.550326273194568,
+      "diffDays": 2,
+      "prevPrice": 0.170827,
+      "movements": [
+        -0.0970402717127605,
+        -0.17086315148890074,
+        0.0410304504557233,
+        0.08905815145745612,
+        0
+      ],
+      "avgMovement": -0.027562964257696377
+    },
+    {
+      "symbol": "LAUSDT",
+      "stealthCeiling": 2.09967754392,
+      "lowestAnchor": 0.3838,
+      "anchorTimestamp": 1763095740,
+      "currentPrice": 0.4754,
+      "diffPercent": 23.8665971860344,
+      "diffDays": 3,
+      "prevPrice": 0.4754,
+      "movements": [
+        0.020885547201334377,
+        -0.5846732094382897,
+        -0.14702793530771557
+      ],
+      "avgMovement": -0.23693853251489028
+    },
+    {
+      "symbol": "DCRUSDT",
+      "stealthCeiling": 1.530397,
+      "lowestAnchor": 27.428,
+      "anchorTimestamp": 1763162760,
+      "currentPrice": 33.8931,
+      "diffPercent": 23.57116814933643,
+      "diffDays": 2,
+      "prevPrice": 33.8931,
+      "movements": [
+        -0.13463430729618847,
+        -0.17257604408507327,
+        0,
+        0,
+        0.15809879549403558,
+        0,
+        0
+      ],
+      "avgMovement": -0.021301650841032308
+    },
+    {
+      "symbol": "ASTERUSDT",
+      "stealthCeiling": 6.034366,
+      "lowestAnchor": 1.0168,
+      "anchorTimestamp": 1763120700,
+      "currentPrice": 1.2336,
+      "diffPercent": 21.321793863099934,
+      "diffDays": 2,
+      "prevPrice": 1.2336,
+      "movements": [
+        -0.04861842638359403,
+        -0.04053506282934292,
+        0,
+        0,
+        -0.01622060016222222,
+        0.024334847501637658,
+        0.02432892709431246,
+        0.016215339711365167
+      ],
+      "avgMovement": -0.005061871883480486
+    },
+    {
+      "symbol": "ARRRUSDT",
+      "stealthCeiling": 2.857653713145,
+      "lowestAnchor": 0.5182,
+      "anchorTimestamp": 1763128200,
+      "currentPrice": 0.6247,
+      "diffPercent": 20.551910459282137,
+      "diffDays": 2,
+      "prevPrice": 0.6247,
+      "movements": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "PENDLEUSDT",
+      "stealthCeiling": 6.3952845,
+      "lowestAnchor": 2.0854,
+      "anchorTimestamp": 1763161740,
+      "currentPrice": 2.4976,
+      "diffPercent": 19.76599213580128,
+      "diffDays": 2,
+      "prevPrice": 2.4976,
+      "movements": [
+        -0.20052135552435907,
+        -0.14466546112115924,
+        -0.06036460219727381,
+        -0.008053475074493758,
+        0.2899484536082513,
+        0.30517185994218,
+        -0.01601281024821457
+      ],
+      "avgMovement": 0.02364322991213297
+    },
+    {
+      "symbol": "MYXUSDT",
+      "stealthCeiling": 1.15429184091,
+      "lowestAnchor": 2.1761,
+      "anchorTimestamp": 1763121960,
+      "currentPrice": 2.5045,
+      "diffPercent": 15.09121823445615,
+      "diffDays": 2,
+      "prevPrice": 2.5045,
+      "movements": [
+        -0.07603649751880953,
+        -0.6007449237053996,
+        -0.3021878399613135,
+        0.6062075654704041,
+        0.30127741624488974,
+        0.14818374784732324,
+        0.15596256898345343
+      ],
+      "avgMovement": 0.0332374339086497
+    },
+    {
+      "symbol": "XNOUSDT",
+      "stealthCeiling": 0.942458015816,
+      "lowestAnchor": 0.8896,
+      "anchorTimestamp": 1763331000,
+      "currentPrice": 1.0204,
+      "diffPercent": 14.703237410071946,
+      "diffDays": 0,
+      "prevPrice": 1.0204,
+      "movements": [
+        0.19552253397204047,
+        -0.43906722607083115,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.04870893841975814
+    },
+    {
+      "symbol": "NPCUSDT",
+      "stealthCeiling": 1.62684979573791,
+      "lowestAnchor": 0.014608,
+      "anchorTimestamp": 1763315700,
+      "currentPrice": 0.016722,
+      "diffPercent": 14.471522453450172,
+      "diffDays": 0,
+      "prevPrice": 0.016722,
+      "movements": [
+        -0.05950255861003845,
+        -0.4227196951655046,
+        0.059790732436469915,
+        -0.0776815058261077
+      ],
+      "avgMovement": -0.1250282567912952
+    },
+    {
+      "symbol": "NMRUSDT",
+      "stealthCeiling": 1.045399064955,
+      "lowestAnchor": 9.8664,
+      "anchorTimestamp": 1763314560,
+      "currentPrice": 11.225,
+      "diffPercent": 13.769966755858256,
+      "diffDays": 0,
+      "prevPrice": 11.225,
+      "movements": [
+        -0.5319242624394501,
+        -0.4869583694863164,
+        -0.12989786113384574
+      ],
+      "avgMovement": -0.38292683101987074
+    },
+    {
+      "symbol": "TRBUSDT",
+      "stealthCeiling": 7.2671448,
+      "lowestAnchor": 23.4848,
+      "anchorTimestamp": 1763136420,
+      "currentPrice": 26.6907,
+      "diffPercent": 13.650957214879412,
+      "diffDays": 2,
+      "prevPrice": 26.6907,
+      "movements": [
+        -0.12579840805109757,
+        0.055855869364745576
+      ],
+      "avgMovement": -0.034971269343176
+    },
+    {
+      "symbol": "UNIUSDT",
+      "stealthCeiling": 20.5004435,
+      "lowestAnchor": 6.9385,
+      "anchorTimestamp": 1763161680,
+      "currentPrice": 7.8831,
+      "diffPercent": 13.613893492829854,
+      "diffDays": 2,
+      "prevPrice": 7.8831,
+      "movements": [
+        -0.0685461861663735,
+        -0.029215624007621073,
+        -0.22871083326979993,
+        -0.06749700720817202,
+        -0.1962558462577532,
+        0.1098129349422141,
+        0.12882488743766587,
+        -0.13502840691957105,
+        0.36481453135363995,
+        0.18936986858493574
+      ],
+      "avgMovement": 0.006756831848916486
+    },
+    {
+      "symbol": "BINANCELIFEUSDT",
+      "stealthCeiling": 1.43382976555,
+      "lowestAnchor": 0.129149,
+      "anchorTimestamp": 1763124000,
+      "currentPrice": 0.146673,
+      "diffPercent": 13.568823606841695,
+      "diffDays": 2,
+      "prevPrice": 0.146673,
+      "movements": [
+        0,
+        0.49961201791525145,
+        -0.6603543563068945,
+        0
+      ],
+      "avgMovement": -0.04018558459791077
+    },
+    {
+      "symbol": "GNOUSDT",
+      "stealthCeiling": 1.2114419804,
+      "lowestAnchor": 115.51,
+      "anchorTimestamp": 1763066520,
+      "currentPrice": 129.24,
+      "diffPercent": 11.886416760453642,
+      "diffDays": 3,
+      "prevPrice": 129.24,
+      "movements": [
+        0,
+        -0.10048697534203868,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.014355282191719812
+    },
+    {
+      "symbol": "XANUSDT",
+      "stealthCeiling": 1.381395,
+      "lowestAnchor": 0.02489,
+      "anchorTimestamp": 1763319540,
+      "currentPrice": 0.027579,
+      "diffPercent": 10.803535556448375,
+      "diffDays": 0,
+      "prevPrice": 0.027579,
+      "movements": [
+        0,
+        -0.6341199783822702
+      ],
+      "avgMovement": -0.3170599891911351
+    },
+    {
+      "symbol": "ZKUSDT",
+      "stealthCeiling": 13.4709865,
+      "lowestAnchor": 0.045787,
+      "anchorTimestamp": 1763097540,
+      "currentPrice": 0.050561,
+      "diffPercent": 10.42654028436019,
+      "diffDays": 3,
+      "prevPrice": 0.050561,
+      "movements": [
+        -0.3063396391557784,
+        0.3711315521679244,
+        0.15506033437369873,
+        -0.047637006014178335,
+        0.24624183331016367,
+        0.15847546601692455
+      ],
+      "avgMovement": 0.09615542344979243
+    },
+    {
+      "symbol": "SFPUSDT",
+      "stealthCeiling": 1.714367303415,
+      "lowestAnchor": 0.3252,
+      "anchorTimestamp": 1763123700,
+      "currentPrice": 0.359,
+      "diffPercent": 10.39360393603936,
+      "diffDays": 2,
+      "prevPrice": 0.359,
+      "movements": [
+        0,
+        -0.1946066166249747,
+        0,
+        0
+      ],
+      "avgMovement": -0.04865165415624367
+    },
+    {
+      "symbol": "CLANKERUSDT",
+      "stealthCeiling": 3.232633859484,
+      "lowestAnchor": 60.1234,
+      "anchorTimestamp": 1763124240,
+      "currentPrice": 66.3458,
+      "diffPercent": 10.349381438840785,
+      "diffDays": 2,
+      "prevPrice": 66.3458,
+      "movements": [
+        -0.04896178419754478
+      ],
+      "avgMovement": -0.04896178419754478
+    },
+    {
+      "symbol": "ENAUSDT",
+      "stealthCeiling": 7.769095,
+      "lowestAnchor": 0.2558,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 0.2821,
+      "diffPercent": 10.281469898358088,
+      "diffDays": 0,
+      "prevPrice": 0.2821,
+      "movements": [
+        -0.2123142250530944,
+        -0.10638297872339254,
+        0.10649627263044621,
+        -0.035460992907797514,
+        -0.07094714437743099,
+        -0.03549875754348207,
+        -0.03551136363637943,
+        0.21314387211369273,
+        0
+      ],
+      "avgMovement": -0.01960836861082645
+    },
+    {
+      "symbol": "METUSDT",
+      "stealthCeiling": 2.148728558912,
+      "lowestAnchor": 0.3969,
+      "anchorTimestamp": 1763058660,
+      "currentPrice": 0.4371,
+      "diffPercent": 10.128495842781561,
+      "diffDays": 3,
+      "prevPrice": 0.4371,
+      "movements": [
+        0,
+        -0.044752741105400194,
+        -0.4029550033579513,
+        -0.11238480557428646,
+        -1.0126012601260135,
+        -0.6365082973403102,
+        0
+      ],
+      "avgMovement": -0.3156003010719945
+    },
+    {
+      "symbol": "TIBBIRUSDT",
+      "stealthCeiling": 1.42511243216223,
+      "lowestAnchor": 0.258639,
+      "anchorTimestamp": 1763331300,
+      "currentPrice": 0.28379,
+      "diffPercent": 9.724364848302065,
+      "diffDays": 0,
+      "prevPrice": 0.28379,
+      "movements": [
+        0,
+        -0.15838958954766671,
+        -0.043678650923730696,
+        0,
+        -0.2960958693402644,
+        -0.4975298815956031,
+        0
+      ],
+      "avgMovement": -0.1422419987724664
+    },
+    {
+      "symbol": "GRASSUSDT",
+      "stealthCeiling": 7.94461,
+      "lowestAnchor": 0.2645,
+      "anchorTimestamp": 1763313900,
+      "currentPrice": 0.2882,
+      "diffPercent": 8.960302457466918,
+      "diffDays": 0,
+      "prevPrice": 0.2882,
+      "movements": [
+        -0.13937282229963624,
+        0.5582693649685939
+      ],
+      "avgMovement": 0.20944827133447885
+    },
+    {
+      "symbol": "MOVEUSDT",
+      "stealthCeiling": 14.9122115,
+      "lowestAnchor": 0.050508,
+      "anchorTimestamp": 1763314380,
+      "currentPrice": 0.05485,
+      "diffPercent": 8.596657955175429,
+      "diffDays": 0,
+      "prevPrice": 0.05485,
+      "movements": [
+        -0.09143107925246212,
+        -0.16472655392049163,
+        0.0036666300003703302,
+        0.511476131113884,
+        0.041950134058041086,
+        0
+      ],
+      "avgMovement": 0.05015587699989028
+    },
+    {
+      "symbol": "FARTCOINUSDT",
+      "stealthCeiling": 6.83203,
+      "lowestAnchor": 0.2316,
+      "anchorTimestamp": 1763315280,
+      "currentPrice": 0.2505,
+      "diffPercent": 8.160621761658032,
+      "diffDays": 0,
+      "prevPrice": 0.2505,
+      "movements": [
+        -0.35899481451933957,
+        -0.04003202562049199,
+        0,
+        0.08009611533840838,
+        0.2000800320128053,
+        0.039936102236417324
+      ],
+      "avgMovement": -0.013152431758700095
+    },
+    {
+      "symbol": "SPXUSDT",
+      "stealthCeiling": 14.42422,
+      "lowestAnchor": 0.4712,
+      "anchorTimestamp": 1763314200,
+      "currentPrice": 0.5084,
+      "diffPercent": 7.894736842105253,
+      "diffDays": 0,
+      "prevPrice": 0.5084,
+      "movements": [
+        -0.07823195775473421,
+        -0.1370131141123574,
+        0,
+        0.019600156801252253,
+        -0.03919263178522006,
+        0,
+        -0.4508919819643146,
+        0,
+        0,
+        0.11815675462779321
+      ],
+      "avgMovement": -0.05675727741875809
+    },
+    {
+      "symbol": "LAYERUSDT",
+      "stealthCeiling": 1.09221181019808,
+      "lowestAnchor": 0.208227,
+      "anchorTimestamp": 1763095200,
+      "currentPrice": 0.223802,
+      "diffPercent": 7.479817698953549,
+      "diffDays": 3,
+      "prevPrice": 0.223802,
+      "movements": [
+        -0.20066710664788093
+      ],
+      "avgMovement": -0.20066710664788093
+    },
+    {
+      "symbol": "PIUSDT",
+      "stealthCeiling": 1.10072058511837,
+      "lowestAnchor": 0.211682,
+      "anchorTimestamp": 1763124420,
+      "currentPrice": 0.227312,
+      "diffPercent": 7.3837170850615435,
+      "diffDays": 2,
+      "prevPrice": 0.227312,
+      "movements": [
+        0,
+        0,
+        -0.08783062741808949,
+        -0.0017581567484666676,
+        0.0017581876601616656,
+        0,
+        0,
+        0,
+        -0.08746829823613132
+      ],
+      "avgMovement": -0.019477654971391756
+    },
+    {
+      "symbol": "KTAUSDT",
+      "stealthCeiling": 1.532162244604,
+      "lowestAnchor": 0.2873,
+      "anchorTimestamp": 1763331960,
+      "currentPrice": 0.3073,
+      "diffPercent": 6.961364427427783,
+      "diffDays": 0,
+      "prevPrice": 0.3073,
+      "movements": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "SKLUSDT",
+      "stealthCeiling": 8.773687,
+      "lowestAnchor": 0.014755,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 0.015775,
+      "diffPercent": 6.912910877668588,
+      "diffDays": 0,
+      "prevPrice": 0.015775,
+      "movements": [
+        0,
+        -0.08234101849505399
+      ],
+      "avgMovement": -0.04117050924752699
+    },
+    {
+      "symbol": "SNEKUSDT",
+      "stealthCeiling": 1.69017040499104,
+      "lowestAnchor": 0.001524,
+      "anchorTimestamp": 1763333160,
+      "currentPrice": 0.001628,
+      "diffPercent": 6.824146981627306,
+      "diffDays": 0,
+      "prevPrice": 0.001628,
+      "movements": [
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "AWEUSDT",
+      "stealthCeiling": 2.8222536203613,
+      "lowestAnchor": 0.053751,
+      "anchorTimestamp": 1763245500,
+      "currentPrice": 0.05736,
+      "diffPercent": 6.714293687559303,
+      "diffDays": 1,
+      "prevPrice": 0.05736,
+      "movements": [
+        -0.0017354783846184555,
+        -0.47726483859770474,
+        0.026157467957103712
+      ],
+      "avgMovement": -0.15094761634173984
+    },
+    {
+      "symbol": "OPUSDT",
+      "stealthCeiling": 10.83023,
+      "lowestAnchor": 0.3664,
+      "anchorTimestamp": 1763315760,
+      "currentPrice": 0.3906,
+      "diffPercent": 6.604803493449782,
+      "diffDays": 0,
+      "prevPrice": 0.3906,
+      "movements": [
+        -0.17939518195796475,
+        0.025673940949932986,
+        0.07700205338809613,
+        0.02564760194921492,
+        -0.05128205128205987,
+        0.2052334530528535
+      ],
+      "avgMovement": 0.01714663601667882
+    },
+    {
+      "symbol": "PNUTUSDT",
+      "stealthCeiling": 5.7148019,
+      "lowestAnchor": 0.093681,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 0.099811,
+      "diffPercent": 6.543482669911718,
+      "diffDays": 0,
+      "prevPrice": 0.099811,
+      "movements": [
+        -0.08623542270398463,
+        -0.0682449995483773,
+        0.23902061803902874
+      ],
+      "avgMovement": 0.028180065262222276
+    },
+    {
+      "symbol": "XMRUSDT",
+      "stealthCeiling": 11.016847,
+      "lowestAnchor": 372.57,
+      "anchorTimestamp": 1763056680,
+      "currentPrice": 396.25,
+      "diffPercent": 6.355852591459326,
+      "diffDays": 3,
+      "prevPrice": 396.25,
+      "movements": [
+        -0.012655664675511637,
+        -0.017720173151404495,
+        0,
+        -0.08102086287218786,
+        -0.05321305493613915,
+        0.19268311233932278,
+        -0.06073028163668339,
+        -0.08861881250790377,
+        0,
+        0,
+        0,
+        0.2508869741510269,
+        0.1668394044338899,
+        0
+      ],
+      "avgMovement": 0.02117504579602923
+    },
+    {
+      "symbol": "ROAMUSDT",
+      "stealthCeiling": 3.5279242717422,
+      "lowestAnchor": 0.065557,
+      "anchorTimestamp": 1763121300,
+      "currentPrice": 0.069557,
+      "diffPercent": 6.101560474091232,
+      "diffDays": 2,
+      "prevPrice": 0.069557,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "HYPEUSDT",
+      "stealthCeiling": 10.690625,
+      "lowestAnchor": 36.2,
+      "anchorTimestamp": 1763128140,
+      "currentPrice": 38.4,
+      "diffPercent": 6.07734806629833,
+      "diffDays": 2,
+      "prevPrice": 38.4,
+      "movements": [
+        -0.12919896640827974,
+        -0.36222509702458106,
+        0.02596728122566896,
+        -0.02596053997924485,
+        -0.337574655933512,
+        0.02605523710265245,
+        0,
+        0.05209690023442569,
+        -0.026034886748237465
+      ],
+      "avgMovement": -0.08631941417012312
+    },
+    {
+      "symbol": "BATUSDT",
+      "stealthCeiling": 1.786931267904,
+      "lowestAnchor": 0.169905,
+      "anchorTimestamp": 1763319000,
+      "currentPrice": 0.1802,
+      "diffPercent": 6.059268414702332,
+      "diffDays": 0,
+      "prevPrice": 0.1802,
+      "movements": [
+        -0.12273754713732664,
+        -0.03225124834573477,
+        0.16853932584269535,
+        -0.02720967553849808,
+        -0.05554506371018196,
+        0,
+        0.14783198283814536,
+        0
+      ],
+      "avgMovement": 0.009828471743637407
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "stealthCeiling": 8.6603764,
+      "lowestAnchor": 14.7108,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 15.5946,
+      "diffPercent": 6.00783098131984,
+      "diffDays": 0,
+      "prevPrice": 15.5946,
+      "movements": [
+        -0.11064281557184916,
+        -0.08259383043294619,
+        -0.0371659073287369,
+        0.021795011506490155,
+        0.025635602725061747,
+        0.014095967912452515,
+        -0.10890803677248621,
+        0,
+        0,
+        0.013468013468016257
+      ],
+      "avgMovement": -0.026431599449399778
+    },
+    {
+      "symbol": "ZETAUSDT",
+      "stealthCeiling": 5.5995562,
+      "lowestAnchor": 0.094269,
+      "anchorTimestamp": 1763161740,
+      "currentPrice": 0.099906,
+      "diffPercent": 5.9796964007255715,
+      "diffDays": 2,
+      "prevPrice": 0.099906,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "RSRUSDT",
+      "stealthCeiling": 10.614215,
+      "lowestAnchor": 0.003587,
+      "anchorTimestamp": 1763333100,
+      "currentPrice": 0.003801,
+      "diffPercent": 5.965988291051024,
+      "diffDays": 0,
+      "prevPrice": 0.003801,
+      "movements": [
+        -0.05265929436546249,
+        0.07903055848261234,
+        -0.052645433008682074,
+        -0.052673163023435124,
+        0,
+        0.1581027667984171
+      ],
+      "avgMovement": 0.013192572480574956
+    },
+    {
+      "symbol": "LPTUSDT",
+      "stealthCeiling": 12.953605,
+      "lowestAnchor": 4.4183,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 4.6817,
+      "diffPercent": 5.9615689292261695,
+      "diffDays": 0,
+      "prevPrice": 4.6817,
+      "movements": [
+        -0.02975810908473175,
+        -0.34869875829222596,
+        0.012801911752163055,
+        -0.040534198062892275,
+        -0.0853697577633219,
+        0,
+        0.004272134999475
+      ],
+      "avgMovement": -0.06961239663593341
+    },
+    {
+      "symbol": "RLCUSDT",
+      "stealthCeiling": 21.875205,
+      "lowestAnchor": 0.7482,
+      "anchorTimestamp": 1763162100,
+      "currentPrice": 0.7928,
+      "diffPercent": 5.960973001871154,
+      "diffDays": 2,
+      "prevPrice": 0.7928,
+      "movements": [
+        -0.12597631645250706
+      ],
+      "avgMovement": -0.12597631645250706
+    },
+    {
+      "symbol": "YZYUSDT",
+      "stealthCeiling": 1.884418451199,
+      "lowestAnchor": 0.3662,
+      "anchorTimestamp": 1763094900,
+      "currentPrice": 0.388,
+      "diffPercent": 5.9530311305297605,
+      "diffDays": 3,
+      "prevPrice": 0.388,
+      "movements": [
+        -0.1545197012619082,
+        0.07737941707506384,
+        0
+      ],
+      "avgMovement": -0.025713428062281454
+    },
+    {
+      "symbol": "XVSUSDT",
+      "stealthCeiling": 2.103934030588,
+      "lowestAnchor": 4.0483,
+      "anchorTimestamp": 1763095320,
+      "currentPrice": 4.2883,
+      "diffPercent": 5.928414396166275,
+      "diffDays": 3,
+      "prevPrice": 4.2883,
+      "movements": [
+        -0.11651480903222552,
+        0.046660289760394276,
+        0
+      ],
+      "avgMovement": -0.023284839757277086
+    },
+    {
+      "symbol": "LUNCUSDT",
+      "stealthCeiling": 9.048445,
+      "lowestAnchor": 0.00003038,
+      "anchorTimestamp": 1763315160,
+      "currentPrice": 0.00003218,
+      "diffPercent": 5.924950625411453,
+      "diffDays": 0,
+      "prevPrice": 0.00003218,
+      "movements": [
+        -0.1551831160769746,
+        0.031084861672370526,
+        0
+      ],
+      "avgMovement": -0.04136608480153469
+    },
+    {
+      "symbol": "LINEAUSDT",
+      "stealthCeiling": 1.08377913188841,
+      "lowestAnchor": 0.010123,
+      "anchorTimestamp": 1763328660,
+      "currentPrice": 0.010714,
+      "diffPercent": 5.838190259804401,
+      "diffDays": 0,
+      "prevPrice": 0.010714,
+      "movements": [
+        -0.10252586447945375,
+        -0.046650494495239746,
+        0,
+        0.009334453467742605
+      ],
+      "avgMovement": -0.03496047637673772
+    },
+    {
+      "symbol": "CCDUSDT",
+      "stealthCeiling": 1.257685,
+      "lowestAnchor": 0.022584,
+      "anchorTimestamp": 1763314560,
+      "currentPrice": 0.023888,
+      "diffPercent": 5.773999291533827,
+      "diffDays": 0,
+      "prevPrice": 0.023888,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "MERLUSDT",
+      "stealthCeiling": 10.1039,
+      "lowestAnchor": 0.3429,
+      "anchorTimestamp": 1763161680,
+      "currentPrice": 0.3625,
+      "diffPercent": 5.715952172645088,
+      "diffDays": 2,
+      "prevPrice": 0.3625,
+      "movements": [
+        0.08285004142502692,
+        0.3035320088300193,
+        0,
+        -0.27510316368638266,
+        0
+      ],
+      "avgMovement": 0.022255777313732718
+    },
+    {
+      "symbol": "CHEEMSUSDT",
+      "stealthCeiling": 1.2364976426085044,
+      "lowestAnchor": 0.0000011739,
+      "anchorTimestamp": 1763097420,
+      "currentPrice": 0.0000012406,
+      "diffPercent": 5.681914984240559,
+      "diffDays": 3,
+      "prevPrice": 0.0000012406,
+      "movements": [
+        0,
+        -0.27182603133994593,
+        -0.09620009620008646,
+        0,
+        0,
+        -0.5617075910768818,
+        0,
+        0.23402194964493273,
+        -0.12076322357297328,
+        0,
+        0
+      ],
+      "avgMovement": -0.07422499932226861
+    },
+    {
+      "symbol": "HNTUSDT",
+      "stealthCeiling": 6.5997505,
+      "lowestAnchor": 2.25,
+      "anchorTimestamp": 1763056680,
+      "currentPrice": 2.3777,
+      "diffPercent": 5.675555555555553,
+      "diffDays": 3,
+      "prevPrice": 2.3777,
+      "movements": [
+        -0.46492146596860023,
+        -0.1388655108567522,
+        0.05478066663857735,
+        0.10950134770888283,
+        0.012620950778299916,
+        0.008412905396877886,
+        0.00841219768664471
+      ],
+      "avgMovement": -0.058579844088009966
+    },
+    {
+      "symbol": "RUNEUSDT",
+      "stealthCeiling": 20.54949,
+      "lowestAnchor": 0.7077,
+      "anchorTimestamp": 1763323200,
+      "currentPrice": 0.7475,
+      "diffPercent": 5.62385191465311,
+      "diffDays": 0,
+      "prevPrice": 0.7475,
+      "movements": [
+        -0.08004268943437098,
+        -0.13351134846461962,
+        0,
+        -0.0935828877005393,
+        0.04014452027299317,
+        -0.026752273943297083,
+        0.013379716350026761
+      ],
+      "avgMovement": -0.04005213755997243
+    },
+    {
+      "symbol": "IMXUSDT",
+      "stealthCeiling": 10.74641,
+      "lowestAnchor": 0.3604,
+      "anchorTimestamp": 1763315040,
+      "currentPrice": 0.3804,
+      "diffPercent": 5.549389567147619,
+      "diffDays": 0,
+      "prevPrice": 0.3804,
+      "movements": [
+        -0.1577287066246029,
+        0.07898894154817454,
+        0,
+        0.05261773217575203,
+        0,
+        -0.026295030239296475,
+        0,
+        0.02630194634404116,
+        0.026295030239281876,
+        0
+      ],
+      "avgMovement": 0.000017991344335023877
+    },
+    {
+      "symbol": "FILUSDT",
+      "stealthCeiling": 5.7132165,
+      "lowestAnchor": 1.8904,
+      "anchorTimestamp": 1763314800,
+      "currentPrice": 1.9951,
+      "diffPercent": 5.538510368176048,
+      "diffDays": 0,
+      "prevPrice": 1.9951,
+      "movements": [
+        -0.15525617268492417,
+        0.1504815409309737,
+        0.09015326054292416,
+        -0.020016012810245995,
+        -0.060060060060064556,
+        0,
+        0,
+        -0.07512019230768403,
+        -0.010023555355083345
+      ],
+      "avgMovement": -0.008871243527122692
+    },
+    {
+      "symbol": "ONTUSDT",
+      "stealthCeiling": 3.97526197340032,
+      "lowestAnchor": 0.074787,
+      "anchorTimestamp": 1763329920,
+      "currentPrice": 0.07886,
+      "diffPercent": 5.446133686335851,
+      "diffDays": 0,
+      "prevPrice": 0.07886,
+      "movements": [
+        -0.03791421277456493,
+        -0.2983715990694853,
+        0
+      ],
+      "avgMovement": -0.1120952706146834
+    },
+    {
+      "symbol": "IDUSDT",
+      "stealthCeiling": 25.3163405,
+      "lowestAnchor": 0.085157,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 0.089739,
+      "diffPercent": 5.380649858496662,
+      "diffDays": 0,
+      "prevPrice": 0.089739,
+      "movements": [
+        -0.11927055466380862,
+        0.007812064058917608,
+        0.1417220907914142,
+        0
+      ],
+      "avgMovement": 0.0075659000466308
+    },
+    {
+      "symbol": "SOSOUSDT",
+      "stealthCeiling": 3.13855979655,
+      "lowestAnchor": 0.6011,
+      "anchorTimestamp": 1763127000,
+      "currentPrice": 0.6334,
+      "diffPercent": 5.373481949758776,
+      "diffDays": 2,
+      "prevPrice": 0.6334,
+      "movements": [
+        -0.22005658597924502,
+        -0.22054190296157336,
+        0
+      ],
+      "avgMovement": -0.1468661629802728
+    },
+    {
+      "symbol": "KMNOUSDT",
+      "stealthCeiling": 15.4099425,
+      "lowestAnchor": 0.051825,
+      "anchorTimestamp": 1763323200,
+      "currentPrice": 0.054609,
+      "diffPercent": 5.371924746743839,
+      "diffDays": 0,
+      "prevPrice": 0.054609,
+      "movements": [
+        0.06571861479764382,
+        -0.3758095411839912,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.062018185277269475
+    },
+    {
+      "symbol": "LDOUSDT",
+      "stealthCeiling": 21.229155,
+      "lowestAnchor": 0.7135,
+      "anchorTimestamp": 1763314380,
+      "currentPrice": 0.7516,
+      "diffPercent": 5.3398738612473755,
+      "diffDays": 0,
+      "prevPrice": 0.7516,
+      "movements": [
+        -0.27873639500929,
+        0.03993078663650712,
+        -0.0532197977647774,
+        0,
+        0,
+        0,
+        -0.039936102236417324,
+        0,
+        0.05326941004127792,
+        0.03993078663650712
+      ],
+      "avgMovement": -0.02387613116961925
+    },
+    {
+      "symbol": "PEPEUSDT",
+      "stealthCeiling": 14.0027595,
+      "lowestAnchor": 0.0000047157,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 0.0000049666,
+      "diffPercent": 5.320525054604841,
+      "diffDays": 0,
+      "prevPrice": 0.0000049666,
+      "movements": [
+        -0.06431514420661723,
+        -0.16290247973774657,
+        0.1309375125901425,
+        0.03017683626048446,
+        -0.0020111821728685943,
+        -0.020112226222330574,
+        -0.07241857938885606,
+        -0.018117765475596966
+      ],
+      "avgMovement": -0.02234537854417363
+    },
+    {
+      "symbol": "DOGUSDT",
+      "stealthCeiling": 7.784004235762713,
+      "lowestAnchor": 0.00132905,
+      "anchorTimestamp": 1763328360,
+      "currentPrice": 0.00139694,
+      "diffPercent": 5.108159963883971,
+      "diffDays": 0,
+      "prevPrice": 0.00139694,
+      "movements": [
+        -0.1009291205566038,
+        0.09529882990232999,
+        0.00930605466234021,
+        -0.009305188716391828
+      ],
+      "avgMovement": -0.0014073561770813576
+    },
+    {
+      "symbol": "FLUIDUSDT",
+      "stealthCeiling": 10.1277525,
+      "lowestAnchor": 3.3985,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 3.5703,
+      "diffPercent": 5.055171399146688,
+      "diffDays": 0,
+      "prevPrice": 3.5703,
+      "movements": [
+        -0.7738392411382874,
+        -0.2990915443745613,
+        0,
+        0.0981271728159649,
+        -0.008402655239060836,
+        0.008403361344543111
+      ],
+      "avgMovement": -0.1624671510985669
+    },
+    {
+      "symbol": "COMPUSDT",
+      "stealthCeiling": 9.182485,
+      "lowestAnchor": 31.51,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 33.13,
+      "diffPercent": 5.1412250079339925,
+      "diffDays": 0,
+      "prevPrice": 33.13,
+      "movements": [
+        0.060441220912650404,
+        -0.12080942313500195,
+        0.06047777441791088,
+        0.12088244182532229
+      ],
+      "avgMovement": 0.030248003505220403
+    },
+    {
+      "symbol": "PENGUUSDT",
+      "stealthCeiling": 7.274193,
+      "lowestAnchor": 0.012203,
+      "anchorTimestamp": 1763315520,
+      "currentPrice": 0.01281,
+      "diffPercent": 4.974186675407686,
+      "diffDays": 0,
+      "prevPrice": 0.01281,
+      "movements": [
+        -0.3810857053974213,
+        -0.023421032086810296,
+        0.1639856317351256,
+        -0.03118422078428729,
+        -0.0545894096545275,
+        -0.046816479400741746
+      ],
+      "avgMovement": -0.062185202598110424
+    },
+    {
+      "symbol": "HOTUSDT",
+      "stealthCeiling": 3.0015356481766884,
+      "lowestAnchor": 0.00055531,
+      "anchorTimestamp": 1763315160,
+      "currentPrice": 0.00058292,
+      "diffPercent": 4.971997622949336,
+      "diffDays": 0,
+      "prevPrice": 0.00058292,
+      "movements": [
+        -0.00857765349709559,
+        0.010294067185939835
+      ],
+      "avgMovement": 0.0008582068444221227
+    },
+    {
+      "symbol": "YGGUSDT",
+      "stealthCeiling": 5.7629385,
+      "lowestAnchor": 0.097349,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 0.102179,
+      "diffPercent": 4.961530164665278,
+      "diffDays": 0,
+      "prevPrice": 0.102179,
+      "movements": [
+        -0.07139224660641331
+      ],
+      "avgMovement": -0.07139224660641331
+    },
+    {
+      "symbol": "IOTXUSDT",
+      "stealthCeiling": 5.679411,
+      "lowestAnchor": 0.00963,
+      "anchorTimestamp": 1763319720,
+      "currentPrice": 0.010101,
+      "diffPercent": 4.8909657320872375,
+      "diffDays": 0,
+      "prevPrice": 0.010101,
+      "movements": [
+        0,
+        -0.18774703557312172,
+        0
+      ],
+      "avgMovement": -0.06258234519104057
+    },
+    {
+      "symbol": "ENSUSDT",
+      "stealthCeiling": 7.2060848,
+      "lowestAnchor": 12.1944,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 12.7907,
+      "diffPercent": 4.889949485009507,
+      "diffDays": 0,
+      "prevPrice": 12.7907,
+      "movements": [
+        -0.17503281865349213,
+        0.0399210971256853,
+        0.025820990117598294,
+        0.05553991051033699
+      ],
+      "avgMovement": -0.013437705224967882
+    },
+    {
+      "symbol": "MINAUSDT",
+      "stealthCeiling": 7.3038564,
+      "lowestAnchor": 0.12457,
+      "anchorTimestamp": 1763323320,
+      "currentPrice": 0.130629,
+      "diffPercent": 4.863931925824834,
+      "diffDays": 0,
+      "prevPrice": 0.130629,
+      "movements": [
+        -0.030618962323376235,
+        0.18530145944043552,
+        -0.1054723326199933,
+        0,
+        -0.055852244036064855,
+        0
+      ],
+      "avgMovement": -0.0011070132564998114
+    },
+    {
+      "symbol": "FETUSDT",
+      "stealthCeiling": 1.39503480291496,
+      "lowestAnchor": 0.265403,
+      "anchorTimestamp": 1763315640,
+      "currentPrice": 0.278217,
+      "diffPercent": 4.828129297709518,
+      "diffDays": 0,
+      "prevPrice": 0.278217,
+      "movements": [
+        -0.2614088864697655,
+        -0.20141746192455218,
+        0.2485924486895822,
+        0.03265675241157834,
+        -0.0932745464525315,
+        0,
+        -0.09120712995578842,
+        -0.005750575956128857
+      ],
+      "avgMovement": -0.04647617495720074
+    },
+    {
+      "symbol": "AXSUSDT",
+      "stealthCeiling": 7.11854,
+      "lowestAnchor": 1.2058,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 1.2638,
+      "diffPercent": 4.810084591142814,
+      "diffDays": 0,
+      "prevPrice": 1.2638,
+      "movements": [
+        -0.14201183431952852,
+        -0.1738168602354412,
+        0,
+        -0.015829046299958682,
+        0.007915776141849837,
+        0.031660598385305994
+      ],
+      "avgMovement": -0.04868022772129543
+    },
+    {
+      "symbol": "TAOUSDT",
+      "stealthCeiling": 9.2804645,
+      "lowestAnchor": 313.51,
+      "anchorTimestamp": 1763334240,
+      "currentPrice": 328.15,
+      "diffPercent": 4.669707505342728,
+      "diffDays": 0,
+      "prevPrice": 328.15,
+      "movements": [
+        -0.23654283548141702,
+        -0.15502933398183655,
+        -0.04262315045971697,
+        0.127923976608192,
+        -0.15817971649327184,
+        0,
+        -0.021327158613140582
+      ],
+      "avgMovement": -0.06939688834588444
+    },
+    {
+      "symbol": "NOTUSDT",
+      "stealthCeiling": 19.088977,
+      "lowestAnchor": 0.00064985,
+      "anchorTimestamp": 1763315580,
+      "currentPrice": 0.00068015,
+      "diffPercent": 4.662614449488348,
+      "diffDays": 0,
+      "prevPrice": 0.00068015,
+      "movements": [
+        -0.04711217113495322,
+        0.182645711508154
+      ],
+      "avgMovement": 0.06776677018660039
+    },
+    {
+      "symbol": "KAITOUSDT",
+      "stealthCeiling": 21.3465,
+      "lowestAnchor": 0.7194,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.7528,
+      "diffPercent": 4.6427578537670255,
+      "diffDays": 0,
+      "prevPrice": 0.7528,
+      "movements": [
+        0,
+        -0.09277667329356169,
+        0,
+        -0.09286282833643325,
+        0,
+        -0.03983534723143898
+      ],
+      "avgMovement": -0.03757914147690565
+    },
+    {
+      "symbol": "ONEUSDT",
+      "stealthCeiling": 14.33323,
+      "lowestAnchor": 0.004813,
+      "anchorTimestamp": 1763314680,
+      "currentPrice": 0.005036,
+      "diffPercent": 4.633284853521714,
+      "diffDays": 0,
+      "prevPrice": 0.005036,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "GALAUSDT",
+      "stealthCeiling": 24.93627,
+      "lowestAnchor": 0.008393,
+      "anchorTimestamp": 1763323200,
+      "currentPrice": 0.008781,
+      "diffPercent": 4.622900035744086,
+      "diffDays": 0,
+      "prevPrice": 0.008781,
+      "movements": [
+        -0.15936254980079823,
+        0.07980845969672856,
+        0,
+        0.011392116655285944,
+        0.022781637999775207
+      ],
+      "avgMovement": -0.009076067089801703
+    },
+    {
+      "symbol": "ICXUSDT",
+      "stealthCeiling": 3.81036893515254,
+      "lowestAnchor": 0.072142,
+      "anchorTimestamp": 1763331120,
+      "currentPrice": 0.075469,
+      "diffPercent": 4.611737961243099,
+      "diffDays": 0,
+      "prevPrice": 0.075469,
+      "movements": [
+        0,
+        -0.07017822621224461,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.010025460887463516
+    },
+    {
+      "symbol": "FOLKSUSDT",
+      "stealthCeiling": 2.919425715955,
+      "lowestAnchor": 5.4978,
+      "anchorTimestamp": 1763123760,
+      "currentPrice": 5.7513,
+      "diffPercent": 4.610935283204188,
+      "diffDays": 2,
+      "prevPrice": 5.7513,
+      "movements": [
+        -0.15277512543186414
+      ],
+      "avgMovement": -0.15277512543186414
+    },
+    {
+      "symbol": "GRTUSDT",
+      "stealthCeiling": 16.0332955,
+      "lowestAnchor": 0.054594,
+      "anchorTimestamp": 1763315280,
+      "currentPrice": 0.05711,
+      "diffPercent": 4.608565043777713,
+      "diffDays": 0,
+      "prevPrice": 0.05711,
+      "movements": [
+        -0.0785861478816726,
+        -0.043693307932952175,
+        -0.010490977759125511,
+        -0.15388381771761936,
+        0,
+        0.021016497950888162
+      ],
+      "avgMovement": -0.044272958890080254
+    },
+    {
+      "symbol": "ORDIUSDT",
+      "stealthCeiling": 12.6731065,
+      "lowestAnchor": 4.2826,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 4.4789,
+      "diffPercent": 4.583664129267265,
+      "diffDays": 0,
+      "prevPrice": 4.4789,
+      "movements": [
+        -0.12496373820097453,
+        0.07149719596935755
+      ],
+      "avgMovement": -0.02673327111580849
+    },
+    {
+      "symbol": "SUSHIUSDT",
+      "stealthCeiling": 12.971465,
+      "lowestAnchor": 0.4402,
+      "anchorTimestamp": 1763314800,
+      "currentPrice": 0.4602,
+      "diffPercent": 4.543389368468882,
+      "diffDays": 0,
+      "prevPrice": 0.4602,
+      "movements": [
+        -0.06509004122368561,
+        -0.19539730785931653,
+        0,
+        0.10876658690450304
+      ],
+      "avgMovement": -0.03793019054462478
+    },
+    {
+      "symbol": "XDCUSDT",
+      "stealthCeiling": 2.71471652541903,
+      "lowestAnchor": 0.051488,
+      "anchorTimestamp": 1763162700,
+      "currentPrice": 0.053822,
+      "diffPercent": 4.533095090118091,
+      "diffDays": 2,
+      "prevPrice": 0.053822,
+      "movements": [
+        0,
+        0,
+        0,
+        -0.26313838855532634,
+        0
+      ],
+      "avgMovement": -0.05262767771106527
+    },
+    {
+      "symbol": "MOODENGUSDT",
+      "stealthCeiling": 22.788487,
+      "lowestAnchor": 0.076655,
+      "anchorTimestamp": 1763333160,
+      "currentPrice": 0.080119,
+      "diffPercent": 4.518948535646722,
+      "diffDays": 0,
+      "prevPrice": 0.080119,
+      "movements": [
+        -0.022448088794667483,
+        -0.05987501091472348,
+        0
+      ],
+      "avgMovement": -0.027441033236463654
+    },
+    {
+      "symbol": "INJUSDT",
+      "stealthCeiling": 19.001458,
+      "lowestAnchor": 6.3422,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 6.6272,
+      "diffPercent": 4.4937088076692655,
+      "diffDays": 0,
+      "prevPrice": 6.6272,
+      "movements": [
+        -0.2033622559652872,
+        0.09811468852359961,
+        -0.02865156678831035,
+        -0.019609321969990542,
+        0.05129597779186008,
+        -0.06634899571746661,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.01872905268062167
+    },
+    {
+      "symbol": "MOGUSDT",
+      "stealthCeiling": 10.25028,
+      "lowestAnchor": 3.456e-7,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 3.608e-7,
+      "diffPercent": 4.398148148148142,
+      "diffDays": 0,
+      "prevPrice": 3.608e-7,
+      "movements": [
+        -0.11049723756905445,
+        -0.2488938053097386,
+        0,
+        0.0277238702522893,
+        0
+      ],
+      "avgMovement": -0.06633343452530074
+    },
+    {
+      "symbol": "XRPUSDT",
+      "stealthCeiling": 6.3862295,
+      "lowestAnchor": 2.1683,
+      "anchorTimestamp": 1763314800,
+      "currentPrice": 2.2635,
+      "diffPercent": 4.390536364894165,
+      "diffDays": 0,
+      "prevPrice": 2.2635,
+      "movements": [
+        -0.052956751985872366,
+        -0.21193924408337864,
+        0,
+        0,
+        0,
+        0.022123893805317124,
+        0,
+        0.10617120106171997,
+        0,
+        0.008838216447919836,
+        -0.07069948301004232,
+        0,
+        0.004421843908919348,
+        0.0840113194198803
+      ],
+      "avgMovement": -0.00785921460253834
+    },
+    {
+      "symbol": "BONKUSDT",
+      "stealthCeiling": 6.1886238,
+      "lowestAnchor": 0.0000103472,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 0.0000108013,
+      "diffPercent": 4.388626874903352,
+      "diffDays": 0,
+      "prevPrice": 0.0000108013,
+      "movements": [
+        -0.10081111326914888,
+        -0.09906123280315278,
+        0,
+        0.1297413513488486,
+        -0.018510463039226478,
+        0,
+        0,
+        -0.012959723032217646,
+        0
+      ],
+      "avgMovement": -0.011289020088321909
+    },
+    {
+      "symbol": "ZILUSDT",
+      "stealthCeiling": 19.34208,
+      "lowestAnchor": 0.0066,
+      "anchorTimestamp": 1763330040,
+      "currentPrice": 0.006889,
+      "diffPercent": 4.3787878787878824,
+      "diffDays": 0,
+      "prevPrice": 0.006889,
+      "movements": [
+        0,
+        -0.1742160278745624,
+        0,
+        0,
+        0,
+        0,
+        0.18906340895869678
+      ],
+      "avgMovement": 0.0021210544405906267
+    },
+    {
+      "symbol": "FLOKIUSDT",
+      "stealthCeiling": 15.55008,
+      "lowestAnchor": 0.00005253,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 0.00005481,
+      "diffPercent": 4.340376927470014,
+      "diffDays": 0,
+      "prevPrice": 0.00005481,
+      "movements": [
+        -0.20003637024913118,
+        0.036443148688040126,
+        0,
+        0,
+        -0.10928961748634392,
+        0,
+        0,
+        -0.0182348650619891,
+        0,
+        0,
+        -0.036476381542956765
+      ],
+      "avgMovement": -0.0297812805138528
+    },
+    {
+      "symbol": "ETCUSDT",
+      "stealthCeiling": 8.4156475,
+      "lowestAnchor": 14.3717,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 14.9945,
+      "diffPercent": 4.333516563802471,
+      "diffDays": 0,
+      "prevPrice": 14.9945,
+      "movements": [
+        -0.12980097184316688,
+        -0.040657179991335314,
+        -0.041340499019840354,
+        0.17943860398101058,
+        -0.05060560257289571,
+        -0.04596782252423241,
+        0,
+        0,
+        0,
+        -0.06065211016022892,
+        0
+      ],
+      "avgMovement": -0.017235052920971727
+    },
+    {
+      "symbol": "VANAUSDT",
+      "stealthCeiling": 1.398675050852,
+      "lowestAnchor": 2.6599,
+      "anchorTimestamp": 1763124240,
+      "currentPrice": 2.7745,
+      "diffPercent": 4.308432647843913,
+      "diffDays": 2,
+      "prevPrice": 2.7745,
+      "movements": [
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "PIPEUSDT",
+      "stealthCeiling": 3.98657517554736,
+      "lowestAnchor": 0.074339,
+      "anchorTimestamp": 1763145840,
+      "currentPrice": 0.077529,
+      "diffPercent": 4.291152692395644,
+      "diffDays": 2,
+      "prevPrice": 0.077529,
+      "movements": [
+        0.06453361556033828,
+        0
+      ],
+      "avgMovement": 0.03226680778016914
+    },
+    {
+      "symbol": "APTUSDT",
+      "stealthCeiling": 8.1330755,
+      "lowestAnchor": 2.7703,
+      "anchorTimestamp": 1763314320,
+      "currentPrice": 2.8889,
+      "diffPercent": 4.281124787929098,
+      "diffDays": 0,
+      "prevPrice": 2.8889,
+      "movements": [
+        -0.19674168162363792,
+        -0.1037523776586586,
+        -0.031158040505456914,
+        0,
+        0.13159717412384075,
+        0,
+        -0.034585321989343915,
+        0,
+        -0.05189593135898342,
+        0,
+        0
+      ],
+      "avgMovement": -0.026048743546567277
+    },
+    {
+      "symbol": "ARKMUSDT",
+      "stealthCeiling": 8.236675,
+      "lowestAnchor": 0.2786,
+      "anchorTimestamp": 1763315040,
+      "currentPrice": 0.2905,
+      "diffPercent": 4.271356783919586,
+      "diffDays": 0,
+      "prevPrice": 0.2905,
+      "movements": [
+        -0.2746309646412712
+      ],
+      "avgMovement": -0.2746309646412712
+    },
+    {
+      "symbol": "SNXUSDT",
+      "stealthCeiling": 20.09288,
+      "lowestAnchor": 0.6824,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 0.7115,
+      "diffPercent": 4.26436107854631,
+      "diffDays": 0,
+      "prevPrice": 0.7115,
+      "movements": [
+        -1.318742985409647,
+        1.0235996588001113,
+        0.04221784407542457,
+        0,
+        0.09846673231115965,
+        -0.014052838673410482
+      ],
+      "avgMovement": -0.028085264816060343
+    },
+    {
+      "symbol": "AEROUSDT",
+      "stealthCeiling": 23.38023,
+      "lowestAnchor": 0.802,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 0.8357,
+      "diffPercent": 4.201995012468822,
+      "diffDays": 0,
+      "prevPrice": 0.8357,
+      "movements": [
+        -0.15496483490284513,
+        -0.08357211079274521,
+        -0.035846576651925796,
+        0.08367200573751302,
+        -0.09554520482503558,
+        0,
+        -0.023909145248054747,
+        -0.07174458926223184,
+        0
+      ],
+      "avgMovement": -0.042434495105036135
+    },
+    {
+      "symbol": "WUSDT",
+      "stealthCeiling": 15.1110145,
+      "lowestAnchor": 0.051111,
+      "anchorTimestamp": 1763333100,
+      "currentPrice": 0.053257,
+      "diffPercent": 4.198704779793004,
+      "diffDays": 0,
+      "prevPrice": 0.053257,
+      "movements": [
+        -0.231992516370438,
+        0.03750515695908035,
+        -0.12184606156037121,
+        0,
+        0.020645258159563674,
+        -0.06567589882158731,
+        0,
+        0
+      ],
+      "avgMovement": -0.04517050770421906
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "stealthCeiling": 8.157305,
+      "lowestAnchor": 0.2768,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 0.2884,
+      "diffPercent": 4.190751445086705,
+      "diffDays": 0,
+      "prevPrice": 0.2884,
+      "movements": [
+        -0.10398613518196428,
+        0.06939625260235183,
+        0
+      ],
+      "avgMovement": -0.01152996085987082
+    },
+    {
+      "symbol": "SANDUSDT",
+      "stealthCeiling": 10.2887109,
+      "lowestAnchor": 0.173713,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.180963,
+      "diffPercent": 4.17355062660826,
+      "diffDays": 0,
+      "prevPrice": 0.180963,
+      "movements": [
+        -0.06229979986877029,
+        -0.0921287816934045,
+        0,
+        0,
+        0,
+        -0.020430588456170448,
+        -0.055781381169083856,
+        0
+      ],
+      "avgMovement": -0.028830068898428634
+    },
+    {
+      "symbol": "REKTUSDT",
+      "stealthCeiling": 1.71325,
+      "lowestAnchor": 3.113e-7,
+      "anchorTimestamp": 1763330640,
+      "currentPrice": 3.241e-7,
+      "diffPercent": 4.111789270799875,
+      "diffDays": 0,
+      "prevPrice": 3.241e-7,
+      "movements": [
+        0,
+        -0.0924784217016099,
+        0
+      ],
+      "avgMovement": -0.0308261405672033
+    },
+    {
+      "symbol": "LRCUSDT",
+      "stealthCeiling": 17.2272365,
+      "lowestAnchor": 0.058423,
+      "anchorTimestamp": 1763332800,
+      "currentPrice": 0.060804,
+      "diffPercent": 4.075449737261,
+      "diffDays": 0,
+      "prevPrice": 0.060804,
+      "movements": [
+        -0.09037282899818667
+      ],
+      "avgMovement": -0.09037282899818667
+    },
+    {
+      "symbol": "QTUMUSDT",
+      "stealthCeiling": 9.817836,
+      "lowestAnchor": 1.682,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 1.7503,
+      "diffPercent": 4.060642092746732,
+      "diffDays": 0,
+      "prevPrice": 1.7503,
+      "movements": [
+        0,
+        -0.005712979890310157,
+        0
+      ],
+      "avgMovement": -0.0019043266301033857
+    },
+    {
+      "symbol": "NEOUSDT",
+      "stealthCeiling": 13.347631,
+      "lowestAnchor": 4.5678,
+      "anchorTimestamp": 1763314920,
+      "currentPrice": 4.7526,
+      "diffPercent": 4.045711283331146,
+      "diffDays": 0,
+      "prevPrice": 4.7526,
+      "movements": [
+        0,
+        -0.18485064907784562,
+        0,
+        -0.01683572540931672,
+        0,
+        0,
+        0.01052410018942797,
+        0,
+        0,
+        0.023150584026099146
+      ],
+      "avgMovement": -0.01680116902716352
+    },
+    {
+      "symbol": "PROVEUSDT",
+      "stealthCeiling": 2.727095967804,
+      "lowestAnchor": 0.5075,
+      "anchorTimestamp": 1763103360,
+      "currentPrice": 0.528,
+      "diffPercent": 4.039408866995089,
+      "diffDays": 3,
+      "prevPrice": 0.528,
+      "movements": [
+        -0.018928639030851596,
+        -0.03786444528587239,
+        0,
+        0
+      ],
+      "avgMovement": -0.014198271079180997
+    },
+    {
+      "symbol": "MASKUSDT",
+      "stealthCeiling": 20.29261,
+      "lowestAnchor": 0.6891,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 0.7169,
+      "diffPercent": 4.034247569293272,
+      "diffDays": 0,
+      "prevPrice": 0.7169,
+      "movements": [
+        -1.3485332962602588,
+        1.0287485907553513,
+        0
+      ],
+      "avgMovement": -0.10659490183496916
+    },
+    {
+      "symbol": "ZIGUSDT",
+      "stealthCeiling": 3.477084676197,
+      "lowestAnchor": 0.065776,
+      "anchorTimestamp": 1763338740,
+      "currentPrice": 0.06842,
+      "diffPercent": 4.019703235222564,
+      "diffDays": 0,
+      "prevPrice": 0.06842,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "PEAQUSDT",
+      "stealthCeiling": 2.9321097724976,
+      "lowestAnchor": 0.055671,
+      "anchorTimestamp": 1763126400,
+      "currentPrice": 0.057895,
+      "diffPercent": 3.9948986007077365,
+      "diffDays": 2,
+      "prevPrice": 0.057895,
+      "movements": [
+        -0.1086131990897189,
+        -0.07939110474447703,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.031334050639032655
+    },
+    {
+      "symbol": "BCHUSDT",
+      "stealthCeiling": 13.855186,
+      "lowestAnchor": 475.18,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 494.16,
+      "diffPercent": 3.9942758533608353,
+      "diffDays": 0,
+      "prevPrice": 494.16,
+      "movements": [
+        -0.10316368638239154,
+        -0.11136984914447937,
+        0.03446178795864908,
+        0,
+        0.07497922872716632,
+        0,
+        0.018224526162326227,
+        0.046565302775700645
+      ],
+      "avgMovement": -0.00503783623787858
+    },
+    {
+      "symbol": "ATHUSDT",
+      "stealthCeiling": 6.142605,
+      "lowestAnchor": 0.021096,
+      "anchorTimestamp": 1763314980,
+      "currentPrice": 0.021937,
+      "diffPercent": 3.986537732271528,
+      "diffDays": 0,
+      "prevPrice": 0.021937,
+      "movements": [
+        0.0273236486178745,
+        -0.12292283177782494,
+        0,
+        0,
+        0,
+        -0.009116601331017098,
+        0.004558716265504194
+      ],
+      "avgMovement": -0.014308152603637622
+    },
+    {
+      "symbol": "APEUSDT",
+      "stealthCeiling": 9.85068,
+      "lowestAnchor": 0.3349,
+      "anchorTimestamp": 1763314680,
+      "currentPrice": 0.3482,
+      "diffPercent": 3.971334726784125,
+      "diffDays": 0,
+      "prevPrice": 0.3482,
+      "movements": [
+        -0.028653295128936676,
+        -0.17196904557179404,
+        0,
+        0,
+        0.028710881424056554,
+        -0.05740528128587198
+      ],
+      "avgMovement": -0.038219456760424354
+    },
+    {
+      "symbol": "YFIUSDT",
+      "stealthCeiling": 2.369431695,
+      "lowestAnchor": 4497.54,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 4675.65,
+      "diffPercent": 3.9601648901399362,
+      "diffDays": 0,
+      "prevPrice": 4675.65,
+      "movements": [
+        -0.04163926304910055,
+        -0.10894805314102286,
+        0,
+        -0.008126551797146492
+      ],
+      "avgMovement": -0.03967846699681748
+    },
+    {
+      "symbol": "JUPUSDT",
+      "stealthCeiling": 7.939415,
+      "lowestAnchor": 0.2682,
+      "anchorTimestamp": 1763314980,
+      "currentPrice": 0.2788,
+      "diffPercent": 3.952274422073079,
+      "diffDays": 0,
+      "prevPrice": 0.2788,
+      "movements": [
+        -0.10733452593918513,
+        -0.14326647564470324,
+        0,
+        0,
+        0.14347202295552777,
+        0,
+        -0.035816618911170835,
+        0,
+        -0.10748835542817,
+        0
+      ],
+      "avgMovement": -0.025043395296770143
+    },
+    {
+      "symbol": "STORJUSDT",
+      "stealthCeiling": 9.1807603,
+      "lowestAnchor": 0.158523,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.164757,
+      "diffPercent": 3.932552374103436,
+      "diffDays": 0,
+      "prevPrice": 0.164757,
+      "movements": [
+        -0.5765658936771241,
+        0.2561824554570982
+      ],
+      "avgMovement": -0.16019171911001293
+    },
+    {
+      "symbol": "RAYUSDT",
+      "stealthCeiling": 7.294697,
+      "lowestAnchor": 1.2363,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 1.2849,
+      "diffPercent": 3.9310846881824784,
+      "diffDays": 0,
+      "prevPrice": 1.2849,
+      "movements": [
+        -0.06991377301329316,
+        -0.12437810945273987,
+        0,
+        0.00778331257783227
+      ],
+      "avgMovement": -0.04662714247205019
+    },
+    {
+      "symbol": "SOLUSDT",
+      "stealthCeiling": 7.93497,
+      "lowestAnchor": 135.71,
+      "anchorTimestamp": 1763332920,
+      "currentPrice": 141.04,
+      "diffPercent": 3.9274924471298975,
+      "diffDays": 0,
+      "prevPrice": 141.04,
+      "movements": [
+        -0.035365681143006755,
+        -0.08490766291658143,
+        -0.04248990864669802,
+        0,
+        -0.03542330853702541,
+        0,
+        0,
+        0,
+        -0.04252303330971104,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.01851612265792482
+    },
+    {
+      "symbol": "FFUSDT",
+      "stealthCeiling": 7.2347535,
+      "lowestAnchor": 0.122159,
+      "anchorTimestamp": 1763332080,
+      "currentPrice": 0.126952,
+      "diffPercent": 3.9235750128930373,
+      "diffDays": 0,
+      "prevPrice": 0.126952,
+      "movements": [
+        0.0007860337522901093,
+        -0.2106553897910664,
+        0,
+        0,
+        0,
+        -0.0015753737574255241,
+        0,
+        0
+      ],
+      "avgMovement": -0.026430591224525228
+    },
+    {
+      "symbol": "SHIBUSDT",
+      "stealthCeiling": 25.672318,
+      "lowestAnchor": 0.00000867,
+      "anchorTimestamp": 1763315820,
+      "currentPrice": 0.0000090101,
+      "diffPercent": 3.92272202998847,
+      "diffDays": 0,
+      "prevPrice": 0.0000090101,
+      "movements": [
+        -0.1428634712501238,
+        -0.055452660064093356,
+        0,
+        0.01664502813009644,
+        -0.057693161141431935,
+        0,
+        0.02331261101242809,
+        0
+      ],
+      "avgMovement": -0.02700645666414057
+    },
+    {
+      "symbol": "DOTUSDT",
+      "stealthCeiling": 8.001129,
+      "lowestAnchor": 2.7137,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 2.8196,
+      "diffPercent": 3.90242104875263,
+      "diffDays": 0,
+      "prevPrice": 2.8196,
+      "movements": [
+        -0.14503006720904743,
+        -0.06376421410606985,
+        0,
+        -0.14887809719612852,
+        0,
+        0.12425006212502525,
+        -0.010636789107918909,
+        0,
+        0,
+        0,
+        0,
+        -0.01772986773519262,
+        0,
+        0
+      ],
+      "avgMovement": -0.018699212373523715
+    },
+    {
+      "symbol": "LINKUSDT",
+      "stealthCeiling": 7.882565,
+      "lowestAnchor": 13.5131,
+      "anchorTimestamp": 1763332860,
+      "currentPrice": 14.0403,
+      "diffPercent": 3.9013993828211184,
+      "diffDays": 0,
+      "prevPrice": 14.0403,
+      "movements": [
+        -0.11659320346936483,
+        -0.20142922218425985,
+        -0.0028528025218834494,
+        0,
+        0.13836486958755126,
+        0,
+        0.012108003390238035,
+        -0.01210653753026343,
+        0,
+        0
+      ],
+      "avgMovement": -0.018250889272798228
+    },
+    {
+      "symbol": "BLURUSDT",
+      "stealthCeiling": 11.757252,
+      "lowestAnchor": 0.0404,
+      "anchorTimestamp": 1763314920,
+      "currentPrice": 0.041967,
+      "diffPercent": 3.8787128712871266,
+      "diffDays": 0,
+      "prevPrice": 0.041967,
+      "movements": [
+        -0.04049547403526232,
+        0.009532206944205757
+      ],
+      "avgMovement": -0.01548163354552828
+    },
+    {
+      "symbol": "UMAUSDT",
+      "stealthCeiling": 26.31634,
+      "lowestAnchor": 0.8968,
+      "anchorTimestamp": 1763327100,
+      "currentPrice": 0.9315,
+      "diffPercent": 3.8693131132916982,
+      "diffDays": 0,
+      "prevPrice": 0.9315,
+      "movements": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "VETUSDT",
+      "stealthCeiling": 8.727323,
+      "lowestAnchor": 0.014718,
+      "anchorTimestamp": 1763314500,
+      "currentPrice": 0.015278,
+      "diffPercent": 3.804864791411875,
+      "diffDays": 0,
+      "prevPrice": 0.015278,
+      "movements": [
+        -0.11108207004704428,
+        -0.12428861123830652,
+        0,
+        0,
+        -0.0785957558291843,
+        0.026219192448864684,
+        0.11795543905636079
+      ],
+      "avgMovement": -0.024255972229901373
+    },
+    {
+      "symbol": "AUSDT",
+      "stealthCeiling": 6.8771622,
+      "lowestAnchor": 0.234057,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.24296,
+      "diffPercent": 3.8037742942958435,
+      "diffDays": 0,
+      "prevPrice": 0.24296,
+      "movements": [
+        0.01109184872361547,
+        -0.20907869820784206,
+        0,
+        0.013583600889110583,
+        0,
+        0,
+        0,
+        -0.005350388726313313,
+        0
+      ],
+      "avgMovement": -0.02108373748015881
+    },
+    {
+      "symbol": "MEWUSDT",
+      "stealthCeiling": 7.7883222,
+      "lowestAnchor": 0.00133249,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.00138259,
+      "diffPercent": 3.75987812291274,
+      "diffDays": 0,
+      "prevPrice": 0.00138259,
+      "movements": [
+        -0.08822614820545921,
+        0.07238037333795959,
+        0
+      ],
+      "avgMovement": -0.005281924955833207
+    },
+    {
+      "symbol": "BABYDOGEUSDT",
+      "stealthCeiling": 21.8004,
+      "lowestAnchor": 7.46e-10,
+      "anchorTimestamp": 1763315220,
+      "currentPrice": 7.74e-10,
+      "diffPercent": 3.7533512064343175,
+      "diffDays": 0,
+      "prevPrice": 7.74e-10,
+      "movements": [
+        -0.25773195876288574,
+        0,
+        0
+      ],
+      "avgMovement": -0.08591065292096191
+    },
+    {
+      "symbol": "MEMEUSDT",
+      "stealthCeiling": 8.0846271,
+      "lowestAnchor": 0.00136928,
+      "anchorTimestamp": 1763314380,
+      "currentPrice": 0.00142059,
+      "diffPercent": 3.747224818882912,
+      "diffDays": 0,
+      "prevPrice": 0.00142059,
+      "movements": [
+        -0.00492728731716371,
+        0,
+        0
+      ],
+      "avgMovement": -0.0016424291057212366
+    },
+    {
+      "symbol": "CROUSDT",
+      "stealthCeiling": 6.3275106,
+      "lowestAnchor": 0.107629,
+      "anchorTimestamp": 1763314680,
+      "currentPrice": 0.111638,
+      "diffPercent": 3.724832526549535,
+      "diffDays": 0,
+      "prevPrice": 0.111638,
+      "movements": [
+        -0.0026838672738197693,
+        -0.10377898654452206,
+        -0.001791151710551675,
+        0,
+        -0.008060327070156302,
+        0,
+        0,
+        -0.004478320450702649,
+        -0.005374225215857657,
+        0
+      ],
+      "avgMovement": -0.01261668782656101
+    },
+    {
+      "symbol": "TIAUSDT",
+      "stealthCeiling": 24.004745,
+      "lowestAnchor": 0.8056,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 0.8356,
+      "diffPercent": 3.7239324726911653,
+      "diffDays": 0,
+      "prevPrice": 0.8356,
+      "movements": [
+        -0.1314531548757158,
+        -0.20342228072275156,
+        0,
+        0,
+        0.1798561151079205,
+        -0.05984440454818144,
+        0,
+        0,
+        0.07185628742515508,
+        0
+      ],
+      "avgMovement": -0.01430074376135732
+    },
+    {
+      "symbol": "SUIUSDT",
+      "stealthCeiling": 9.76284,
+      "lowestAnchor": 1.6526,
+      "anchorTimestamp": 1763328120,
+      "currentPrice": 1.713,
+      "diffPercent": 3.6548469079026993,
+      "diffDays": 0,
+      "prevPrice": 1.713,
+      "movements": [
+        -0.13987644247581058,
+        -0.14007237072487205,
+        -0.05844535359439578,
+        0,
+        0.16374269005848746,
+        -0.017515179822523878,
+        0,
+        0.02335766423358704,
+        0.00583805242571014
+      ],
+      "avgMovement": -0.018107882211090852
+    },
+    {
+      "symbol": "CFXUSDT",
+      "stealthCeiling": 24.659446,
+      "lowestAnchor": 0.084207,
+      "anchorTimestamp": 1763328540,
+      "currentPrice": 0.087283,
+      "diffPercent": 3.652902965311667,
+      "diffDays": 0,
+      "prevPrice": 0.087283,
+      "movements": [
+        -0.02403653553401985,
+        -0.04465001259359029,
+        -0.029779971823563112,
+        0,
+        -0.0022914494563559084,
+        0,
+        0,
+        0,
+        0,
+        0.004583003929930453
+      ],
+      "avgMovement": -0.009617496547759872
+    },
+    {
+      "symbol": "XPLUSDT",
+      "stealthCeiling": 6.445215,
+      "lowestAnchor": 0.2173,
+      "anchorTimestamp": 1763315040,
+      "currentPrice": 0.2254,
+      "diffPercent": 3.727565577542566,
+      "diffDays": 0,
+      "prevPrice": 0.2254,
+      "movements": [
+        0,
+        -0.44208664898320105,
+        0,
+        0,
+        0,
+        0.08880994671402219
+      ],
+      "avgMovement": -0.058879450378196474
+    },
+    {
+      "symbol": "WLDUSDT",
+      "stealthCeiling": 19.427175,
+      "lowestAnchor": 0.6593,
+      "anchorTimestamp": 1763315040,
+      "currentPrice": 0.6831,
+      "diffPercent": 3.609889276505391,
+      "diffDays": 0,
+      "prevPrice": 0.6831,
+      "movements": [
+        -0.10227936879018612,
+        -0.17551557700745635,
+        0.11721611721612057,
+        -0.029269720474166244,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.027121221293669732
+    },
+    {
+      "symbol": "CRVUSDT",
+      "stealthCeiling": 12.132785,
+      "lowestAnchor": 0.4132,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 0.428,
+      "diffPercent": 3.581800580832522,
+      "diffDays": 0,
+      "prevPrice": 0.428,
+      "movements": [
+        -0.1398601398601374,
+        -0.02334267040149136,
+        -0.046696240952611136,
+        0,
+        -0.023359028264421627,
+        0
+      ],
+      "avgMovement": -0.03887634657977692
+    },
+    {
+      "symbol": "BIOUSDT",
+      "stealthCeiling": 3.34854386452132,
+      "lowestAnchor": 0.063824,
+      "anchorTimestamp": 1763315880,
+      "currentPrice": 0.066109,
+      "diffPercent": 3.580157934319371,
+      "diffDays": 0,
+      "prevPrice": 0.066109,
+      "movements": [
+        0,
+        -0.15254493278961465,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.03050898655792293
+    },
+    {
+      "symbol": "WAXLUSDT",
+      "stealthCeiling": 1.4718089927556,
+      "lowestAnchor": 0.134191,
+      "anchorTimestamp": 1763330040,
+      "currentPrice": 0.138987,
+      "diffPercent": 3.574010179520232,
+      "diffDays": 0,
+      "prevPrice": 0.138987,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "ANKRUSDT",
+      "stealthCeiling": 24.93726,
+      "lowestAnchor": 0.008534,
+      "anchorTimestamp": 1763314680,
+      "currentPrice": 0.008838,
+      "diffPercent": 3.562221701429581,
+      "diffDays": 0,
+      "prevPrice": 0.008838,
+      "movements": [
+        0.011316057485583345
+      ],
+      "avgMovement": 0.011316057485583345
+    },
+    {
+      "symbol": "LIGHTUSDT",
+      "stealthCeiling": 1.0213665,
+      "lowestAnchor": 1.7744,
+      "anchorTimestamp": 1763349000,
+      "currentPrice": 1.8369,
+      "diffPercent": 3.522317403065825,
+      "diffDays": 0,
+      "prevPrice": 1.8369,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "SPKUSDT",
+      "stealthCeiling": 1.73741295752486,
+      "lowestAnchor": 0.032047,
+      "anchorTimestamp": 1763315820,
+      "currentPrice": 0.033171,
+      "diffPercent": 3.5073485817705246,
+      "diffDays": 0,
+      "prevPrice": 0.033171,
+      "movements": [
+        0.018091361374940634
+      ],
+      "avgMovement": 0.018091361374940634
+    },
+    {
+      "symbol": "MOCAUSDT",
+      "stealthCeiling": 9.6686395,
+      "lowestAnchor": 0.032853,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 0.033998,
+      "diffPercent": 3.4852220497367066,
+      "diffDays": 0,
+      "prevPrice": 0.033998,
+      "movements": [
+        0.20282186948853503,
+        -0.26694828243715213,
+        0
+      ],
+      "avgMovement": -0.021375470982872364
+    },
+    {
+      "symbol": "VIRTUALUSDT",
+      "stealthCeiling": 6.365794,
+      "lowestAnchor": 1.0797,
+      "anchorTimestamp": 1763332920,
+      "currentPrice": 1.1172,
+      "diffPercent": 3.4731869963878728,
+      "diffDays": 0,
+      "prevPrice": 1.1172,
+      "movements": [
+        -0.18746652383502863,
+        -0.27725605938646836,
+        0,
+        0,
+        0.16143497757847747,
+        0.035816618911170835,
+        0,
+        0
+      ],
+      "avgMovement": -0.03343387334148108
+    },
+    {
+      "symbol": "KASUSDT",
+      "stealthCeiling": 2.2397286444351,
+      "lowestAnchor": 0.042942,
+      "anchorTimestamp": 1763319600,
+      "currentPrice": 0.044428,
+      "diffPercent": 3.4604815798053217,
+      "diffDays": 0,
+      "prevPrice": 0.044428,
+      "movements": [
+        -0.024725768746621836,
+        -0.20684848348585066,
+        0,
+        0,
+        0.07434944237917834,
+        0.022513395470311726
+      ],
+      "avgMovement": -0.02245190239716374
+    },
+    {
+      "symbol": "ALTUSDT",
+      "stealthCeiling": 8.43431255701199,
+      "lowestAnchor": 0.014255,
+      "anchorTimestamp": 1763318760,
+      "currentPrice": 0.014746,
+      "diffPercent": 3.444405471764294,
+      "diffDays": 0,
+      "prevPrice": 0.014746,
+      "movements": [
+        -0.11515274673169176
+      ],
+      "avgMovement": -0.11515274673169176
+    },
+    {
+      "symbol": "KAVAUSDT",
+      "stealthCeiling": 7.527021,
+      "lowestAnchor": 0.128199,
+      "anchorTimestamp": 1763324280,
+      "currentPrice": 0.132613,
+      "diffPercent": 3.4430845794428984,
+      "diffDays": 0,
+      "prevPrice": 0.132613,
+      "movements": [
+        -0.0860156639051134,
+        0.07702763932939961,
+        0.06866784382970959
+      ],
+      "avgMovement": 0.019893273084665267
+    },
+    {
+      "symbol": "KAIAUSDT",
+      "stealthCeiling": 24.864279,
+      "lowestAnchor": 0.085832,
+      "anchorTimestamp": 1763161800,
+      "currentPrice": 0.088767,
+      "diffPercent": 3.4194705937179526,
+      "diffDays": 2,
+      "prevPrice": 0.088767,
+      "movements": [
+        -0.133828160143943,
+        -0.09008907557348522,
+        0.0349409948039396,
+        0.01690102758247828,
+        0,
+        0
+      ],
+      "avgMovement": -0.02867920222183506
+    },
+    {
+      "symbol": "BANDUSDT",
+      "stealthCeiling": 2.14862567559,
+      "lowestAnchor": 0.3992,
+      "anchorTimestamp": 1763327280,
+      "currentPrice": 0.4128,
+      "diffPercent": 3.406813627254509,
+      "diffDays": 0,
+      "prevPrice": 0.4128,
+      "movements": [
+        -0.19342359767892237
+      ],
+      "avgMovement": -0.19342359767892237
+    },
+    {
+      "symbol": "SAFEUSDT",
+      "stealthCeiling": 1.71392590213341,
+      "lowestAnchor": 0.156211,
+      "anchorTimestamp": 1763319480,
+      "currentPrice": 0.161529,
+      "diffPercent": 3.40436973068479,
+      "diffDays": 0,
+      "prevPrice": 0.161529,
+      "movements": [
+        0.37424733672996474,
+        -0.6164977758089244
+      ],
+      "avgMovement": -0.12112521953947983
+    },
+    {
+      "symbol": "ENJUSDT",
+      "stealthCeiling": 10.698981,
+      "lowestAnchor": 0.036205,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.037427,
+      "diffPercent": 3.375224416517058,
+      "diffDays": 0,
+      "prevPrice": 0.037427,
+      "movements": [
+        -0.15739209304806212
+      ],
+      "avgMovement": -0.15739209304806212
+    },
+    {
+      "symbol": "XCNUSDT",
+      "stealthCeiling": 3.02968647056116,
+      "lowestAnchor": 0.00566,
+      "anchorTimestamp": 1763315520,
+      "currentPrice": 0.00585,
+      "diffPercent": 3.3568904593639584,
+      "diffDays": 0,
+      "prevPrice": 0.00585,
+      "movements": [
+        -0.20470829068577034,
+        -0.051282051282058094,
+        0,
+        0,
+        0,
+        0.05130836326321872,
+        0,
+        0
+      ],
+      "avgMovement": -0.025585247338076215
+    },
+    {
+      "symbol": "MEUSDT",
+      "stealthCeiling": 1.98851152024,
+      "lowestAnchor": 0.3736,
+      "anchorTimestamp": 1763318760,
+      "currentPrice": 0.3861,
+      "diffPercent": 3.345824411134907,
+      "diffDays": 0,
+      "prevPrice": 0.3861,
+      "movements": [
+        -0.051773233238410044
+      ],
+      "avgMovement": -0.051773233238410044
+    },
+    {
+      "symbol": "ACHUSDT",
+      "stealthCeiling": 1.09847624809208,
+      "lowestAnchor": 0.010329,
+      "anchorTimestamp": 1763315820,
+      "currentPrice": 0.010674,
+      "diffPercent": 3.340110368864361,
+      "diffDays": 0,
+      "prevPrice": 0.010674,
+      "movements": [
+        0,
+        -0.11229646266142485,
+        0,
+        0
+      ],
+      "avgMovement": -0.02807411566535621
+    },
+    {
+      "symbol": "WIFUSDT",
+      "stealthCeiling": 11.79878,
+      "lowestAnchor": 0.4002,
+      "anchorTimestamp": 1763333100,
+      "currentPrice": 0.4134,
+      "diffPercent": 3.2983508245877036,
+      "diffDays": 0,
+      "prevPrice": 0.4134,
+      "movements": [
+        -0.24137098720733788,
+        0.1693684974594673,
+        0,
+        -0.09661835748791206,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -0.0483558994197373,
+        0
+      ],
+      "avgMovement": -0.01972515878686545
+    },
+    {
+      "symbol": "SXPUSDT",
+      "stealthCeiling": 5.8836078,
+      "lowestAnchor": 0.101498,
+      "anchorTimestamp": 1763314200,
+      "currentPrice": 0.10481,
+      "diffPercent": 3.263118485093298,
+      "diffDays": 0,
+      "prevPrice": 0.10481,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "OMUSDT",
+      "stealthCeiling": 23.6951345,
+      "lowestAnchor": 0.080058,
+      "anchorTimestamp": 1763314380,
+      "currentPrice": 0.082665,
+      "diffPercent": 3.256389117889528,
+      "diffDays": 0,
+      "prevPrice": 0.082665,
+      "movements": [
+        -0.09426779304593107
+      ],
+      "avgMovement": -0.09426779304593107
+    },
+    {
+      "symbol": "OKBUSDT",
+      "stealthCeiling": 1.1537220501,
+      "lowestAnchor": 110.76,
+      "anchorTimestamp": 1763315400,
+      "currentPrice": 114.34,
+      "diffPercent": 3.2322137955940757,
+      "diffDays": 0,
+      "prevPrice": 114.34,
+      "movements": [
+        -0.043610989969482226,
+        0,
+        -0.24432809773124012,
+        0,
+        -0.017494751574524164,
+        0.03499562554681212,
+        0
+      ],
+      "avgMovement": -0.038634030532633486
+    },
+    {
+      "symbol": "IOTAUSDT",
+      "stealthCeiling": 7.410811,
+      "lowestAnchor": 0.1259,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.129966,
+      "diffPercent": 3.2295472597299333,
+      "diffDays": 0,
+      "prevPrice": 0.129966,
+      "movements": [
+        -0.056123194255437214,
+        -0.02461576331943895,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.013456492929146026
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "stealthCeiling": 9.209879,
+      "lowestAnchor": 0.156273,
+      "anchorTimestamp": 1763333100,
+      "currentPrice": 0.161318,
+      "diffPercent": 3.228324790590821,
+      "diffDays": 0,
+      "prevPrice": 0.161318,
+      "movements": [
+        -0.09590812620272889,
+        -0.16412937110579065,
+        0,
+        0.014268609679077407,
+        0.09986601826121136,
+        0.01549167477397476,
+        -0.05204396475880147,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.01824551593530575
+    },
+    {
+      "symbol": "TAIKOUSDT",
+      "stealthCeiling": 1.12766973976118,
+      "lowestAnchor": 0.208347,
+      "anchorTimestamp": 1763315760,
+      "currentPrice": 0.215034,
+      "diffPercent": 3.209549453555846,
+      "diffDays": 0,
+      "prevPrice": 0.215034,
+      "movements": [
+        0,
+        -0.5425356255810438,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.10850712511620877
+    },
+    {
+      "symbol": "SAHARAUSDT",
+      "stealthCeiling": 4.06009930108352,
+      "lowestAnchor": 0.076711,
+      "anchorTimestamp": 1763128080,
+      "currentPrice": 0.079159,
+      "diffPercent": 3.1911981332533688,
+      "diffDays": 2,
+      "prevPrice": 0.079159,
+      "movements": [
+        0,
+        -0.1828407142136667,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.026120102030523815
+    },
+    {
+      "symbol": "ADAUSDT",
+      "stealthCeiling": 14.03417,
+      "lowestAnchor": 0.4766,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 0.4918,
+      "diffPercent": 3.1892572387746516,
+      "diffDays": 0,
+      "prevPrice": 0.4918,
+      "movements": [
+        -0.12150668286755557,
+        -0.28386050283860753,
+        0,
+        -0.040666937779592,
+        0,
+        0.08136696501220737,
+        -0.040650406504060564,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.036847051361600755
+    },
+    {
+      "symbol": "USELESSUSDT",
+      "stealthCeiling": 1.20853169682,
+      "lowestAnchor": 0.1098,
+      "anchorTimestamp": 1763319540,
+      "currentPrice": 0.1133,
+      "diffPercent": 3.1876138433515515,
+      "diffDays": 0,
+      "prevPrice": 0.1133,
+      "movements": [
+        0,
+        -1.5679442508710766,
+        0.2654867256637121,
+        0
+      ],
+      "avgMovement": -0.3256143813018411
+    },
+    {
+      "symbol": "TRACUSDT",
+      "stealthCeiling": 2.845934529944,
+      "lowestAnchor": 0.5281,
+      "anchorTimestamp": 1763339520,
+      "currentPrice": 0.5446,
+      "diffPercent": 3.1244082560121114,
+      "diffDays": 0,
+      "prevPrice": 0.5446,
+      "movements": [
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "TORNUSDT",
+      "stealthCeiling": 1.382738488425,
+      "lowestAnchor": 13.015,
+      "anchorTimestamp": 1763336400,
+      "currentPrice": 13.4196,
+      "diffPercent": 3.108720706876683,
+      "diffDays": 0,
+      "prevPrice": 13.4196,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "RENDERUSDT",
+      "stealthCeiling": 5.8272885,
+      "lowestAnchor": 1.9677,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 2.0287,
+      "diffPercent": 3.1000660669817637,
+      "diffDays": 0,
+      "prevPrice": 2.0287,
+      "movements": [
+        -0.17732243128753836,
+        -0.10855620250667135,
+        0.2667457024303423,
+        -0.054192531283853436,
+        0,
+        0
+      ],
+      "avgMovement": -0.012220910441286805
+    },
+    {
+      "symbol": "ETHFIUSDT",
+      "stealthCeiling": 25.38846,
+      "lowestAnchor": 0.8648,
+      "anchorTimestamp": 1763314980,
+      "currentPrice": 0.8916,
+      "diffPercent": 3.0989824236817687,
+      "diffDays": 0,
+      "prevPrice": 0.8916,
+      "movements": [
+        -0.1454626832270425,
+        0.011205737337515575,
+        -0.03361344537814756,
+        0,
+        -0.011208249271462562,
+        -0.05604752830400807
+      ],
+      "avgMovement": -0.03918769480719086
+    },
+    {
+      "symbol": "BNBUSDT",
+      "stealthCeiling": 26.2445735,
+      "lowestAnchor": 906.04,
+      "anchorTimestamp": 1763128920,
+      "currentPrice": 933.96,
+      "diffPercent": 3.081541653790128,
+      "diffDays": 2,
+      "prevPrice": 933.96,
+      "movements": [
+        -0.06841041976205856,
+        -0.1401234369818851,
+        0.008569163863828192,
+        0.06319216845532977,
+        0,
+        -0.02247792346802637,
+        0,
+        0,
+        -0.00856494368548748
+      ],
+      "avgMovement": -0.01864615461981106
+    },
+    {
+      "symbol": "GMXUSDT",
+      "stealthCeiling": 4.54454,
+      "lowestAnchor": 8.2586,
+      "anchorTimestamp": 1763330700,
+      "currentPrice": 8.513,
+      "diffPercent": 3.080425253674962,
+      "diffDays": 0,
+      "prevPrice": 8.513,
+      "movements": [
+        -0.06685354382424732,
+        -0.08685038261115109,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.02195770377648549
+    },
+    {
+      "symbol": "BBUSDT",
+      "stealthCeiling": 22.1877235,
+      "lowestAnchor": 0.075744,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 0.07807,
+      "diffPercent": 3.070870299957745,
+      "diffDays": 0,
+      "prevPrice": 0.07807,
+      "movements": [
+        -0.07039999999999935
+      ],
+      "avgMovement": -0.07039999999999935
+    },
+    {
+      "symbol": "KSMUSDT",
+      "stealthCeiling": 5.7277392,
+      "lowestAnchor": 9.6746,
+      "anchorTimestamp": 1763314860,
+      "currentPrice": 9.9705,
+      "diffPercent": 3.0585243834370375,
+      "diffDays": 0,
+      "prevPrice": 9.9705,
+      "movements": [
+        -0.09725870816372037,
+        0.07928781476761775,
+        0,
+        -0.011031328974296893
+      ],
+      "avgMovement": -0.007250555592599879
+    },
+    {
+      "symbol": "SKYUSDT",
+      "stealthCeiling": 14.369658,
+      "lowestAnchor": 0.04926,
+      "anchorTimestamp": 1763314260,
+      "currentPrice": 0.050759,
+      "diffPercent": 3.0430369468128307,
+      "diffDays": 0,
+      "prevPrice": 0.050759,
+      "movements": [
+        -0.21208907741252095,
+        -0.1633408115873573,
+        0,
+        0,
+        0.02168299461868298,
+        0,
+        0.021678294115322853,
+        0.011821961263371745
+      ],
+      "avgMovement": -0.04003082987531258
+    },
+    {
+      "symbol": "MANAUSDT",
+      "stealthCeiling": 5.79615325,
+      "lowestAnchor": 0.194948,
+      "anchorTimestamp": 1763314740,
+      "currentPrice": 0.200867,
+      "diffPercent": 3.0361942671891886,
+      "diffDays": 0,
+      "prevPrice": 0.200867,
+      "movements": [
+        -0.027878588746011367,
+        -0.2524711799417273,
+        0,
+        0,
+        0,
+        0.14128242506538816,
+        -0.0249263426574445,
+        0,
+        0.16256027445758872,
+        0
+      ],
+      "avgMovement": -0.00014334118222062708
+    },
+    {
+      "symbol": "HUSDT",
+      "stealthCeiling": 1.57803093828168,
+      "lowestAnchor": 0.144169,
+      "anchorTimestamp": 1763350620,
+      "currentPrice": 0.148522,
+      "diffPercent": 3.019373096851609,
+      "diffDays": 0,
+      "prevPrice": 0.148522,
+      "movements": [
+        0,
+        0.02693929230478071,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0.003367411538097589
+    },
+    {
+      "symbol": "VTHOUSDT",
+      "stealthCeiling": 1.0757593856699932,
+      "lowestAnchor": 0.00102958,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 0.0010605,
+      "diffPercent": 3.0031663396724912,
+      "diffDays": 0,
+      "prevPrice": 0.0010605,
+      "movements": [
+        -0.0028287476191410674,
+        -0.0009429425465050412,
+        0
+      ],
+      "avgMovement": -0.0012572300552153696
+    },
+    {
+      "symbol": "ETHWUSDT",
+      "stealthCeiling": 21.87141,
+      "lowestAnchor": 0.7544,
+      "anchorTimestamp": 1763334180,
+      "currentPrice": 0.7765,
+      "diffPercent": 2.9294803817603405,
+      "diffDays": 0,
+      "prevPrice": 0.7765,
+      "movements": [
+        -0.11578541103821072,
+        0.012879958784130474,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.020581090450816047
+    },
+    {
+      "symbol": "SUSDT",
+      "stealthCeiling": 7.2750875,
+      "lowestAnchor": 0.122923,
+      "anchorTimestamp": 1763328720,
+      "currentPrice": 0.126451,
+      "diffPercent": 2.8700894055628345,
+      "diffDays": 0,
+      "prevPrice": 0.126451,
+      "movements": [
+        -0.11759691880288722,
+        -0.16830627000117812,
+        0,
+        0.08864827215019627,
+        0,
+        -0.00869881537951429,
+        0,
+        0,
+        0,
+        0,
+        0.0063269615558061735,
+        0
+      ],
+      "avgMovement": -0.016635564206464764
+    },
+    {
+      "symbol": "RVNUSDT",
+      "stealthCeiling": 26.003445,
+      "lowestAnchor": 0.008943,
+      "anchorTimestamp": 1763314380,
+      "currentPrice": 0.009199,
+      "diffPercent": 2.862574080286269,
+      "diffDays": 0,
+      "prevPrice": 0.009199,
+      "movements": [
+        -0.010854227721708454,
+        -0.14112027789838388,
+        0,
+        0
+      ],
+      "avgMovement": -0.03799362640502309
+    },
+    {
+      "symbol": "ETHUSDT",
+      "stealthCeiling": 10.752114,
+      "lowestAnchor": 3095.73,
+      "anchorTimestamp": 1763337540,
+      "currentPrice": 3183.89,
+      "diffPercent": 2.8477935737289704,
+      "diffDays": 0,
+      "prevPrice": 3183.89,
+      "movements": [
+        -0.09622738499730951,
+        -0.1920126502451892,
+        0,
+        0.005972645284598264,
+        0.035833731485901396,
+        0.06472898664571705,
+        -0.02103901323887987,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.01689530708876349
+    },
+    {
+      "symbol": "XLMUSDT",
+      "stealthCeiling": 7.300805,
+      "lowestAnchor": 0.2504,
+      "anchorTimestamp": 1763314800,
+      "currentPrice": 0.2574,
+      "diffPercent": 2.795527156549523,
+      "diffDays": 0,
+      "prevPrice": 0.2574,
+      "movements": [
+        -0.07757951900697363,
+        -0.11645962732920126,
+        0,
+        0,
+        0.11659541391372814,
+        0,
+        -0.07763975155278648,
+        0,
+        0
+      ],
+      "avgMovement": -0.017231498219470356
+    },
+    {
+      "symbol": "JTOUSDT",
+      "stealthCeiling": 16.610435,
+      "lowestAnchor": 0.5594,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 0.575,
+      "diffPercent": 2.7887021809081065,
+      "diffDays": 0,
+      "prevPrice": 0.575,
+      "movements": [
+        -0.13860013860014256,
+        -0.2428868841082699,
+        0,
+        0
+      ],
+      "avgMovement": -0.09537175567710311
+    },
+    {
+      "symbol": "JASMYUSDT",
+      "stealthCeiling": 24.083115,
+      "lowestAnchor": 0.008222,
+      "anchorTimestamp": 1763314980,
+      "currentPrice": 0.008448,
+      "diffPercent": 2.7487229384578025,
+      "diffDays": 0,
+      "prevPrice": 0.008448,
+      "movements": [
+        -0.13010053222945703,
+        -0.17764092846991222,
+        0,
+        0.20168466010202457,
+        0,
+        0.0473596968979256,
+        -0.023668639053237052
+      ],
+      "avgMovement": -0.011766534678950875
+    },
+    {
+      "symbol": "XPRUSDT",
+      "stealthCeiling": 2.1193648184856,
+      "lowestAnchor": 0.003964,
+      "anchorTimestamp": 1763329380,
+      "currentPrice": 0.004073,
+      "diffPercent": 2.74974772956611,
+      "diffDays": 0,
+      "prevPrice": 0.004073,
+      "movements": [
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "QUBICUSDT",
+      "stealthCeiling": 4.330022701141358,
+      "lowestAnchor": 8.326e-7,
+      "anchorTimestamp": 1763330940,
+      "currentPrice": 8.554e-7,
+      "diffPercent": 2.738409800624552,
+      "diffDays": 0,
+      "prevPrice": 8.554e-7,
+      "movements": [
+        -0.14028524666822356,
+        0.1404823226410658,
+        0
+      ],
+      "avgMovement": 0.00006569199094741407
+    },
+    {
+      "symbol": "SEIUSDT",
+      "stealthCeiling": 9.0380594,
+      "lowestAnchor": 0.153452,
+      "anchorTimestamp": 1763332920,
+      "currentPrice": 0.157603,
+      "diffPercent": 2.7050804160258504,
+      "diffDays": 0,
+      "prevPrice": 0.157603,
+      "movements": [
+        -0.0930933593403547,
+        -0.2009394075773881,
+        0,
+        0.10289503436185737,
+        -0.0006345016623949901,
+        0
+      ],
+      "avgMovement": -0.03196203903638007
+    },
+    {
+      "symbol": "POLYXUSDT",
+      "stealthCeiling": 19.828512,
+      "lowestAnchor": 0.068091,
+      "anchorTimestamp": 1763314680,
+      "currentPrice": 0.069926,
+      "diffPercent": 2.694922970730351,
+      "diffDays": 0,
+      "prevPrice": 0.069926,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "EDUUSDT",
+      "stealthCeiling": 1.63797972676438,
+      "lowestAnchor": 0.15514,
+      "anchorTimestamp": 1763123100,
+      "currentPrice": 0.159312,
+      "diffPercent": 2.6891839628722503,
+      "diffDays": 2,
+      "prevPrice": 0.159312,
+      "movements": [
+        0.12679521944359493,
+        -0.12663465275773914
+      ],
+      "avgMovement": 0.00008028334292789485
+    },
+    {
+      "symbol": "ZBCNUSDT",
+      "stealthCeiling": 1.48255741777832,
+      "lowestAnchor": 0.002901,
+      "anchorTimestamp": 1763344860,
+      "currentPrice": 0.002979,
+      "diffPercent": 2.688728024819026,
+      "diffDays": 0,
+      "prevPrice": 0.002979,
+      "movements": [
+        -0.133868808567607,
+        -0.16756032171582538,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.05023818838057206
+    },
+    {
+      "symbol": "GASUSDT",
+      "stealthCeiling": 6.6582965,
+      "lowestAnchor": 2.2724,
+      "anchorTimestamp": 1763314380,
+      "currentPrice": 2.3321,
+      "diffPercent": 2.627178313677163,
+      "diffDays": 0,
+      "prevPrice": 2.3321,
+      "movements": [
+        -0.03429502293479281,
+        0.04288348556970238,
+        -0.034292082815376226,
+        0,
+        0
+      ],
+      "avgMovement": -0.005140724036093331
+    },
+    {
+      "symbol": "HBARUSDT",
+      "stealthCeiling": 8.5916097,
+      "lowestAnchor": 0.146241,
+      "anchorTimestamp": 1763332920,
+      "currentPrice": 0.150045,
+      "diffPercent": 2.601185713992657,
+      "diffDays": 0,
+      "prevPrice": 0.150045,
+      "movements": [
+        -0.15231127369471695,
+        -0.12056940734475154,
+        0.033346672002149025,
+        0,
+        0.08667244482964946,
+        0,
+        -0.049960031974414953
+      ],
+      "avgMovement": -0.02897451374029785
+    },
+    {
+      "symbol": "SUPERUSDT",
+      "stealthCeiling": 7.4057,
+      "lowestAnchor": 0.2474,
+      "anchorTimestamp": 1763332800,
+      "currentPrice": 0.2538,
+      "diffPercent": 2.586903799514962,
+      "diffDays": 0,
+      "prevPrice": 0.2538,
+      "movements": [
+        -0.07874015748030629,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.015748031496061257
+    },
+    {
+      "symbol": "ZROUSDT",
+      "stealthCeiling": 8.208589,
+      "lowestAnchor": 1.4042,
+      "anchorTimestamp": 1763334180,
+      "currentPrice": 1.4399,
+      "diffPercent": 2.542372881355937,
+      "diffDays": 0,
+      "prevPrice": 1.4399,
+      "movements": [
+        -0.08321775312065659,
+        -0.062465297057198985,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.029136610035571116
+    },
+    {
+      "symbol": "MNTUSDT",
+      "stealthCeiling": 6.725412,
+      "lowestAnchor": 1.1638,
+      "anchorTimestamp": 1763128080,
+      "currentPrice": 1.1931,
+      "diffPercent": 2.5176147104313547,
+      "diffDays": 2,
+      "prevPrice": 1.1931,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "LMTSUSDT",
+      "stealthCeiling": 1.14785,
+      "lowestAnchor": 0.2075,
+      "anchorTimestamp": 1763343600,
+      "currentPrice": 0.2127,
+      "diffPercent": 2.506024096385547,
+      "diffDays": 0,
+      "prevPrice": 0.2127,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "WAVESUSDT",
+      "stealthCeiling": 18.61357,
+      "lowestAnchor": 0.6405,
+      "anchorTimestamp": 1763334240,
+      "currentPrice": 0.6565,
+      "diffPercent": 2.4980483996877463,
+      "diffDays": 0,
+      "prevPrice": 0.6565,
+      "movements": [
+        -0.09131030284584461
+      ],
+      "avgMovement": -0.09131030284584461
+    },
+    {
+      "symbol": "XECUSDT",
+      "stealthCeiling": 7.3273325,
+      "lowestAnchor": 0.0000125672,
+      "anchorTimestamp": 1763314740,
+      "currentPrice": 0.0000128801,
+      "diffPercent": 2.48981475587243,
+      "diffDays": 0,
+      "prevPrice": 0.0000128801,
+      "movements": [
+        -0.002326284690725551,
+        -0.11941872547651085,
+        0,
+        0,
+        -0.002329120213649916,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.013786014486765148
+    },
+    {
+      "symbol": "XYOUSDT",
+      "stealthCeiling": 3.08411558440524,
+      "lowestAnchor": 0.005784,
+      "anchorTimestamp": 1763124480,
+      "currentPrice": 0.005928,
+      "diffPercent": 2.489626556016598,
+      "diffDays": 2,
+      "prevPrice": 0.005928,
+      "movements": [
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "RPLUSDT",
+      "stealthCeiling": 1.536918945733,
+      "lowestAnchor": 2.8882,
+      "anchorTimestamp": 1763328720,
+      "currentPrice": 2.96,
+      "diffPercent": 2.4859774253860567,
+      "diffDays": 0,
+      "prevPrice": 2.96,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "JSTUSDT",
+      "stealthCeiling": 1.87060533015,
+      "lowestAnchor": 0.035764,
+      "anchorTimestamp": 1763124960,
+      "currentPrice": 0.036653,
+      "diffPercent": 2.4857398501286236,
+      "diffDays": 2,
+      "prevPrice": 0.036653,
+      "movements": [
+        0.013644426251889753,
+        -0.027285129604373973,
+        0,
+        0,
+        0.03548034934497577
+      ],
+      "avgMovement": 0.00436792919849831
+    },
+    {
+      "symbol": "WALUSDT",
+      "stealthCeiling": 1.0362532025061,
+      "lowestAnchor": 0.190509,
+      "anchorTimestamp": 1763315280,
+      "currentPrice": 0.195151,
+      "diffPercent": 2.436630290432462,
+      "diffDays": 0,
+      "prevPrice": 0.195151,
+      "movements": [
+        -0.00205387309118375,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.2182284980744446,
+        -0.012296656846417958,
+        0
+      ],
+      "avgMovement": 0.022653107570760323
+    },
+    {
+      "symbol": "PYTHUSDT",
+      "stealthCeiling": 25.57366,
+      "lowestAnchor": 0.086834,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.088931,
+      "diffPercent": 2.4149526683096503,
+      "diffDays": 0,
+      "prevPrice": 0.088931,
+      "movements": [
+        -0.2086745798460807,
+        -0.13491028466069516,
+        0,
+        0.1722429864457157,
+        -0.05619177127702359
+      ],
+      "avgMovement": -0.045506729867616745
+    },
+    {
+      "symbol": "QNTUSDT",
+      "stealthCeiling": 23.344335,
+      "lowestAnchor": 80.54,
+      "anchorTimestamp": 1763328060,
+      "currentPrice": 82.48,
+      "diffPercent": 2.4087409982617305,
+      "diffDays": 0,
+      "prevPrice": 82.48,
+      "movements": [
+        -0.16924564796905292,
+        -0.12109469605230602,
+        0,
+        0
+      ],
+      "avgMovement": -0.07258508600533974
+    },
+    {
+      "symbol": "TOSHIUSDT",
+      "stealthCeiling": 2.2329529926523097,
+      "lowestAnchor": 0.00040911,
+      "anchorTimestamp": 1763321520,
+      "currentPrice": 0.00041896,
+      "diffPercent": 2.4076654200581737,
+      "diffDays": 0,
+      "prevPrice": 0.00041896,
+      "movements": [
+        0,
+        -0.08585328627300778,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.012264755181858255
+    },
+    {
+      "symbol": "AKTUSDT",
+      "stealthCeiling": 15.94415,
+      "lowestAnchor": 0.5454,
+      "anchorTimestamp": 1763333160,
+      "currentPrice": 0.5585,
+      "diffPercent": 2.4019068573524023,
+      "diffDays": 0,
+      "prevPrice": 0.5585,
+      "movements": [
+        -0.10725777618878173,
+        -0.01789549033643325,
+        0,
+        0,
+        -0.03579738679076033,
+        0
+      ],
+      "avgMovement": -0.026825108885995885
+    },
+    {
+      "symbol": "BERAUSDT",
+      "stealthCeiling": 7.898027,
+      "lowestAnchor": 1.324,
+      "anchorTimestamp": 1763332920,
+      "currentPrice": 1.355,
+      "diffPercent": 2.3413897280966705,
+      "diffDays": 0,
+      "prevPrice": 1.355,
+      "movements": [
+        -0.044300059066756936,
+        0.014773230905613829,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.07385524372229614,
+        0
+      ],
+      "avgMovement": 0.004925379506794782
+    },
+    {
+      "symbol": "COTIUSDT",
+      "stealthCeiling": 9.862796,
+      "lowestAnchor": 0.033395,
+      "anchorTimestamp": 1763315040,
+      "currentPrice": 0.034176,
+      "diffPercent": 2.3386734541098875,
+      "diffDays": 0,
+      "prevPrice": 0.034176,
+      "movements": [
+        -0.21576860275250082,
+        -0.13441645724973517,
+        0
+      ],
+      "avgMovement": -0.11672835333407866
+    },
+    {
+      "symbol": "ONDOUSDT",
+      "stealthCeiling": 16.07522,
+      "lowestAnchor": 0.5477,
+      "anchorTimestamp": 1763334180,
+      "currentPrice": 0.5604,
+      "diffPercent": 2.3187876574767294,
+      "diffDays": 0,
+      "prevPrice": 0.5604,
+      "movements": [
+        -0.1424755120213754,
+        -0.07133939718208596,
+        0.017847581652684096,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.021774147505641918
+    },
+    {
+      "symbol": "ALGOUSDT",
+      "stealthCeiling": 9.1459281,
+      "lowestAnchor": 0.156104,
+      "anchorTimestamp": 1763315100,
+      "currentPrice": 0.159547,
+      "diffPercent": 2.205580894788091,
+      "diffDays": 0,
+      "prevPrice": 0.159547,
+      "movements": [
+        -0.14313573518012554,
+        -0.17463804856064538,
+        0,
+        0,
+        -0.032605969400566995,
+        -0.04641593697467869,
+        0,
+        0.12111399776597936,
+        0
+      ],
+      "avgMovement": -0.030631299150004135
+    },
+    {
+      "symbol": "CHZUSDT",
+      "stealthCeiling": 8.730952,
+      "lowestAnchor": 0.030217,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 0.030882,
+      "diffPercent": 2.2007479233544,
+      "diffDays": 0,
+      "prevPrice": 0.030882,
+      "movements": [
+        -0.009707795359672299,
+        -0.18770226537216514,
+        0,
+        0,
+        0,
+        0,
+        0.20102457687568753,
+        -0.07118819570282547,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.004826691397069671
+    },
+    {
+      "symbol": "CAKEUSDT",
+      "stealthCeiling": 6.688057,
+      "lowestAnchor": 2.3237,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 2.3747,
+      "diffPercent": 2.1947755734389,
+      "diffDays": 0,
+      "prevPrice": 2.3747,
+      "movements": [
+        -0.12617235143206096,
+        -0.10527645597338388,
+        0,
+        0,
+        0,
+        0,
+        0.1306803810808669,
+        -0.025259967162058604,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.009694491806664348
+    },
+    {
+      "symbol": "POLUSDT",
+      "stealthCeiling": 8.6457455,
+      "lowestAnchor": 0.147561,
+      "anchorTimestamp": 1763315700,
+      "currentPrice": 0.150738,
+      "diffPercent": 2.153007908593743,
+      "diffDays": 0,
+      "prevPrice": 0.150738,
+      "movements": [
+        -0.18463004506561412,
+        -0.09281726931593755,
+        0,
+        0.029198242796671565,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.02482490715848801
+    },
+    {
+      "symbol": "FLRUSDT",
+      "stealthCeiling": 1.4474431324051,
+      "lowestAnchor": 0.013882,
+      "anchorTimestamp": 1763127720,
+      "currentPrice": 0.01417,
+      "diffPercent": 2.0746290159919325,
+      "diffDays": 2,
+      "prevPrice": 0.01417,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "CFGUSDT",
+      "stealthCeiling": 1.58948987956097,
+      "lowestAnchor": 0.150469,
+      "anchorTimestamp": 1763333100,
+      "currentPrice": 0.153588,
+      "diffPercent": 2.0728522154065026,
+      "diffDays": 0,
+      "prevPrice": 0.153588,
+      "movements": [
+        0.050811022083248475
+      ],
+      "avgMovement": 0.050811022083248475
+    },
+    {
+      "symbol": "RONUSDT",
+      "stealthCeiling": 7.092155,
+      "lowestAnchor": 0.2418,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 0.2468,
+      "diffPercent": 2.0678246484698115,
+      "diffDays": 0,
+      "prevPrice": 0.2468,
+      "movements": [
+        -0.08084074373484468,
+        -0.16181229773463246
+      ],
+      "avgMovement": -0.12132652073473857
+    },
+    {
+      "symbol": "PUNDIXUSDT",
+      "stealthCeiling": 1.381950860576,
+      "lowestAnchor": 0.2628,
+      "anchorTimestamp": 1763315280,
+      "currentPrice": 0.2682,
+      "diffPercent": 2.054794520547951,
+      "diffDays": 0,
+      "prevPrice": 0.2682,
+      "movements": [
+        -0.037271710771520306
+      ],
+      "avgMovement": -0.037271710771520306
+    },
+    {
+      "symbol": "ORCAUSDT",
+      "stealthCeiling": 1.31354520066,
+      "lowestAnchor": 1.2421,
+      "anchorTimestamp": 1763315760,
+      "currentPrice": 1.2674,
+      "diffPercent": 2.0368730375976254,
+      "diffDays": 0,
+      "prevPrice": 1.2674,
+      "movements": [
+        -0.19647909462432778,
+        -0.19686589495235426,
+        0
+      ],
+      "avgMovement": -0.1311149965255607
+    },
+    {
+      "symbol": "NEARUSDT",
+      "stealthCeiling": 6.6441285,
+      "lowestAnchor": 2.254,
+      "anchorTimestamp": 1763338980,
+      "currentPrice": 2.2999,
+      "diffPercent": 2.036379769299026,
+      "diffDays": 0,
+      "prevPrice": 2.2999,
+      "movements": [
+        -0.03043081337217515,
+        -0.18264045921029665,
+        0,
+        0,
+        -0.004356539165276943,
+        0.20040953252297902
+      ],
+      "avgMovement": -0.002836379870794955
+    },
+    {
+      "symbol": "EGLDUSDT",
+      "stealthCeiling": 24.2798125,
+      "lowestAnchor": 8.311,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 8.4797,
+      "diffPercent": 2.0298399711226014,
+      "diffDays": 0,
+      "prevPrice": 8.4797,
+      "movements": [
+        0,
+        -0.36541805705692004,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.073083611411384
+    },
+    {
+      "symbol": "ICPUSDT",
+      "stealthCeiling": 14.4273005,
+      "lowestAnchor": 4.8456,
+      "anchorTimestamp": 1763333160,
+      "currentPrice": 4.9435,
+      "diffPercent": 2.020389631830941,
+      "diffDays": 0,
+      "prevPrice": 4.9435,
+      "movements": [
+        -0.24196475380085428,
+        -0.11319076686745103,
+        0,
+        0,
+        0.13355457525599185,
+        0.29504486298601007,
+        -0.39290751561555204
+      ],
+      "avgMovement": -0.045637656863122204
+    },
+    {
+      "symbol": "AIOZUSDT",
+      "stealthCeiling": 7.8869289,
+      "lowestAnchor": 0.134126,
+      "anchorTimestamp": 1763333100,
+      "currentPrice": 0.136828,
+      "diffPercent": 2.014523656859975,
+      "diffDays": 0,
+      "prevPrice": 0.136828,
+      "movements": [
+        -0.13853445133065675,
+        -0.09637850467289226,
+        0,
+        0
+      ],
+      "avgMovement": -0.05872823900088725
+    },
+    {
+      "symbol": "FLOWUSDT",
+      "stealthCeiling": 7.3033464,
+      "lowestAnchor": 0.252837,
+      "anchorTimestamp": 1763314680,
+      "currentPrice": 0.2579,
+      "diffPercent": 2.0024759034476918,
+      "diffDays": 0,
+      "prevPrice": 0.2579,
+      "movements": [
+        0,
+        -0.3877915195711137,
+        0,
+        0.0007755003916284733,
+        0,
+        0
+      ],
+      "avgMovement": -0.06450266986324753
+    },
+    {
+      "symbol": "FTTUSDT",
+      "stealthCeiling": 19.501065,
+      "lowestAnchor": 0.6632,
+      "anchorTimestamp": 1763342640,
+      "currentPrice": 0.6761,
+      "diffPercent": 1.9451145958986764,
+      "diffDays": 0,
+      "prevPrice": 0.6761,
+      "movements": [
+        -0.10326006785660465,
+        0,
+        -0.16243354991139838,
+        0
+      ],
+      "avgMovement": -0.06642340444200076
+    },
+    {
+      "symbol": "AVNTUSDT",
+      "stealthCeiling": 13.21354,
+      "lowestAnchor": 0.4529,
+      "anchorTimestamp": 1763332920,
+      "currentPrice": 0.4616,
+      "diffPercent": 1.9209538529476673,
+      "diffDays": 0,
+      "prevPrice": 0.4616,
+      "movements": [
+        -0.1513513513513587,
+        -0.04330879168470723,
+        0
+      ],
+      "avgMovement": -0.0648867143453553
+    },
+    {
+      "symbol": "XTZUSDT",
+      "stealthCeiling": 15.838465,
+      "lowestAnchor": 0.5425,
+      "anchorTimestamp": 1763314440,
+      "currentPrice": 0.5527,
+      "diffPercent": 1.8801843317972327,
+      "diffDays": 0,
+      "prevPrice": 0.5527,
+      "movements": [
+        -0.018063583815026915,
+        -0.1445347786811243,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.01806648472179458
+    },
+    {
+      "symbol": "PUMPUSDT",
+      "stealthCeiling": 1.74290658683648,
+      "lowestAnchor": 0.003315,
+      "anchorTimestamp": 1763313960,
+      "currentPrice": 0.003377,
+      "diffPercent": 1.8702865761689291,
+      "diffDays": 0,
+      "prevPrice": 0.003377,
+      "movements": [
+        -0.1183081928423572,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.01478852410529465
+    },
+    {
+      "symbol": "REQUSDT",
+      "stealthCeiling": 1.25983020905296,
+      "lowestAnchor": 0.119091,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 0.12127,
+      "diffPercent": 1.8296932597761377,
+      "diffDays": 0,
+      "prevPrice": 0.12127,
+      "movements": [
+        0.3934188758755267,
+        -0.5796174688670809
+      ],
+      "avgMovement": -0.09309929649577708
+    },
+    {
+      "symbol": "SNTUSDT",
+      "stealthCeiling": 1.74151525194735,
+      "lowestAnchor": 0.01612,
+      "anchorTimestamp": 1763331240,
+      "currentPrice": 0.016409,
+      "diffPercent": 1.7928039702233316,
+      "diffDays": 0,
+      "prevPrice": 0.016409,
+      "movements": [
+        -0.02437092548589856
+      ],
+      "avgMovement": -0.02437092548589856
+    },
+    {
+      "symbol": "TUSDT",
+      "stealthCeiling": 6.657832,
+      "lowestAnchor": 0.011563,
+      "anchorTimestamp": 1763161560,
+      "currentPrice": 0.01177,
+      "diffPercent": 1.790192856525113,
+      "diffDays": 2,
+      "prevPrice": 0.01177,
+      "movements": [
+        -0.11880515953835814
+      ],
+      "avgMovement": -0.11880515953835814
+    },
+    {
+      "symbol": "TURBOUSDT",
+      "stealthCeiling": 9.7115905,
+      "lowestAnchor": 0.00163625,
+      "anchorTimestamp": 1763333100,
+      "currentPrice": 0.00166473,
+      "diffPercent": 1.7405653170359052,
+      "diffDays": 0,
+      "prevPrice": 0.00166473,
+      "movements": [
+        -0.04368301688079332,
+        -0.339439655172423,
+        0
+      ],
+      "avgMovement": -0.12770755735107212
+    },
+    {
+      "symbol": "2ZUSDT",
+      "stealthCeiling": 8.3888693,
+      "lowestAnchor": 0.14415,
+      "anchorTimestamp": 1763314560,
+      "currentPrice": 0.1466,
+      "diffPercent": 1.6996184530003522,
+      "diffDays": 0,
+      "prevPrice": 0.1466,
+      "movements": [
+        -0.07225335023788733,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.018063337559471832
+    },
+    {
+      "symbol": "MELANIAUSDT",
+      "stealthCeiling": 1.43798745928991,
+      "lowestAnchor": 0.136182,
+      "anchorTimestamp": 1763313660,
+      "currentPrice": 0.138491,
+      "diffPercent": 1.6955251061080066,
+      "diffDays": 0,
+      "prevPrice": 0.138491,
+      "movements": [
+        -0.025237411939464282,
+        -0.11323639720730952,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.027694761829354757
+    },
+    {
+      "symbol": "DGBUSDT",
+      "stealthCeiling": 23.650225,
+      "lowestAnchor": 0.008087,
+      "anchorTimestamp": 1763162220,
+      "currentPrice": 0.008223,
+      "diffPercent": 1.6817113886484352,
+      "diffDays": 2,
+      "prevPrice": 0.008223,
+      "movements": [
+        -0.01215953307394212,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.00303988326848553
+    },
+    {
+      "symbol": "BTCUSDT",
+      "stealthCeiling": 164.81562174,
+      "lowestAnchor": 93853,
+      "anchorTimestamp": 1763332740,
+      "currentPrice": 95402,
+      "diffPercent": 1.6504533685657359,
+      "diffDays": 0,
+      "prevPrice": 95402,
+      "movements": [
+        -0.05855658029571073,
+        0,
+        0,
+        0,
+        0,
+        -0.212391973048191,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.01782437745740498,
+        0,
+        0.010483059376048305
+      ],
+      "avgMovement": -0.017331508322174886
+    },
+    {
+      "symbol": "SCUSDT",
+      "stealthCeiling": 1.8150411345016897,
+      "lowestAnchor": 0.00175772,
+      "anchorTimestamp": 1763330280,
+      "currentPrice": 0.00178633,
+      "diffPercent": 1.627676763079449,
+      "diffDays": 0,
+      "prevPrice": 0.00178633,
+      "movements": [
+        0,
+        -0.13863965429531458,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.023106609049219098
+    },
+    {
+      "symbol": "TFUELUSDT",
+      "stealthCeiling": 1.1021208394272,
+      "lowestAnchor": 0.020752,
+      "anchorTimestamp": 1763335620,
+      "currentPrice": 0.021085,
+      "diffPercent": 1.604664610639938,
+      "diffDays": 0,
+      "prevPrice": 0.021085,
+      "movements": [
+        -0.30785260964290306,
+        0.17102950258920285,
+        0
+      ],
+      "avgMovement": -0.0456077023512334
+    },
+    {
+      "symbol": "SYRUPUSDT",
+      "stealthCeiling": 12.705025,
+      "lowestAnchor": 0.4343,
+      "anchorTimestamp": 1763056800,
+      "currentPrice": 0.4411,
+      "diffPercent": 1.5657379691457454,
+      "diffDays": 3,
+      "prevPrice": 0.4411,
+      "movements": [
+        -0.11322463768115953,
+        -0.0906823849467267,
+        0.09076469253460664
+      ],
+      "avgMovement": -0.0377141100310932
+    },
+    {
+      "symbol": "ALEOUSDT",
+      "stealthCeiling": 1.04511,
+      "lowestAnchor": 0.188033,
+      "anchorTimestamp": 1763175600,
+      "currentPrice": 0.190888,
+      "diffPercent": 1.5183505023054444,
+      "diffDays": 2,
+      "prevPrice": 0.190888,
+      "movements": [
+        -0.11042495289930342,
+        0.009954471391368553,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.01435292592970498
+    },
+    {
+      "symbol": "LTCUSDT",
+      "stealthCeiling": 6.45185,
+      "lowestAnchor": 95.17,
+      "anchorTimestamp": 1763328360,
+      "currentPrice": 96.47,
+      "diffPercent": 1.3659766733214218,
+      "diffDays": 0,
+      "prevPrice": 96.47,
+      "movements": [
+        -0.13474295190714103,
+        -0.09340944473273399,
+        0.0311655931851248,
+        0.1869352996157364,
+        0
+      ],
+      "avgMovement": -0.002010300767802764
+    },
+    {
+      "symbol": "OGUSDT",
+      "stealthCeiling": 1.522492236266,
+      "lowestAnchor": 14.2338,
+      "anchorTimestamp": 1763337300,
+      "currentPrice": 14.4235,
+      "diffPercent": 1.3327431887479113,
+      "diffDays": 0,
+      "prevPrice": 14.4235,
+      "movements": [
+        -0.007625861375699934
+      ],
+      "avgMovement": -0.007625861375699934
+    },
+    {
+      "symbol": "CCUSDT",
+      "stealthCeiling": 1.12096258482884,
+      "lowestAnchor": 0.108546,
+      "anchorTimestamp": 1763093340,
+      "currentPrice": 0.10999,
+      "diffPercent": 1.330311572973671,
+      "diffDays": 3,
+      "prevPrice": 0.10999,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "TWTUSDT",
+      "stealthCeiling": 6.486252,
+      "lowestAnchor": 1.1117,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 1.1255,
+      "diffPercent": 1.241342088692996,
+      "diffDays": 0,
+      "prevPrice": 1.1255,
+      "movements": [
+        -0.13286093888397313,
+        -0.17738359201773854,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.02820404826379197
+    },
+    {
+      "symbol": "PLUMEUSDT",
+      "stealthCeiling": 1.58426532215875,
+      "lowestAnchor": 0.029919,
+      "anchorTimestamp": 1763343180,
+      "currentPrice": 0.030286,
+      "diffPercent": 1.2266452755773898,
+      "diffDays": 0,
+      "prevPrice": 0.030286,
+      "movements": [
+        -0.056005798247346826,
+        -0.16811154695585906,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.022411734520320588
+    },
+    {
+      "symbol": "ARUSDT",
+      "stealthCeiling": 12.4372615,
+      "lowestAnchor": 4.2532,
+      "anchorTimestamp": 1763314740,
+      "currentPrice": 4.3046,
+      "diffPercent": 1.2085018339132916,
+      "diffDays": 0,
+      "prevPrice": 4.3046,
+      "movements": [
+        -0.3731689226775399,
+        -0.1139985575692745,
+        0,
+        0.26086551451063617
+      ],
+      "avgMovement": -0.05657549143404457
+    },
+    {
+      "symbol": "TRUMPUSDT",
+      "stealthCeiling": 20.138316,
+      "lowestAnchor": 6.9584,
+      "anchorTimestamp": 1763315040,
+      "currentPrice": 7.0368,
+      "diffPercent": 1.1266957921361267,
+      "diffDays": 0,
+      "prevPrice": 7.0368,
+      "movements": [
+        -0.1220342831195423,
+        -0.10087233256612735,
+        0.029865604778490314,
+        0.04549590536852445,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.021077872219807843
+    },
+    {
+      "symbol": "BSVUSDT",
+      "stealthCeiling": 6.3815366,
+      "lowestAnchor": 22.0688,
+      "anchorTimestamp": 1763314980,
+      "currentPrice": 22.2895,
+      "diffPercent": 1.000054375407819,
+      "diffDays": 0,
+      "prevPrice": 22.2895,
+      "movements": [
+        -0.12948724841837442,
+        -0.002243168430539548,
+        0.0004486437499428739,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.013128177309897108
+    },
+    {
+      "symbol": "BEAMXUSDT",
+      "stealthCeiling": 10.6779,
+      "lowestAnchor": 0.003658,
+      "anchorTimestamp": 1763333040,
+      "currentPrice": 0.003694,
+      "diffPercent": 0.9841443411700386,
+      "diffDays": 0,
+      "prevPrice": 0.003694,
+      "movements": [
+        -0.24252223120452424,
+        -0.2971366828741264,
+        0,
+        0,
+        0.08127878623679123,
+        0
+      ],
+      "avgMovement": -0.07639668797364323
+    },
+    {
+      "symbol": "BABYUSDT",
+      "stealthCeiling": 7.746726,
+      "lowestAnchor": 0.026302,
+      "anchorTimestamp": 1763128080,
+      "currentPrice": 0.02656,
+      "diffPercent": 0.9809139989354472,
+      "diffDays": 2,
+      "prevPrice": 0.02656,
+      "movements": [
+        -0.1275701635899719,
+        -0.21789766323540094,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.026574448217336368
+    },
+    {
+      "symbol": "CELOUSDT",
+      "stealthCeiling": 1.0300016618316,
+      "lowestAnchor": 0.190249,
+      "anchorTimestamp": 1763330880,
+      "currentPrice": 0.191956,
+      "diffPercent": 0.8972451891994104,
+      "diffDays": 0,
+      "prevPrice": 0.191956,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "0GUSDT",
+      "stealthCeiling": 1.273873944116,
+      "lowestAnchor": 1.2057,
+      "anchorTimestamp": 1763161620,
+      "currentPrice": 1.2163,
+      "diffPercent": 0.8791573359873884,
+      "diffDays": 2,
+      "prevPrice": 1.2163,
+      "movements": [
+        -0.13951579811241796,
+        -0.041091387245247114,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.036121437071533015
+    },
+    {
+      "symbol": "SOLOUSDT",
+      "stealthCeiling": 1.00696406875512,
+      "lowestAnchor": 0.190392,
+      "anchorTimestamp": 1763128080,
+      "currentPrice": 0.191998,
+      "diffPercent": 0.8435228370939937,
+      "diffDays": 2,
+      "prevPrice": 0.191998,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "EULUSDT",
+      "stealthCeiling": 2.347153798364,
+      "lowestAnchor": 4.3605,
+      "anchorTimestamp": 1763327340,
+      "currentPrice": 4.3915,
+      "diffPercent": 0.710927645912159,
+      "diffDays": 0,
+      "prevPrice": 4.3915,
+      "movements": [
+        0.02270714593881436,
+        -0.30420667892573855,
+        0
+      ],
+      "avgMovement": -0.09383317766230807
+    },
+    {
+      "symbol": "TRXUSDT",
+      "stealthCeiling": 8.34795,
+      "lowestAnchor": 0.2907,
+      "anchorTimestamp": 1763334360,
+      "currentPrice": 0.2927,
+      "diffPercent": 0.6879944960440323,
+      "diffDays": 0,
+      "prevPrice": 0.2927,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -0.03415300546447711,
+        0
+      ],
+      "avgMovement": -0.001797526603393532
+    },
+    {
+      "symbol": "CETUSDT",
+      "stealthCeiling": 13.312698,
+      "lowestAnchor": 0.046281,
+      "anchorTimestamp": 1763304120,
+      "currentPrice": 0.046596,
+      "diffPercent": 0.6806248784598341,
+      "diffDays": 0,
+      "prevPrice": 0.046596,
+      "movements": [
+        0,
+        0,
+        0,
+        -0.10076538816113552,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.01259567352014194
+    },
+    {
+      "symbol": "XAUTUSDT",
+      "stealthCeiling": 11.52879675,
+      "lowestAnchor": 4042.58,
+      "anchorTimestamp": 1763127840,
+      "currentPrice": 4069.97,
+      "diffPercent": 0.6775376121189901,
+      "diffDays": 2,
+      "prevPrice": 4069.97,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "PAXGUSDT",
+      "stealthCeiling": 2.0611266228,
+      "lowestAnchor": 4055.71,
+      "anchorTimestamp": 1763131500,
+      "currentPrice": 4082.76,
+      "diffPercent": 0.6669609020368858,
+      "diffDays": 2,
+      "prevPrice": 4082.76,
+      "movements": [
+        0,
+        0.13612249553003603,
+        0,
+        0
+      ],
+      "avgMovement": 0.034030623882509006
+    },
+    {
+      "symbol": "EURCUSDT",
+      "stealthCeiling": 1.17957840306,
+      "lowestAnchor": 1.1554,
+      "anchorTimestamp": 1763335020,
+      "currentPrice": 1.1621,
+      "diffPercent": 0.5798857538514738,
+      "diffDays": 0,
+      "prevPrice": 1.1621,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "AMPUSDT",
+      "stealthCeiling": 1.2468585760522273,
+      "lowestAnchor": 0.00237172,
+      "anchorTimestamp": 1763314620,
+      "currentPrice": 0.0023849,
+      "diffPercent": 0.5557148398630624,
+      "diffDays": 0,
+      "prevPrice": 0.0023849,
+      "movements": [
+        0.6242620644610213,
+        -0.7668526586028483,
+        0,
+        0
+      ],
+      "avgMovement": -0.035647648535456766
+    },
+    {
+      "symbol": "NFTUSDT",
+      "stealthCeiling": 2.018880667168206,
+      "lowestAnchor": 3.89e-7,
+      "anchorTimestamp": 1763218920,
+      "currentPrice": 3.908e-7,
+      "diffPercent": 0.46272493573264173,
+      "diffDays": 1,
+      "prevPrice": 3.908e-7,
+      "movements": [
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "SUNUSDT",
+      "stealthCeiling": 1.13779889792,
+      "lowestAnchor": 0.022024,
+      "anchorTimestamp": 1763318760,
+      "currentPrice": 0.022125,
+      "diffPercent": 0.4585906284053778,
+      "diffDays": 0,
+      "prevPrice": 0.022125,
+      "movements": [
+        0,
+        -0.0045189570247232145,
+        -0.013557483731017403,
+        0,
+        0
+      ],
+      "avgMovement": -0.003615288151148124
+    },
+    {
+      "symbol": "UBUSDT",
+      "stealthCeiling": 2.0427047044,
+      "lowestAnchor": 0.03939,
+      "anchorTimestamp": 1763182680,
+      "currentPrice": 0.039565,
+      "diffPercent": 0.4442751967504482,
+      "diffDays": 2,
+      "prevPrice": 0.039565,
+      "movements": [
+        0.0025275502982534627
+      ],
+      "avgMovement": 0.0025275502982534627
+    },
+    {
+      "symbol": "WEMIXUSDT",
+      "stealthCeiling": 2.696852661207,
+      "lowestAnchor": 0.5209,
+      "anchorTimestamp": 1763290080,
+      "currentPrice": 0.5223,
+      "diffPercent": 0.26876559800344724,
+      "diffDays": 0,
+      "prevPrice": 0.5223,
+      "movements": [
+        -0.019142419601835565,
+        0,
+        0
+      ],
+      "avgMovement": -0.0063808065339451886
+    },
+    {
+      "symbol": "GLMUSDT",
+      "stealthCeiling": 6.2768987,
+      "lowestAnchor": 0.216815,
+      "anchorTimestamp": 1763342820,
+      "currentPrice": 0.217264,
+      "diffPercent": 0.2070889929202338,
+      "diffDays": 0,
+      "prevPrice": 0.217264,
+      "movements": [
+        -0.14759299278127178,
+        0.04374473336434378
+      ],
+      "avgMovement": -0.051924129708463995
+    },
+    {
+      "symbol": "DAIUSDT",
+      "stealthCeiling": 1.09868,
+      "lowestAnchor": 0.9985,
+      "anchorTimestamp": 1763073540,
+      "currentPrice": 0.9999,
+      "diffPercent": 0.14021031547320548,
+      "diffDays": 3,
+      "prevPrice": 0.9999,
+      "movements": [
+        0,
+        -0.0100010001000089,
+        0,
+        0.010002000400078915
+      ],
+      "avgMovement": 2.500750175037439e-7
+    },
+    {
+      "symbol": "IPUSDT",
+      "stealthCeiling": 8.464293,
+      "lowestAnchor": 2.9148,
+      "anchorTimestamp": 1763333280,
+      "currentPrice": 2.9188,
+      "diffPercent": 0.13723068478111716,
+      "diffDays": 0,
+      "prevPrice": 2.9188,
+      "movements": [
+        -0.09247208712925285,
+        -0.003428062116492785,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0.06170723345904169,
+        0
+      ],
+      "avgMovement": -0.003799212865189328
+    },
+    {
+      "symbol": "BARDUSDT",
+      "stealthCeiling": 3.90302416665,
+      "lowestAnchor": 0.7383,
+      "anchorTimestamp": 1763329800,
+      "currentPrice": 0.7393,
+      "diffPercent": 0.135446295543817,
+      "diffDays": 0,
+      "prevPrice": 0.7393,
+      "movements": [
+        0,
+        -0.1890103955717656,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.03150173259529427
+    },
+    {
+      "symbol": "HTXUSDT",
+      "stealthCeiling": 1.841649027588518,
+      "lowestAnchor": 0.0000017905,
+      "anchorTimestamp": 1763219460,
+      "currentPrice": 0.0000017924,
+      "diffPercent": 0.10611561016475458,
+      "diffDays": 1,
+      "prevPrice": 0.0000017924,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "MMTUSDT",
+      "stealthCeiling": 1.777825970762,
+      "lowestAnchor": 0.3258,
+      "anchorTimestamp": 1763315760,
+      "currentPrice": 0.326,
+      "diffPercent": 0.06138735420504405,
+      "diffDays": 0,
+      "prevPrice": 0.326,
+      "movements": [
+        -0.18371096142069487
+      ],
+      "avgMovement": -0.18371096142069487
+    },
+    {
+      "symbol": "USDCUSDT",
+      "stealthCeiling": 1.1,
+      "lowestAnchor": 1,
+      "anchorTimestamp": 1763010300,
+      "currentPrice": 1.0005,
+      "diffPercent": 0.04999999999999449,
+      "diffDays": 4,
+      "prevPrice": 1.0005,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -0.009994003597840195,
+        0,
+        0
+      ],
+      "avgMovement": -0.0008328336331533496
+    },
+    {
+      "symbol": "EDGEUSDT",
+      "stealthCeiling": 1.1788425,
+      "lowestAnchor": 0.210745,
+      "anchorTimestamp": 1763365680,
+      "currentPrice": 0.210767,
+      "diffPercent": 0.010439156326376427,
+      "diffDays": 0,
+      "prevPrice": 0.210767,
+      "movements": [
+        -0.027505097927634323,
+        -0.021346033432626935,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.009770226272052252
+    },
+    {
+      "symbol": "USD1USDT",
+      "stealthCeiling": 5.223610531266,
+      "lowestAnchor": 0.9993,
+      "anchorTimestamp": 1763126460,
+      "currentPrice": 0.9993,
+      "diffPercent": 0,
+      "diffDays": 2,
+      "prevPrice": 0.9993,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "BDXUSDT",
+      "stealthCeiling": 4.21821958225008,
+      "lowestAnchor": 0.082456,
+      "anchorTimestamp": 1763140380,
+      "currentPrice": 0.082431,
+      "diffPercent": -0.030319200543316736,
+      "diffDays": 2,
+      "prevPrice": 0.082431,
+      "movements": [
+        -0.03516856657773617,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.005861427762956028
+    },
+    {
+      "symbol": "ELFUSDT",
+      "stealthCeiling": 1.258175318514,
+      "lowestAnchor": 0.119558,
+      "anchorTimestamp": 1763246520,
+      "currentPrice": 0.11947,
+      "diffPercent": -0.07360444303182628,
+      "diffDays": 1,
+      "prevPrice": 0.11947,
+      "movements": [
+        0.0008370372230461458
+      ],
+      "avgMovement": 0.0008370372230461458
+    },
+    {
+      "symbol": "PROMUSDT",
+      "stealthCeiling": 4.8221294836,
+      "lowestAnchor": 9.162,
+      "anchorTimestamp": 1763319000,
+      "currentPrice": 9.1455,
+      "diffPercent": -0.18009168303864465,
+      "diffDays": 0,
+      "prevPrice": 9.1455,
+      "movements": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "KUBUSDT",
+      "stealthCeiling": 1.404981415964,
+      "lowestAnchor": 1.3348,
+      "anchorTimestamp": 1763337060,
+      "currentPrice": 1.3321,
+      "diffPercent": -0.202277494755763,
+      "diffDays": 0,
+      "prevPrice": 1.3321,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "MORPHOUSDT",
+      "stealthCeiling": 1.032405117714,
+      "lowestAnchor": 1.9921,
+      "anchorTimestamp": 1763124420,
+      "currentPrice": 1.9868,
+      "diffPercent": -0.2660509010591879,
+      "diffDays": 2,
+      "prevPrice": 1.9868,
+      "movements": [
+        0.020089397820298123,
+        -0.1556615616369622,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -0.08046670690002243,
+        0
+      ],
+      "avgMovement": -0.024004318968520726
+    },
+    {
+      "symbol": "CSPRUSDT",
+      "stealthCeiling": 3.45839092369344,
+      "lowestAnchor": 0.006552,
+      "anchorTimestamp": 1763327040,
+      "currentPrice": 0.006523,
+      "diffPercent": -0.4426129426129352,
+      "diffDays": 0,
+      "prevPrice": 0.006523,
+      "movements": [
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "CVXUSDT",
+      "stealthCeiling": 5.9338125,
+      "lowestAnchor": 1.9022,
+      "anchorTimestamp": 1763068500,
+      "currentPrice": 1.8929,
+      "diffPercent": -0.4889075806960291,
+      "diffDays": 3,
+      "prevPrice": 1.8929,
+      "movements": [
+        -0.2839713925115613,
+        -0.17403227507647298,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.09160073351760685
+    },
+    {
+      "symbol": "ZORAUSDT",
+      "stealthCeiling": 14.733513,
+      "lowestAnchor": 0.05006,
+      "anchorTimestamp": 1763362140,
+      "currentPrice": 0.049776,
+      "diffPercent": -0.5673192169396715,
+      "diffDays": 0,
+      "prevPrice": 0.049776,
+      "movements": [
+        0,
+        -0.6288554830208937,
+        0,
+        0
+      ],
+      "avgMovement": -0.15721387075522342
+    },
+    {
+      "symbol": "ZANOUSDT",
+      "stealthCeiling": 1.569359240466,
+      "lowestAnchor": 14.9396,
+      "anchorTimestamp": 1763352420,
+      "currentPrice": 14.8528,
+      "diffPercent": -0.5810061849045504,
+      "diffDays": 0,
+      "prevPrice": 14.8528,
+      "movements": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0
+    },
+    {
+      "symbol": "CTCUSDT",
+      "stealthCeiling": 1.85190889926,
+      "lowestAnchor": 0.345,
+      "anchorTimestamp": 1763317380,
+      "currentPrice": 0.3407,
+      "diffPercent": -1.2463768115941944,
+      "diffDays": 0,
+      "prevPrice": 0.3407,
+      "movements": [
+        -0.08764241893075284,
+        -0.3801169590643343,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.038979948166257265
+    },
+    {
+      "symbol": "FXSUSDT",
+      "stealthCeiling": 5.72229,
+      "lowestAnchor": 0.9739,
+      "anchorTimestamp": 1763243880,
+      "currentPrice": 0.9491,
+      "diffPercent": -2.546462675839402,
+      "diffDays": 1,
+      "prevPrice": 0.9491,
+      "movements": [
+        -0.052537564358510556,
+        -0.22077375946173158,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.04555188730337369
+    },
+    {
+      "symbol": "COREUSDT",
+      "stealthCeiling": 1.01255,
+      "lowestAnchor": 0.178314,
+      "anchorTimestamp": 1763067480,
+      "currentPrice": 0.1727,
+      "diffPercent": -3.1483787027378716,
+      "diffDays": 3,
+      "prevPrice": 0.1727,
+      "movements": [
+        -0.14479376982982475,
+        -0.23050393127632768,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.0288690539312425
+    },
+    {
+      "symbol": "ZRXUSDT",
+      "stealthCeiling": 5.94440405,
+      "lowestAnchor": 0.185711,
+      "anchorTimestamp": 1763067420,
+      "currentPrice": 0.179794,
+      "diffPercent": -3.186133293127482,
+      "diffDays": 3,
+      "prevPrice": 0.179794,
+      "movements": [
+        0,
+        -0.05169912222672122,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.0039768555559016325
+    },
+    {
+      "symbol": "1INCHUSDT",
+      "stealthCeiling": 6.1115766,
+      "lowestAnchor": 0.198631,
+      "anchorTimestamp": 1763067540,
+      "currentPrice": 0.190794,
+      "diffPercent": -3.945506995383405,
+      "diffDays": 3,
+      "prevPrice": 0.190794,
+      "movements": [
+        -0.19542986732714934,
+        -0.10733040487123531,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.03784503402479808
+    },
+    {
+      "symbol": "TONUSDT",
+      "stealthCeiling": 5.947545,
+      "lowestAnchor": 1.9456,
+      "anchorTimestamp": 1763063820,
+      "currentPrice": 1.8463,
+      "diffPercent": -5.103824013157892,
+      "diffDays": 3,
+      "prevPrice": 1.8463,
+      "movements": [
+        -0.0865332612222848,
+        -0.11367327054238341,
+        0,
+        0,
+        0,
+        0,
+        0.05419173034195589,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.013274072856610213
+    },
+    {
+      "symbol": "AAVEUSDT",
+      "stealthCeiling": 6.1624755,
+      "lowestAnchor": 191.25,
+      "anchorTimestamp": 1763067360,
+      "currentPrice": 177.65,
+      "diffPercent": -7.111111111111108,
+      "diffDays": 3,
+      "prevPrice": 177.65,
+      "movements": [
+        -0.184956843403197,
+        -0.1852995676343492,
+        0,
+        0,
+        0,
+        0,
+        -0.06188118811880357,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.03928523628694089
+    },
+    {
+      "symbol": "BRETTUSDT",
+      "stealthCeiling": 5.6278475,
+      "lowestAnchor": 0.0189,
+      "anchorTimestamp": 1763162520,
+      "currentPrice": 0.016708,
+      "diffPercent": -11.597883597883595,
+      "diffDays": 2,
+      "prevPrice": 0.016708,
+      "movements": [
+        -0.15489098057904355,
+        -0.31026252983293534,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": -0.07752558506866315
+    },
+    {
+      "symbol": "SOONUSDT",
+      "stealthCeiling": 5.655687,
+      "lowestAnchor": 1.9189,
+      "anchorTimestamp": 1763323860,
+      "currentPrice": 1.6686,
+      "diffPercent": -13.043931419042156,
+      "diffDays": 0,
+      "prevPrice": 1.6686,
+      "movements": [
+        0.053966540744745634,
+        0,
+        0,
+        0,
+        0
+      ],
+      "avgMovement": 0.010793308148949127
+    }
+  ]
+}
