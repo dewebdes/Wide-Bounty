@@ -1,0 +1,792 @@
+                     
+                     
+┌───────────────────┐
+│ 166 Code Findings │
+└───────────────────┘
+                                                                                                                     
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Account/Http/Controllers/Api/V1/Admin/PaymentMethodController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           39┆ $paymentMethod = $user->paymentMethods()->create($request->all());
+                                                                                                                   
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Account/Http/Controllers/Api/V1/Admin/TransactionController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           48┆ $transaction = $wallet->transactions()->create($request->all());
+                                                                                                                    
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Account/Http/Controllers/Api/V1/User/PaymentMethodController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           29┆ $paymentMethod = auth()->user()->paymentMethods()
+           30┆     ->create([
+           31┆         ...$request->validated(),
+           32┆         'payment_type' => array_flip(config('user.payment_type'))[$request->payment_type],
+           33┆         'default' => !auth()->user()->paymentMethods()->first() ?  1 : 0,
+           34┆     ]);
+                                                                                                         
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/Admin/AdUnitController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           51┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           51┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           53┆ $adUnits = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                             
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/Admin/AdmobPanelController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           33┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           33┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           35┆ $panels = DynamicFetchService::fetchData($query, request()->per_page);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           50┆ $panel = Panel::create($data);
+                                                                                                      
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/Admin/AppController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           80┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC')
+            ⋮┆----------------------------------------
+           80┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC')
+            ⋮┆----------------------------------------
+           83┆ $apps = DynamicFetchService::fetchData($query, request()->per_page);
+            ⋮┆----------------------------------------
+           94┆ })->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           94┆ })->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           95┆ $apps = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                            
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/Admin/MarketingController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           51┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           51┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           53┆ $users = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                          
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/Admin/PaymentController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           35┆ if (request()->start_date) {
+   
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+          103┆ ->whereDate('start_date', $start_date)->whereDate('end_date',         
+               $end_date)->sum(DB::raw('digital_marketing *' . ($deductions / 100)));
+            ⋮┆----------------------------------------
+          105┆ ->whereDate('start_date', $start_date)->whereDate('end_date',         
+               $end_date)->sum(DB::raw('digital_marketing *' . ($deductions / 100)));
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          209┆ if (request()->start_date) {
+   
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+          267┆ ->whereDate('start_date', $start_date)->whereDate('end_date',         
+               $end_date)->sum(DB::raw('digital_marketing *' . ($deductions / 100)));
+            ⋮┆----------------------------------------
+          269┆ ->whereDate('start_date', $start_date)->whereDate('end_date',         
+               $end_date)->sum(DB::raw('digital_marketing *' . ($deductions / 100)));
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          315┆ $payments = DynamicFetchService::fetchData($query, request()->per_page);
+   
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+          374┆ ->whereDate('start_date', $start_date)->whereDate('end_date',         
+               $end_date)->sum(DB::raw('digital_marketing *' . ($deductions / 100)));
+            ⋮┆----------------------------------------
+          376┆ ->whereDate('start_date', $start_date)->whereDate('end_date',         
+               $end_date)->sum(DB::raw('digital_marketing *' . ($deductions / 100)));
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+          411┆ $payment = $user->payments()->create($userIncomes);
+            ⋮┆----------------------------------------
+          445┆ $userPayment = UserPayment::create(array_merge($request->all(), ['user_id' => $user->id]));
+            ⋮┆----------------------------------------
+          465┆ $userPayment = UserPayment::create([
+          466┆     'user_id' => $user->id,
+          467┆     'deduction' => $request->deduction,
+          468┆     'expenses' => 0,
+          469┆     'demand' => 0,
+          470┆     'invalid_trafics' => 0,
+          471┆ ]);
+                                                                                                          
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/Admin/SettingController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           32┆ $rule = Rule::create($request->all());
+            ⋮┆----------------------------------------
+           45┆ $exchangeRate = ExchangeRate::create($request->all());
+                                                                                                        
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/User/AdUnitController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           32┆ $adunit = $app->adunits()->create([
+           33┆     'ad_format' => $request->ad_format,
+           34┆     'display_name' => $request->display_name,
+           35┆     'ad_types' => $request->ad_types
+           36┆ ]);
+                                                                                                     
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/User/AppController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           49┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC')
+            ⋮┆----------------------------------------
+           49┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC')
+            ⋮┆----------------------------------------
+           54┆ $apps = DynamicFetchService::fetchData($query, request()->per_page);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           84┆ $app = App::create([
+           85┆     'user_id' => auth()->id(),
+           86┆     'linked_app_store_id' => $request->linked_app_store_id,
+           87┆     'linked_app_name' => $request->linked_app_name,
+           88┆     'manual_name' => $request->manual_name,
+           89┆     'video_link' => $request->video_link,
+           90┆     'description' => $request->description,
+           91┆     'platform' => 'ANDROID',
+           92┆     'published_link' => $published_link ? config('admob.published_link')[$published_link] .
+               $request->linked_app_store_id : null,                                                      
+           93┆     'stores' => $storesId ?? []
+             [hid 1 additional lines, adjust with --max-lines-per-finding] 
+                                                                                                         
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/Controllers/Api/User/PaymentController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           31┆ $payments = DynamicFetchService::fetchData($query, request()->per_page);
+            ⋮┆----------------------------------------
+           38┆ $start_date = request()->start_date ?? new Carbon('first day of last month');
+            ⋮┆----------------------------------------
+           39┆ $end_date = request()->end_date ?? new Carbon('last day of last month');
+   
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+           90┆ ->whereDate('start_date', $start_date)->whereDate('end_date',         
+               $end_date)->sum(DB::raw('digital_marketing *' . ($deductions / 100)));
+            ⋮┆----------------------------------------
+           92┆ ->whereDate('start_date', $start_date)->whereDate('end_date',         
+               $end_date)->sum(DB::raw('digital_marketing *' . ($deductions / 100)));
+                                                                                            
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/QueryFilters/admob_status.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                              
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/QueryFilters/adsense_status.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                               
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/QueryFilters/adunit_panel_id.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                        
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/QueryFilters/assigned.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+            ⋮┆----------------------------------------
+           11┆ if (request()->assigned) {
+                                                                                        
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/QueryFilters/panel_id.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName()) && \request($this->filterName()) > 0) {
+                                                                                    
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/QueryFilters/seen.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                          
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/QueryFilters/visibility.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                              
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Admob/Http/QueryFilters/youtube_status.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                                           
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Adsense/Http/Controllers/Api/Admin/AdUnitController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           49┆ $adunits = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                              
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Adsense/Http/Controllers/Api/Admin/MarketingController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           51┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           51┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           53┆ $users = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                         
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Adsense/Http/Controllers/Api/Admin/SiteController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           57┆ $sites = DynamicFetchService::fetchData($query, request()->per_page);
+            ⋮┆----------------------------------------
+           67┆ })->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           67┆ })->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           69┆ $sites = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                          
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Adsense/Http/Controllers/Api/User/AdUnitController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           36┆ $adunits = DynamicFetchService::fetchData($query, request()->per_page);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           46┆ $adunit = AdsenseAdUnit::create([
+           47┆     ...$request->validated(),
+           48┆     "user_id" => auth()->id(),
+           49┆ ]);
+                                                                                                            
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Adsense/Http/Controllers/Api/User/MarketerController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           40┆ $sites = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                        
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Adsense/Http/Controllers/Api/User/SiteController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           39┆ $sites = DynamicFetchService::fetchData($query, request()->per_page);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           46┆ $site = auth()->user()->sites()->create($request->validated());
+                                                                                            
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Adsense/Http/QueryFilters/visibility.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                                
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Auth/Http/Controllers/Api/AuthController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           21┆ $user = User::create($input);
+                                                                                                               
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Auth/Http/Controllers/Web/V1/User/UnsubscribeController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           72┆ Subscriber::create([
+           73┆     'email' => $email,
+           74┆     'is_subscribed' => true,
+           75┆     'subscribed_at' => now(),
+           76┆ ]);
+                                                                                                                 
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Auth/Tests/Feature/Http/Controllers/Api/AuthCotrollerTest.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           46┆ User::create($user);
+                                                                                                
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Database/Seeders/MarketerRoleSeeder.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           21┆ $marketer = Role::create(['name' => 'marketer']);
+            ⋮┆----------------------------------------
+           22┆ $permission = Permission::create(['name' => 'report access']);
+                                                                                                                    
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/Controllers/Api/V1/Admin/AdsenseCheckoutController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          162┆ if (request()->save_transactions == 1) {
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+          163┆ Transaction::create([
+          164┆     'amount' => $remainingAmount,
+          165┆     'wallet_id' => $siteIncome[0]->user->userWallet->id,
+          166┆     'type' => 0, // deposit
+          167┆     'status' => 0, // none
+          168┆     'currency' => $payment['currency'],
+          169┆     'fullname' => 'System',
+          170┆     'transaction_date' => now()->format('Y-m-d H:i:s'),
+          171┆     'description' => 'Adsense deposit transaction',
+          172┆ ]);
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          206┆ if (request()->save_transactions == 1) {
+                                                                                                             
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/Controllers/Api/V1/Admin/CheckoutController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          256┆ if (request()->save_transactions == 1) {
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+          257┆ Transaction::create([
+          258┆     'amount' => $remainingAmount,
+          259┆     'wallet_id' => $appIncome[0]->user->userWallet->id,
+          260┆     'type' => 0, // deposit
+          261┆     'status' => 0, // none
+          262┆     'currency' => $payment['currency'],
+          263┆     'fullname' => 'System',
+          264┆     'transaction_date' => now()->format('Y-m-d H:i:s'),
+          265┆     'description' => 'Admob deposit transaction',
+          266┆ ]);
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          301┆ if (request()->save_transactions == 1) {
+                                                                                                              
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/Controllers/Api/V1/Admin/DeductionController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           50┆ $paymentDate->deductions()->create($item);
+                                                                                                             
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/Controllers/Api/V1/Admin/ExchangeController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           31┆ $exchange = $paymentDate->exchange()->create($request->all());
+                                                                                                                
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/Controllers/Api/V1/Admin/PaymentDateController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           23┆ return PaymentDate::paginate(request()->per_page ?? 30);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           31┆ $paymentDate = PaymentDate::create(['payment_date' =>
+               Carbon::parse($request->payment_date)]);             
+                                                                                                         
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/Controllers/Api/V1/Admin/UserController.php[0m
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+           42┆ $query->select(DB::raw("SUM(estimated_earnings) as income"))
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           43┆ ->where('statistics.created_at', '>=',                   
+               PaymentDate::find(request()->payment_date)->payment_date)
+            ⋮┆----------------------------------------
+           44┆ ->where('statistics.created_at', '<=', Carbon::parse(PaymentDate::find(request()-
+               >payment_date)->payment_date)->endOfMonth()->format('Y-m-d'))                    
+            ⋮┆----------------------------------------
+           45┆ ->where('panel_id', request()->panel_id);
+   
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+           63┆ $query->select(DB::raw("SUM(estimated_earnings) as income"))
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           64┆ ->where('adsense_statistics.created_at', '>=',           
+               PaymentDate::find(request()->payment_date)->payment_date)
+            ⋮┆----------------------------------------
+           65┆ ->where('adsense_statistics.created_at', '<=', Carbon::parse(PaymentDate::find(request()-
+               >payment_date)->payment_date)->endOfMonth()->format('Y-m-d'))                            
+            ⋮┆----------------------------------------
+           66┆ ->where('panel_id', request()->panel_id);
+   
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+           84┆ $query->select(DB::raw("SUM(estimated_earnings) as income"))
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           85┆ ->whereDate('youtube_statistics.start_date', '>=',       
+               PaymentDate::find(request()->payment_date)->payment_date)
+            ⋮┆----------------------------------------
+           86┆ ->whereDate('youtube_statistics.end_date', '<=', Carbon::parse(PaymentDate::find(request()-
+               >payment_date)->payment_date)->endOfMonth()->format('Y-m-d'))                              
+            ⋮┆----------------------------------------
+           87┆ ->where('panel_id', request()->panel_id);
+            ⋮┆----------------------------------------
+           97┆ if (!request()->filled('payment_date')) {
+            ⋮┆----------------------------------------
+          101┆ $paymentDate = PaymentDate::find(request()->payment_date)->payment_date;
+                                                                                                                    
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/Controllers/Api/V1/Admin/YoutubeCheckoutController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          190┆ if (request()->save_transactions == 1) {
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+          191┆ Transaction::create([
+          192┆     'amount' => $remainingAmount,
+          193┆     'wallet_id' => $channelIncome[0]->user->userWallet->id,
+          194┆     'type' => 0, // deposit
+          195┆     'status' => 0, // none
+          196┆     'currency' => $payment['currency'],
+          197┆     'fullname' => 'System',
+          198┆     'transaction_date' => now()->format('Y-m-d H:i:s'),
+          199┆     'description' => 'youtube deposit transaction',
+          200┆ ]);
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          234┆ if (request()->save_transactions == 1) {
+                                                                                                               
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/Controllers/Api/V1/User/PaymentDateController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           18┆ $paymentDates = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                       
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/QueryFilters/panel_id.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (!empty(\request($this->filterName())) && request()->type == 'admob') {
+            ⋮┆----------------------------------------
+           14┆ } elseif (!empty(\request($this->filterName())) && request()->type == 'adsense') {
+            ⋮┆----------------------------------------
+           18┆ } elseif (!empty(\request($this->filterName())) && request()->type == 'youtube') {
+                                                                                           
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Http/QueryFilters/payment_date.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           13┆ if (!empty(\request($this->filterName())) && request()->type == 'admob') {
+            ⋮┆----------------------------------------
+           15┆ $q->where('created_at', '>=', PaymentDate::find(request()->payment_date)->payment_date)
+            ⋮┆----------------------------------------
+           16┆ ->where('created_at', '<=', Carbon::parse(PaymentDate::find(request()->payment_date)-
+               >payment_date)->endOfMonth()->format('Y-m-d'));                                      
+            ⋮┆----------------------------------------
+           18┆ } elseif (!empty(\request($this->filterName())) && request()->type == 'adsense') {
+            ⋮┆----------------------------------------
+           20┆ $q->where('created_at', '>=', PaymentDate::find(request()->payment_date)->payment_date)
+            ⋮┆----------------------------------------
+           21┆ ->where('created_at', '<=', Carbon::parse(PaymentDate::find(request()->payment_date)-
+               >payment_date)->endOfMonth()->format('Y-m-d'));                                      
+            ⋮┆----------------------------------------
+           23┆ } elseif (!empty(\request($this->filterName())) && request()->type == 'youtube') {
+            ⋮┆----------------------------------------
+           25┆ $q->whereDate('start_date', '>=', PaymentDate::find(request()->payment_date)->payment_date)
+            ⋮┆----------------------------------------
+           26┆ ->whereDate('end_date', '<=', Carbon::parse(PaymentDate::find(request()->payment_date)-
+               >payment_date)->endOfMonth()->format('Y-m-d'));                                        
+                                                                                             
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Transformers/AdsenseUserResource.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           26┆ 'currency' => request()->panel_id ? Panel::find(request()->panel_id)->currency : null,
+            ⋮┆----------------------------------------
+           26┆ 'currency' => request()->panel_id ? Panel::find(request()->panel_id)->currency : null,
+                                                                                      
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Transformers/UserResource.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           26┆ 'currency' => request()->panel_id ? Panel::find(request()->panel_id)->currency : null,
+            ⋮┆----------------------------------------
+           26┆ 'currency' => request()->panel_id ? Panel::find(request()->panel_id)->currency : null,
+            ⋮┆----------------------------------------
+           27┆ 'income' => request()->type == 'admob' ? $this->income / 1000000 : $this->income,
+                                                                                             
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Base/Transformers/YoutubeUserResource.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           26┆ 'currency' => request()->panel_id ? Panel::find(request()->panel_id)->currency : null,
+            ⋮┆----------------------------------------
+           26┆ 'currency' => request()->panel_id ? Panel::find(request()->panel_id)->currency : null,
+                                                                                                                  
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Communication/Http/Controllers/Api/Admin/CommentController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           25┆ $comment = auth()->user()->comments()->create([
+           26┆     'commentable_id' => $ticket->id,
+           27┆     'commentable_type' => get_class($ticket),
+           28┆     'text' => $request->text,
+           29┆     'parent_id' => $request->parent_id ?? 0,
+           30┆ ]);
+                                                                                                                        
+  [36m[22m[24m                                                                                                          
+  /root/code/g-ads-backend/Modules/Communication/Http/Controllers/Api/Admin/SendNotificationController.php[0m           
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+          153┆ DB::raw('json_extract(data, "$.message") as message'),
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+          158┆ ->orderBy(request()->order_by ?? 'created_at', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+          158┆ ->orderBy(request()->order_by ?? 'created_at', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+          160┆ $notifications = DynamicFetchService::fetchData($query, request()->per_page);
+            ⋮┆----------------------------------------
+          179┆ )->orderBy(request()->order_by ?? 'created_at', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+          179┆ )->orderBy(request()->order_by ?? 'created_at', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+          181┆ $users = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                                 
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Communication/Http/Controllers/Api/Admin/TicketController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           34┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           34┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           36┆ $tickets = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                                 
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Communication/Http/Controllers/Api/User/CommentController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           27┆ $comment = auth()->user()->comments()->create([
+           28┆     'commentable_id' => $ticket->id,
+           29┆     'commentable_type' => get_class($ticket),
+           30┆     'text' => $request->text,
+           31┆     'parent_id' => $request->parent_id ?? 0,
+           32┆ ]);
+                                                                                                                        
+  [36m[22m[24m                                                                                                          
+  /root/code/g-ads-backend/Modules/Communication/Http/Controllers/Api/User/SendNotificationUserController.php[0m        
+    ❯❱ laravel-db-raw
+          Avoid raw SQL queries; use parameter binding.
+                                                       
+           24┆ DB::raw('json_extract(data, "$.message") as message'),
+            ⋮┆----------------------------------------
+           76┆ DB::raw('json_extract(data, "$.message") as message'),
+                                                                                                                
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Communication/Http/Controllers/Api/User/TicketController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           19┆ $query = auth()->user()->tickets()->with('user')->orderBy(request()->order_by ?? 'id',
+               request()->order_type ?? 'DESC');                                                     
+            ⋮┆----------------------------------------
+           19┆ $query = auth()->user()->tickets()->with('user')->orderBy(request()->order_by ?? 'id',
+               request()->order_type ?? 'DESC');                                                     
+            ⋮┆----------------------------------------
+           21┆ $tickets = DynamicFetchService::fetchData($query, request()->per_page);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           42┆ $ticket = auth()->user()->tickets()->create($data);
+                                                                                                   
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Communication/Http/QueryFilters/is_response.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                              
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Communication/Http/QueryFilters/status.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                                
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/User/Database/Seeders/UserDatabaseSeeder.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           21┆ User::factory()->count(1)->create([
+           22┆     'email' => 'amir.msj74@gmail.com',
+           23┆     'password' => 'Amir_msj1374',
+           24┆     'type' => 'admin',
+           25┆     'status' => 'confirmed'
+           26┆ ]);
+            ⋮┆----------------------------------------
+           30┆ User::factory()->count(1)->create([
+           31┆     'email' => 'saeed.soudi96@gmail.com',
+           32┆     'password' => uniqid(),
+           33┆     'type' => 'admin',
+           34┆     'status' => 'confirmed'
+           35┆ ]);
+                                                                                                      
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/User/Http/Controllers/Api/Admin/UserController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           37┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           37┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           40┆ $users = DynamicFetchService::fetchData($query, request()->per_page);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           55┆ $user = User::create($data);
+   
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           67┆ $query = User::where('status', 'waiting')->orWhere('first_name',             
+               null)->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           67┆ $query = User::where('status', 'waiting')->orWhere('first_name',             
+               null)->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           68┆ $users = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/User/Http/Controllers/Api/UserController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           89┆ $file = request()->file('filezip');
+                                                                                     
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/User/Http/QueryFilters/status.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+                                                                                                               
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Youtube/Http/Controllers/Api/V1/Admin/ChannelController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           41┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           41┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           44┆ $channels = DynamicFetchService::fetchData($query, request()->per_page);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           56┆ $channel = Channel::create($data);
+                                                                                                                 
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Youtube/Http/Controllers/Api/V1/Admin/MarketingController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           45┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           45┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           47┆ $users = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                                                 
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Youtube/Http/Controllers/Api/V1/Admin/StatisticController.php[0m
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+          103┆ $statistic = YoutubeStatistic::create([
+          104┆     'start_date' => $start_date,
+          105┆     'end_date' => $end_date,
+          106┆     'estimated_earnings' => $request->estimated_earnings,
+          107┆     'user_id' => $request->user_id ?? $channel->user_id,
+          108┆     'panel_id' => $request->panel_id ?? $channel->panel_id,
+          109┆     'channel_id' => $channel->id,
+          110┆     'currency' => $request->panel_id ? Panel::find($request->panel_id)->currency :
+               $channel->panel->currency,                                                        
+          111┆     'marketer_id' => $channel->marketer_id,
+          112┆     'digital_marketing' => $channel->digital_marketing,
+             [hid 1 additional lines, adjust with --max-lines-per-finding] 
+                                                                                                              
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Youtube/Http/Controllers/Api/V1/User/ChannelController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           35┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           35┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           38┆ $channels = DynamicFetchService::fetchData($query, request()->per_page);
+   
+   ❯❯❱ laravel-mass-assignment
+          Check $fillable to prevent mass assignment vulnerabilities.
+                                                                     
+           50┆ $channel = Channel::create($data);
+                                                                                                               
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Youtube/Http/Controllers/Api/V1/User/MarketerController.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           30┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           30┆ ->orderBy(request()->order_by ?? 'id', request()->order_type ?? 'DESC');
+            ⋮┆----------------------------------------
+           33┆ $channels = DynamicFetchService::fetchData($query, request()->per_page);
+                                                                                          
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Youtube/Http/QueryFilters/panel_id.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName()) && \request($this->filterName()) > 0) {
+                                                                                            
+  [36m[22m[24m  /root/code/g-ads-backend/Modules/Youtube/Http/QueryFilters/visibility.php[0m
+    ❯❱ laravel-request-direct
+          Validate and sanitize request input before use.
+                                                         
+           10┆ if (request()->has($this->filterName())) {
+
