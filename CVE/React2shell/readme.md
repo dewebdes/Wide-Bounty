@@ -10,5 +10,5 @@ LOGS_FROM_REACT2SHELL_PLAYWRIGHT_SCANNER:
 =================================
 [PASTE LOGS HERE]
 =================================
-GENERATE_CUSTOM_EXPLOIT_FOR: https://ur-target.com
+GENERATE CUSTOM EXPLOIT FOR MY TARGET
 ```
