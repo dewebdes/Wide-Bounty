@@ -1,0 +1,102 @@
+0="$1"
+&1={
+    "status":"resolved_model",
+    "reason":0,
+    "_response":"$5",
+    "value":"{\"then\":\"$4:map\",\"0\":{\"then\":\"$B3\"},\"length\":1}",
+    "then":"$2:then"
+}
+&2="$@3"
+&3=""
+&4=[]
+&5={
+    "_prefix":"console.log('meowmeow')//",
+    "_formData":{
+        "get":"$4:constructor:constructor"
+    },
+    "_chunks":"$2:_response:_chunks",
+    "_bundlerConfig":{}
+}
+
+0="$1"
+&1={
+    "status":"resolved_model",
+    "reason":0,
+    "_response":"$5",
+    "value":"{\"_preload1\":\"$9\",\"_preload2\":\"$c\",\"_preload3\":\"$e\",\"_preload4\":\"$f\",\"then\":\"$b:map\",\"0\":\"$a\",\"length\":1}",
+    "then":"$2:then"
+}
+&2="$@3"
+&3=""
+&5={
+    "_prefix":"$2:_response:_prefix",
+    "_formData":"$2:_response:_formData",
+    "_chunks":"$2:_response:_chunks",
+    "_bundlerConfig":{
+        "bar":{"id":"module","name":"*","chunks":[]}
+    }
+}
+&6={"id":"bar"}
+&7="$F6"
+&8={
+    "set": "$6:constructor:setPrototypeOf"
+}&9={
+    "_prefix":"$2:_response:_prefix",
+    "_formData":"$2:_response:_formData",
+    "_chunks":"$2:_response:_chunks",
+    "_bundlerConfig":{
+        "bar":{"id":"module","name":"*","chunks":[]}
+    },
+    "_temporaryReferences": "$8"
+}&4={
+    "status":"resolved_model",
+    "reason":{
+        "0":"$7:wrapper",
+        "length":1,
+        "toString": "$b:pop"
+    },
+    "_response":"$9",
+    "value":"{\"then\":\"$b:map\",\"0\":\"$d\",\"toString\":\"$b:push\"}",
+    "then":"$2:then"
+}
+&10="$@4"
+&11=[]
+&12={
+    "status":"resolved_model",
+    "reason":{
+        "0":"$7:Module:prototype",
+        "length":1,
+        "toString": "$b:pop"
+    },
+    "_response": "$9",
+    "value": "{\"set\":\"$7:Module:prototype:_compile\",\"then\":\"$b:map\",\"0\":\"$11\",\"length\":1}",
+    "then":"$2:then"
+}
+&13="$@c"
+&14={
+    "_prefix":"$2:_response:_prefix",
+    "_formData":"$2:_response:_formData",
+    "_chunks":"$2:_response:_chunks"
+}
+&15={
+    "status":"resolved_model",
+    "reason":"junk",
+    "_response": "$e",
+    "value":"{\"_preload1\":\"$10\",\"0\":\"$13\",\"length\":1,\"then\":\"$b:map\"}",
+    "then":"$2:then"
+}
+&16={
+    "_prefix":"$2:_response:_prefix",
+    "_formData":"$2:_response:_formData",
+    "_chunks":"$2:_response:_chunks",
+    "_temporaryReferences": "$c:value"
+}
+&17="$@f"
+&18={
+    "status":"resolved_model",
+    "reason":["$4:value"],
+    "_response": "$10",
+    "value":"[\"console.log(7*7)\"]",
+    "then":"$2:then"
+}
+&19="$@12"
